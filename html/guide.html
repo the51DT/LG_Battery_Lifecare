@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>guide</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="admin">
+    <header class="header_admin">
+      <h1><a href="/"><img alt="B-Lifecare" src="https://stag-bas.batterylifecare.com/_next/static/media/logo.d9215bd2.png"></a></h1>
+      <div class="header_tab">
+        <ul>
+          <li><a class="btn_tab on" href="#">일반</a></li>
+          <li><a class="btn_tab" href="#">상품/주문</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="lnb_admin">
+        <ul class="menu menu_1dep">
+          <li class="list_1dep">
+            <a class="btn_menu">1뎁스</a>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">1뎁스</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">2뎁스</a></li>
+              <li class="list_2dep"><a class="btn_menu">2뎁스</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contents_admin">
+        <div class="admin_wrap">
+
+          <h2 class="admin_title">타이틀</h2>
+
+          <div class="admin_box">
+            <div class="box_title">
+              <h3 class="requir">박스타이틀</h3>
+              <span class="caption">설명</span>
+            </div>
+            <div class="sort_wrap">
+              <p class="sort_title">검색어</p>
+              <div class="sort_con">
+                <select name="product_name" class="sort_select">
+                  <option>상품명</option>
+                  <option>상품코드</option>
+                </select>
+                <input type="text" placeholder="검색어를 입력하세요">
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">기간검색</p>
+              <div class="sort_con">
+                <div class="sort_con_double">
+                  <div class="sort_option">
+                    <input type="radio" name="period" value="1month" id="1month">
+                    <label class="period" for="1month">1개월</label>
+                  </div>
+                  <div class="sort_option">
+                    <input type="radio" name="period" value="3month" id="3month" checked>
+                    <label class="period" for="3month">3개월</label>
+                  </div>
+                  <div class="sort_option">
+                    <input type="radio" name="period" value="6month" id="6month">
+                    <label class="period" for="6month">6개월</label>
+                  </div>
+                  <div class="sort_option">
+                    <input type="radio" name="period" value="1year" id="1year">
+                    <label class="period" for="1year">1년</label>
+                  </div>
+                  <div class="sort_option">
+                    <input type="radio" name="period" value="select_day" id="select_day">
+                    <label class="period" for="select_day">기간선택</label>
+                  </div>
+                  <div class="sort_date">
+                    <input type="date"> ~ <input type="date">
+                  </div>
+                </div>
+                <div class="sort_con_double">
+                  <div class="sort_date">
+                    <input type="date"> ~ <input type="date">
+                  </div>
+                  <div class="sort_option">
+                    <input type="radio" name="period" value="1month" id="1month">
+                    <label class="period" for="1month">1개월</label>
+                  </div>
+                  <div class="sort_option">
+                    <input type="radio" name="period" value="3month" id="3month" checked>
+                    <label class="period" for="3month">3개월</label>
+                  </div>
+                  <div class="sort_option">
+                    <input type="radio" name="period" value="6month" id="6month">
+                    <label class="period" for="6month">6개월</label>
+                  </div>
+                  <div class="sort_option">
+                    <input type="radio" name="period" value="1year" id="1year">
+                    <label class="period" for="1year">1년</label>
+                  </div>
+                  <div class="sort_option">
+                    <input type="radio" name="period" value="select_day" id="select_day">
+                    <label class="period" for="select_day">기간선택</label>
+                  </div>
+                </div>
+                <div class="sort_con_double">
+                  <select name="product_name" class="sort_select">
+                    <option>상품명</option>
+                    <option>상품코드</option>
+                  </select>
+                  <div class="sort_option">
+                    <input type="radio" name="period" value="1month" id="1month">
+                    <label class="period" for="1month">1개월</label>
+                  </div>
+                  <div class="sort_option">
+                    <input type="radio" name="period" value="3month" id="3month" checked>
+                    <label class="period" for="3month">3개월</label>
+                  </div>
+                  <div class="sort_option">
+                    <input type="radio" name="period" value="6month" id="6month">
+                    <label class="period" for="6month">6개월</label>
+                  </div>
+                  <div class="sort_option">
+                    <input type="radio" name="period" value="1year" id="1year">
+                    <label class="period" for="1year">1년</label>
+                  </div>
+                  <div class="sort_option">
+                    <input type="radio" name="period" value="select_day" id="select_day">
+                    <label class="period" for="select_day">기간선택</label>
+                  </div>
+                  <div class="sort_date">
+                    <input type="date"> ~ <input type="date">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title requir">체크박스</p>
+              <div class="sort_con">
+                <div class="sort_double">
+                  <div class="input_type_check">
+                    <input type="checkbox" name="checkbox1" value="checkbox1" id="checkbox1" checked>
+                    <label for="checkbox1">사용함</label>
+                  </div>
+                  <div class="input_type_check">
+                    <input type="checkbox" name="checkbox2" value="checkbox2" id="checkbox2">
+                    <label for="checkbox2">사용안함</label>
+                  </div>
+                </div>
+                <div class="sort_double">
+                  <div class="input_type_check">
+                    <input type="checkbox" name="checkbox1" value="checkbox1" id="checkbox1" checked>
+                    <label for="checkbox1">사용함</label>
+                    <input type="text" class="sub_text_small" placeholder="숫자만 입력">
+                    <span class="input_caption">장</span>
+                  </div>
+                  <div class="input_type_check">
+                    <input type="checkbox" name="checkbox2" value="checkbox2" id="checkbox2">
+                    <label for="checkbox2">사용안함</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title requir">라디오</p>
+              <div class="sort_con">
+                <div class="sort_double">
+                  <div class="input_type_radio">
+                    <input type="radio" name="radio" value="radio1" id="radio1">
+                    <label for="radio1">전체</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="radio" value="radio2" id="radio2" checked>
+                    <label for="radio2">일반상품</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="radio" value="radio3" id="radio3">
+                    <label for="radio3">제휴상품</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="radio" value="radio4" id="radio4">
+                    <label for="radio4">기타</label>
+                  </div>
+                </div>
+                <div class="sort_double">
+                  <div class="input_type_radio">
+                    <input type="radio" name="radio" value="radio1" id="radio1">
+                    <label for="radio1">전체</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="radio" value="radio2" id="radio2" checked>
+                    <label for="radio2">일반상품</label>
+                    <input type="text" placeholder="제휴 업체명을 기입해주세요.">
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="radio" value="radio3" id="radio3">
+                    <label for="radio3">제휴상품</label>
+                    <input type="text" placeholder="제휴 업체명을 기입해주세요." disabled>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="radio" value="radio4" id="radio4">
+                    <label for="radio4">기타</label>
+                  </div>
+                </div>
+                <div class="sort_double">
+                  <div class="input_type_radio">
+                    <input type="radio" name="radio" value="radio4" id="radio4">
+                    <label for="radio4">즉시 발송</label>
+                    <div class="sub_input">
+                      <span class="bracket_left">(</span>
+                      <div class="input_type_check">
+                        <input type="checkbox" name="checkbox1" value="checkbox1" id="checkbox1" checked>
+                        <label for="checkbox1">사용함</label>
+                      </div>
+                      <div class="input_type_check">
+                        <input type="checkbox" name="checkbox2" value="checkbox2" id="checkbox2">
+                        <label for="checkbox2">사용안함</label>
+                      </div>
+                      <span class="bracket_right">)</span>
+                    </div>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="radio" value="radio4" id="radio4">
+                    <label for="radio4">예약 발송</label>
+                    <div class="sub_input">
+                      <input type="date">
+                      <select class="select_time">
+                        <option>00시</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <div class="sort_double">
+                <p class="sort_title">제휴상품 로고 등록</p>
+                <div class="sort_con">
+                  <div class="input_type_file">
+                    <input type="file">
+                  </div>
+                  <span class="caption sort_caption">jpg, jpeg ,png 파일(<span class="text_red">가로사이즈 * 세로사이즈</span>)로 등록 </span>
+                </div>
+              </div>
+              <div class="sort_double">
+                <p class="sort_title">제휴상품 파일 등록</p>
+                <div class="sort_con">
+                  <div class="input_type_file">
+                    <input type="file">
+                  </div>
+                  <span class="caption sort_caption text_black">부가세가 포함된 금액으로 입력해주세요.</span>
+                  <span class="caption sort_caption">제휴사에서 전달받은 상품코드를 등록해주세요. csv파일 </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">상품요약설명</p>
+              <div class="sort_con">
+                <input type="text" class="sort_text" placeholder="최대 100자">
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title requir">원가</p>
+              <div class="sort_con">
+                <div class="sort_price">
+                  <input type="text" class="sort_price" placeholder="숫자만입력">
+                  <span class="input_caption text_bold">원</span>
+                  <span class="caption sort_caption">부가세가 포함된 금액으로 입력해주세요.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn_wrap btn_sort">
+              <button class="btn_default btn_sky">검색</button>
+            </div>
+          </div>
+
+          <h2 class="admin_title">버튼</h2>
+
+          <div class="btn_wrap">
+            <button class="btn_default">기본</button>
+            <button class="btn_default btn_sky">하늘색</button>
+            <button class="btn_default btn_white">흰색</button>
+            <button class="btn_default btn_border">보더</button>
+            <button class="btn_middle">middle</button>
+            <button class="btn_small">small</button>
+          </div>
+
+          <h2 class="admin_title">팝업</h2>
+
+          <!-- <div class="popup_wrap">
+            <div class="admin_popup">
+              <h3>삭제 전 확인해주세요</h3>
+              <p>사용중인 상품 분류를 삭제 시 모든 상품의 정보가
+                화면에 미노출될 수 있습니다. 이용중인 상품 분류인지
+                다시 확인하시고 사용여부를 ‘사용안함’으로
+                설정 후 다시 시도해주세요.</p>
+              <button class="btn_default btn_sky">확인</button>
+            </div>
+          </div> -->
+
+          <h2 class="admin_title">테이블</h2>
+
+          <div class="admin_box">
+            <table class="table_checklist">
+              <thead>
+                <tr>
+                  <th style="width: 40px;"><input type="checkbox"></th>
+                  <th style="width: 92px;">No</th>
+                  <th style="width: 135px;">상품코드</th>
+                  <th style="width: 375px;">상품명
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 145px;">원가(원)
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 145px;">공급가(원)
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 157px;">상품사용여부
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 135px;">등록개수
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 189px;">상품유형
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 147px;">상품 코드(제휴사용)
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>4</td>
+                  <td>PB00001</td>
+                  <td><span class="text_overflow text_blue"><a class="text_underline" href="#">배터리인증서배터리인증서배터리인증서배터리인증서배터리</a></span></td>
+                  <td>30,000</td>
+                  <td>30,000</td>
+                  <td>사용함</td>
+                  <td>1,000개</td>
+                  <td>제휴상품 (제휴업체명)</td>
+                  <td><button class=" btn_small">바로가기</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>3</td>
+                  <td>PA00003</td>
+                  <td><span class="text_overflow text_blue"><a class="text_underline" href="#">배터리인증서배터리인증서배터리인증서배터리인증서배터리</a></span></td>
+                  <td>1,200</td>
+                  <td>1,200</td>
+                  <td>사용안함</td>
+                  <td>제한없음</td>
+                  <td>일반상품</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>3</td>
+                  <td>PA00003</td>
+                  <td><span class="text_overflow text_blue"><a class="text_underline" href="#">배터리인증서배터리인증서배터리인증서배터리인증서배터리</a></span></td>
+                  <td>1,200</td>
+                  <td>1,200</td>
+                  <td>사용안함</td>
+                  <td>제한없음</td>
+                  <td>일반상품</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>1</td>
+                  <td>PA00003</td>
+                  <td><span class="text_overflow text_blue"><a class="text_underline" href="#">배터리인증서배터리인증서배터리인증서배터리인증서배터리</a></span></td>
+                  <td>50,000</td>
+                  <td>50,000</td>
+                  <td>사용안함</td>
+                  <td>제한없음</td>
+                  <td>일반상품</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="table_page">
+              <span>Showing 1 to 10 of 13 entries</span>
+              <div class="page_control">
+                <span>Rows per page:</span>
+                <select><option>10</option></select>
+                <span class="text_black">1 - <span class="text_black">10</span></span>
+                <span>&nbsp;of <span>10</span></span>
+                <span class="btn_page">
+                  <button class="btn_page_prev"><span class="hidden">이전</span></button>
+                  <button class="btn_page_next"><span class="hidden">다음</span></button>
+                </span>
+              </div>
+            </div>
+            <table class="table_list">
+              <thead>
+                <tr>
+                  <th width="135px">상품코드</th>
+                  <th width="385px">상품명</th>
+                  <th width="155px">원가</th>
+                  <th width="155px">공급가</th>
+                  <th width="155px">상품유형</th>
+                  <th width="165px">판매 가능 개수</th>
+                  <th width="185px">상품 요약 설명</th>
+                  <th width="90px"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="text_bold">DC001</span></td>
+                  <td><span class="text_overflow"><span>배터리인증서 프리미엄</span></span></td>
+                  <td>50,000</td>
+                  <td>50,000</td>
+                  <td>일반상품</td>
+                  <td>제한없음</td>
+                  <td>프리미엄상품권</td>
+                  <td><button class="btn_small">삭제</button></td>
+                </tr>
+                <tr>
+                  <td><span class="text_bold">D12357</span></td>
+                  <td><span class="text_overflow"><span>배터리인증서 온도 감지 배터리인증서 온도 감지 배터리인증서 온도 감지</span></span></td>
+                  <td>30,000</td>
+                  <td>30,000</td>
+                  <td>제휴상품</td>
+                  <td><span class="text_red">10,000</span></td>
+                  <td>제휴사 제공 상품권</td>
+                  <td><button class="btn_small">삭제</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+</body>
+</html>

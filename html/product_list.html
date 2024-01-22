@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상품 리스트</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="admin">
+    <header class="header_admin">
+      <h1><a href="/"><img alt="B-Lifecare" src="https://stag-bas.batterylifecare.com/_next/static/media/logo.d9215bd2.png"></a></h1>
+      <div class="header_tab">
+        <ul>
+          <li><a class="btn_tab" href="#">일반</a></li>
+          <li><a class="btn_tab on" href="#">상품/주문</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="lnb_admin">
+        <ul class="menu menu_1dep">
+          <li class="list_1dep">
+            <a class="btn_menu">상품 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">상품 리스트</a></li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">전시 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">전시상품 카테고리</a></li>
+              <li class="list_2dep"><a class="btn_menu">전시상품 리스트</a></li>
+              <li class="list_2dep"><a class="btn_menu">전시상품 진열 관리</a></li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">주문 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">주문 통합 리스트</a></li>
+              <li class="list_2dep"><a class="btn_menu">결제완료 리스트</a></li>
+              <li class="list_2dep"><a class="btn_menu">결제 중단/실패 리스트</a></li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">취소/환불 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">카드취소 조회</a></li>
+              <li class="list_2dep"><a class="btn_menu">관리자 카드취소 조회</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contents_admin">
+        <div class="admin_wrap">
+          <h2 class="admin_title">상품 리스트</h2>
+
+          <div class="admin_box">
+            <div class="sort_wrap">
+              <p class="sort_title">검색어</p>
+              <div class="sort_con">
+                <select name="product_name" class="sort_select">
+                  <option>상품명</option>
+                  <option>상품코드</option>
+                </select>
+                <input type="text">
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">기간검색</p>
+              <div class="sort_con">
+                <div class="sort_option">
+                  <input type="radio" name="period" value="1month" id="1month">
+                  <label class="period" for="1month">1개월</label>
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="3month" id="3month" checked>
+                  <label class="period" for="3month">3개월</label>
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="6month" id="6month">
+                  <label class="period" for="6month">6개월</label>
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="1year" id="1year">
+                  <label class="period" for="1year">1년</label>
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="select_day" id="select_day">
+                  <label class="period" for="select_day">기간선택</label>
+                </div>
+                <div class="sort_date">
+                  <input type="date"> ~ <input type="date">
+                </div>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title requir">상품사용여부</p>
+              <div class="sort_con">
+                <div class="input_type_check">
+                  <input type="checkbox" name="checkbox1" value="checkbox1" id="checkbox1" checked>
+                  <label for="checkbox1">사용함</label>
+                </div>
+                <div class="input_type_check">
+                  <input type="checkbox" name="checkbox2" value="checkbox2" id="checkbox2" checked>
+                  <label for="checkbox2">사용안함</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title requir">상품유형</p>
+              <div class="sort_con">
+                <div class="input_type_radio">
+                  <input type="radio" name="radio" value="radio1" id="radio1" checked>
+                  <label for="radio1">전체</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="radio" value="radio2" id="radio2">
+                  <label for="radio2">일반상품</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="radio" value="radio3" id="radio3">
+                  <label for="radio3">제휴상품</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="radio" value="radio4" id="radio4">
+                  <label for="radio4">기타</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn_wrap btn_sort">
+              <button class="btn_default btn_sky">검색</button>
+            </div>
+          </div>
+
+          <div class="btn_wrap btn_collect">
+            <button class="btn_default">조회결과 다운로드</button>
+            <button class="btn_default">전체 다운로드</button>
+            <button class="btn_default btn_sky" onclick="location.href='../html/product_info.html'">검색</button>
+          </div>
+
+          <div class="admin_box">
+            <table class="table_checklist">
+              <thead>
+                <tr>
+                  <th style="width: 40px;"><input type="checkbox"></th>
+                  <th style="width: 92px;">No</th>
+                  <th style="width: 135px;">상품코드
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 375px;">상품명
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 145px;">원가(원)
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 145px;">공급가(원)
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 157px;">상품사용여부
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 135px;">등록개수
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 189px;">상품유형
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 147px;">상품 코드(제휴사용)
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>4</td>
+                  <td class="text_bold">PB00001</td>
+                  <td><span class="text_overflow text_blue"><a class="text_underline" href="#">세차이용권 (3만원)</a></span></td>
+                  <td>30,000</td>
+                  <td>30,000</td>
+                  <td>사용함</td>
+                  <td>1,000개</td>
+                  <td>제휴상품 (제휴업체명)</td>
+                  <td><button class="btn_small btn_border">바로가기</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>3</td>
+                  <td class="text_bold">PA00003</td>
+                  <td><span class="text_overflow text_blue"><a class="text_underline" href="#">배터리인증서 온도 감지</a></span></td>
+                  <td>1,200</td>
+                  <td>1,200</td>
+                  <td>사용안함</td>
+                  <td>제한없음</td>
+                  <td>일반상품</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>2</td>
+                  <td class="text_bold">PA00002</td>
+                  <td><span class="text_overflow text_blue"><a class="text_underline" href="#">배터리인증서 스탠다드</a></span></td>
+                  <td>990</td>
+                  <td>990</td>
+                  <td>사용안함</td>
+                  <td>제한없음</td>
+                  <td>일반상품</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>1</td>
+                  <td class="text_bold">PA00001</td>
+                  <td><span class="text_overflow text_blue"><a class="text_underline" href="#">배터리인증서배터리인증서배터리인증서배터리인증서배터리</a></span></td>
+                  <td>50,000</td>
+                  <td>50,000</td>
+                  <td>사용함</td>
+                  <td>제한없음</td>
+                  <td>일반상품</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="table_page">
+              <div>Showing 1 to 10 of 13 entries</div>
+              <div class="page_control">
+                <span>Rows per page:</span>
+                <select><option>10</option></select>
+                <span class="text_black">1 - <span class="text_black">10</span></span>
+                <span>&nbsp;of <span>10</span></span>
+                <span class="btn_page">
+                  <button class="btn_page_prev"><span class="hidden">이전</span></button>
+                  <button class="btn_page_next"><span class="hidden">다음</span></button>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="popup_wrap" id="retype">
+            <div class="admin_popup">
+              <h3>필수값을 확인하세요</h3>
+              <p><span>@항목명@</span> 을 입력하시고 다시 저장해주세요.</p>
+              <button class="btn_default btn_sky">확인</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

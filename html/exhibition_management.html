@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전시상품 진열 관리</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="admin">
+    <header class="header_admin">
+      <h1><a href="/"><img alt="B-Lifecare" src="https://stag-bas.batterylifecare.com/_next/static/media/logo.d9215bd2.png"></a></h1>
+      <div class="header_tab">
+        <ul>
+          <li><a class="btn_tab" href="#">일반</a></li>
+          <li><a class="btn_tab on" href="#">상품/주문</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="lnb_admin">
+        <ul class="menu menu_1dep">
+          <li class="list_1dep">
+            <a class="btn_menu">상품 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">상품 리스트</a></li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">전시 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">전시상품 카테고리</a></li>
+              <li class="list_2dep"><a class="btn_menu">전시상품 리스트</a></li>
+              <li class="list_2dep"><a class="btn_menu">전시상품 진열 관리</a></li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">주문 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">주문 통합 리스트</a></li>
+              <li class="list_2dep"><a class="btn_menu">결제완료 리스트</a></li>
+              <li class="list_2dep"><a class="btn_menu">결제 중단/실패 리스트</a></li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">취소/환불 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">카드취소 조회</a></li>
+              <li class="list_2dep"><a class="btn_menu">관리자 카드취소 조회</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contents_admin">
+        <div class="admin_wrap">
+          <h2 class="admin_title">전시상품 진열 관리</h2>
+          
+          <div class="admin_flex side_area">
+            <div class="admin_box_side">
+              <div class="box_title">
+                <h3>전시상품 카테고리명</h3>
+              </div>
+
+              <div class="side_con">
+                <div class="side_wrap">
+                  <p>배터리 인증서</p>
+                  <p><span class="side_tag">사용중</span></p>
+                  <p>APP/PC</p>
+                </div>
+                <div class="side_wrap">
+                  <p>매거진</p>
+                  <p><span class="side_tag tag_gray">사용안함</span></p>
+                  <p>APP</p>
+                </div>
+                <div class="side_wrap on">
+                  <p>제휴상품</p>
+                  <p><span class="side_tag">사용중</span></p>
+                  <p>APP/PC</p>
+                </div>
+              </div>
+            </div>
+            <div class="admin_box">
+              <div class="box_title">
+                <h3>제휴상품</h3>
+                <span class="caption">상품이 노출되지 않는다면, ‘전시 상품 등록/설정 > 플랫폼 노출 설정’을 노출로 설정해주세요.</span>
+              </div>
+
+              <div class="sort_wrap">
+                <div class="admin_flex">
+                  <div class="admin_tab">
+                    <p class="on">APP</p>
+                    <!-- [start]인앱결제로 WEB 작업 시 분리 / 2024.01.22 -->
+                    <p>PC</p>
+                    <!-- [end]인앱결제로 WEB 작업 시 분리 / 2024.01.22 -->
+                  </div>
+                  <div class="btn_wrap">
+                    <button class="btn_order btn_bottom"><span class="hidden"></span></button>
+                    <button class="btn_order btn_down"><span class="hidden"></span></button>
+                    <button class="btn_order btn_up"><span class="hidden"></span></button>
+                    <button class="btn_order btn_top"><span class="hidden"></span></button>
+                  </div>
+                </div>
+                
+              </div>
+  
+              <div class="sort_wrap sort_table">
+                <table class="table_checklist">
+                  <thead>
+                    <tr>
+                      <th style="width: 40px;"></th>
+                      <th style="width: 125px;">진열순위</th>
+                      <th style="width: 128px;">전시코드</th>
+                      <th style="width: 380px;">전시 상품명
+                        <div class="btn_table_wrap">
+                          <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                          <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                        </div>
+                      </th>
+                      <th style="width: 140px;">판매최종가</th>
+                      <th style="width: 126px;">진열상태</th>
+                      <th style="width: 150px;">판매상태</th>
+                      <th style="width: 81px;">노출 위치</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><div class="input_type_radio"><input type="radio" name="display" value="2"></div></td>
+                      <td>2
+                        <div class="btn_table_wrap">
+                          <button class="btn_table_top btn_table_top_black"><span class="hidden">오름차정렬</span></button>
+                          <button class="btn_table_bottom btn_table_bottom_black"><span class="hidden">내림차정렬</span></button>
+                        </div>
+                      </td>
+                      <td class="text_bold">DC001</td>
+                      <td><span class="text_overflow text_blue"><a class="text_underline" href="#">배터리인증서 3개월 이용권</a></span></td>
+                      <td>45,000</td>
+                      <td>진열</td>
+                      <td><span class="product_state product_state_ing text_bold">판매중</span></td>
+                      <td>APP</td>
+                    </tr>
+                    <!-- [end]전시 상품 중 목록에 미노출 되는 경우 1. 노출위치 - 미노출 2. 판매상태 - 판매대기, 판매종료 / 2024.01.22 -->
+                    <tr>
+                      <td><div class="input_type_radio"><input type="radio" name="display" value="2"></div></td>
+                      <td>3
+                        <div class="btn_table_wrap">
+                          <button class="btn_table_top btn_table_top_black"><span class="hidden">오름차정렬</span></button>
+                          <button class="btn_table_bottom btn_table_bottom_black"><span class="hidden">내림차정렬</span></button>
+                        </div>
+                      </td>
+                      <td class="text_bold">D12357</td>
+                      <td><span class="text_overflow text_blue"><a class="text_underline" href="#">배터리인증서 온도 감지</a></span></td>
+                      <td>1,200</td>
+                      <td>미진열</td>
+                      <td><span class="product_state product_state_waiting text_bold">판매대기</span></td>
+                      <td>미노출</td>
+                    </tr>
+                    <tr>
+                      <td><div class="input_type_radio"><input type="radio" name="display" value="2"></div></td>
+                      <td>2
+                        <div class="btn_table_wrap">
+                          <button class="btn_table_top btn_table_top_black"><span class="hidden">오름차정렬</span></button>
+                          <button class="btn_table_bottom btn_table_bottom_black"><span class="hidden">내림차정렬</span></button>
+                        </div>
+                      </td>
+                      <td class="text_bold">DC12153</td>
+                      <td><span class="text_overflow text_blue"><a class="text_underline" href="#">세차 이용권(3만원)</a></span></td>
+                      <td>990</td>
+                      <td>미진열</td>
+                      <td><span class="product_state product_state_end text_bold">판매종료</span></td>
+                      <td>미노출</td>
+                    </tr>
+                    <!-- [end]전시 상품 중 목록에 미노출 되는 경우 1. 노출위치 - 미노출 2. 판매상태 - 판매대기, 판매종료 / 2024.01.22 -->
+                    <tr>
+                      <td><div class="input_type_radio"><input type="radio" name="display" value="1"></div></td>
+                      <td>1
+                        <div class="btn_table_wrap">
+                          <button class="btn_table_top btn_table_top_black"><span class="hidden">오름차정렬</span></button>
+                          <button class="btn_table_bottom btn_table_bottom_black"><span class="hidden">내림차정렬</span></button>
+                        </div>
+                      </td>
+                      <td class="text_bold">D12345</td>
+                      <td><span class="text_overflow text_blue"><a class="text_underline" href="#">배터리인증서 프리미엄 배터리인증서 프리미엄 배터리인증서 프리미엄</a></span></td>
+                      <td>50,000</td>
+                      <td>진열</td>
+                      <td><span class="product_state product_state_ing text_bold">판매중</span></td>
+                      <td>APP/PC</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="btn_wrap btn_sub">
+            <button class="btn_default btn_sky">설정 저장</button>
+          </div>
+
+          <div class="popup_wrap" id="save">
+            <div class="admin_popup">
+              <h3>변경된 순서로 설정하시겠습니까?</h3>
+              <p>저장 시 바로 반영 됩니다.</p>
+              <button class="btn_default btn_sky">저장</button>
+              <button class="btn_default btn_no_border">취소</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

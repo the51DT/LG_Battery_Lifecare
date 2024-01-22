@@ -1,0 +1,113 @@
+/******************************
+ * react-datepicker
+ ******************************/
+.react-datepicker-popper {
+    z-index: 9999 !important;
+}
+
+
+/******************************
+ * react-quill
+ ******************************/
+.ql-editor {
+    min-height: 300px;
+    max-height: 500px;
+}
+
+/******************************
+ * material datagrid
+ ******************************/
+/* 폰트 사이즈 */
+.MuiDataGrid-main {
+    font-size: 12px;
+}
+
+/* 헤더 색상 */
+.MuiDataGrid-columnHeaders  {
+    background-color: #E9EFF5;
+}
+
+/* row 색상 */
+.MuiDataGrid-row {
+    background-color: #FFFFFF;
+}
+
+.MuiDataGrid-row.Mui-selected {
+    /*background: #FFFFFF!important;*/
+}
+
+/* row 색상 변경 */
+.MuiDataGrid-row.new,
+.MuiDataGrid-row.edited {
+    font-weight: bold;
+    background-color: #fffaee!important;
+}
+
+.MuiDataGrid-row.error {
+    font-weight: bold;
+    background-color: #ffbdbd !important;
+}
+
+.MuiDataGrid-row.Mui-selected {
+    background-color: rgba(25, 210, 84, 0.08);
+}
+
+.MuiDataGrid-cell .select-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.MuiDataGrid-cell .button-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.MuiDataGrid-cell .button-wrap .btn {
+    display: inline-block;
+    line-height: 2;
+    font-size: 10px;
+    text-align: center;
+    justify-content: center; /* center the content horizontally */
+    align-items: center; /* center the content vertically */
+}
+
+.MuiDataGrid-cell .button-wrap .btn:not(:last-child) {
+    margin-right: 2px;
+}
+
+.MuiDataGrid-cell .button-wrap .btn:disabled {
+    background: #B4B4B4;
+    border: 1px solid gray;
+}
+
+.MuiDataGrid-cell input,
+.MuiDataGrid-cell select {
+    font-size: 12px;
+    width: 90%;
+    height: 80%;
+    text-align: center;
+    background: transparent;
+    border: 1px solid #BEC9D4;
+    border-radius: 3px;
+
+    -webkit-appearance: none; /* for chrome/safari */
+    -moz-appearance: none; /* for firefox */
+    appearance: none;
+}
+
+/* 카테고리 관리 - 체크박스 영역 */
+.MuiDataGrid-cell .custom_checkbox {
+    width: 15px;
+    appearance: auto;
+}
+
+.MuiDataGrid-cell select::-ms-expand {
+    display:none; /* for IE10, 11 */
+}
+
+/* footer 색상 */
+.MuiDataGrid-footerContainer {
+    background-color: #FFFFFF;
+}
+
