@@ -644,6 +644,9 @@
   align-items: baseline;
   gap: 6px;
 }
+.btn_wrap div span + button {
+  margin-left: 16px;
+}
 .btn_sort {
   justify-content: end;
 }
