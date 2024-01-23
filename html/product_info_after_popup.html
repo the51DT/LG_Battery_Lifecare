@@ -74,7 +74,7 @@
             <div class="sort_wrap">
               <p class="sort_title">상품코드</p>
               <div class="sort_con">
-                <p>등록 후 자동 채번</p>
+                <p class="text_bold">PA00001</p>
               </div>
             </div>
 
@@ -98,16 +98,38 @@
             </div>
 
             <div class="sort_wrap">
+              <div class="sort_double">
+                <p class="sort_title">제휴상품 로고 등록</p>
+                <div class="sort_con">
+                  <div class="input_type_file">
+                    <input type="file">
+                  </div>
+                  <span class="caption sort_caption">jpg, jpeg ,png 파일(<span class="text_red">가로사이즈 * 세로사이즈</span>)로 등록 </span>
+                </div>
+              </div>
+              <div class="sort_double">
+                <p class="sort_title">제휴상품 파일 등록</p>
+                <div class="sort_con">
+                  <div class="input_type_file">
+                    <input type="file">
+                  </div>
+                  <span class="caption sort_caption text_black">등록 완료 : 총 <span>@1000@</span>개</span>
+                  <span class="caption sort_caption">제휴사에서 전달받은 상품코드를 등록해주세요. csv파일 </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
               <p class="sort_title requir">상품사용여부</p>
               <div class="sort_con">
                 <div class="sort_con">
                   <div class="input_type_radio">
-                    <input type="radio" name="product_use" value="use" id="product_use" checked>
-                    <label for="product_use">사용함</label>
+                    <input type="radio" name="product_type" value="normal" id="product_type_normal" checked>
+                    <label for="product_type_normal">사용함</label>
                   </div>
                   <div class="input_type_radio">
-                    <input type="radio" name="product_use" value="not_use" id="product_not_use">
-                    <label for="product_not_use">사용안함</label>
+                    <input type="radio" name="product_type" value="alliance" id="product_type_alliance">
+                    <label for="product_type_alliance">사용안함</label>
                   </div>
                   <span class="caption sort_caption">사용 여부 설정에 따라 전시 상품 설정 목록에 노출/미노출 됩니다.</span>
                 </div>
@@ -156,6 +178,17 @@
             <div class="admin_popup">
               <h3>필수값을 확인하세요</h3>
               <p><span>@항목명@</span> 을 입력하시고 다시 저장해주세요.</p>
+              <button class="btn_default btn_sky">확인</button>
+              <button class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+
+          <div class="popup_wrap on" id="count">
+            <div class="admin_popup">
+              <h3>등록한 상품의 개수를 확인해주세요</h3>
+              <p>파일로 등록된 개수와 실제 등록 개수가<br>
+                차이나는 경우, 파일을 다시 확인하시고<br>
+                다시 등록해주세요. 총 <span>@10000@</span>개</p>
               <button class="btn_default btn_sky">확인</button>
               <button class="btn_close"><span class="hidden">닫기</span></button>
             </div>

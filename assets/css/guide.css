@@ -655,6 +655,9 @@
   border: 1px solid #E8E8E8;
   border-radius: 12px;
 }
+.move_box + .move_box {
+  margin-top: 14px;
+}
 .move_box_top {
   padding: 15px 24px;
   background-color: #F5F7FA;
