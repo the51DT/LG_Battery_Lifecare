@@ -278,6 +278,9 @@
 .admin_wrap select:focus {
   outline: none;
 }
+.admin_wrap select:disabled {
+  background-color: #EFEFEF;
+}
 .admin_wrap input[type="text"] {
   padding: 11px 20px;
   border: 1px solid #E8E8E8;
@@ -316,9 +319,6 @@
 }
 .admin_wrap .table_detail input[type="text"] {
   width: 310px;
-}
-.admin_wrap input[type="text"]:disabled {
-  background: #EFEFEF;
 }
 .admin_wrap .period {
   padding: 10px 21px;
@@ -431,6 +431,9 @@
 }
 .admin_wrap input:focus {
   outline: none;
+}
+.admin_wrap input:disabled {
+  background-color: #EFEFEF;
 }
 .admin_wrap textarea {
   width: 100%;

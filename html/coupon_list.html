@@ -118,8 +118,250 @@
 
       <div class="contents_admin">
         <div class="admin_wrap">
-          <h2 class="admin_title">관리자 카드취소 조회</h2>
-          
+          <h2 class="admin_title">쿠폰 관리</h2>
+
+          <div class="admin_box">
+            <div class="sort_wrap">
+              <p class="sort_title">검색어</p>
+              <div class="sort_con">
+                <select class="sort_select">
+                  <option>선택</option>
+                  <option>쿠폰명</option>
+                  <option>쿠폰번호</option>
+                </select>
+                <input type="text">
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">기간검색</p>
+              <div class="sort_con">
+                <select class="sort_select">
+                  <option>쿠폰 등록일</option>
+                  <option>발행 시작일</option>
+                  <option>발행 종료일</option>
+                </select>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="today" id="today">
+                  <label class="period" for="today">오늘</label>
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="1week" id="1week">
+                  <label class="period" for="1week">1주일</label>
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="1month" id="1month">
+                  <label class="period" for="1month">1개월</label>
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="3month" id="3month" checked>
+                  <label class="period" for="3month">3개월</label>
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="6month" id="6month">
+                  <label class="period" for="6month">6개월</label>
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="1year" id="1year">
+                  <label class="period" for="1year">1년</label>
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="select_day" id="select_day">
+                  <label class="period" for="select_day">기간선택</label>
+                </div>
+                <div class="sort_date">
+                  <input type="date"> ~ <input type="date">
+                </div>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">쿠폰유형</p>
+              <div class="sort_con">
+                <div class="input_type_radio">
+                  <input type="radio" name="coupon_publish" value="all" id="all" checked>
+                  <label for="all">전체</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="coupon_publish" value="manual" id="manual">
+                  <label for="manual">수동 발행</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="coupon_publish" value="automatic" id="automatic">
+                  <label for="automatic">자동 발행</label>
+                  <div class="sub_input">
+                    <span class="bracket_left">(</span>
+                    <div class="input_type_check">
+                      <input type="checkbox" name="coupon_category" value="all" id="all" disabled>
+                      <label for="all">전체</label>
+                    </div>
+                    <div class="input_type_check">
+                      <input type="checkbox" name="coupon_category" value="join" id="join" disabled>
+                      <label for="join">회원가입</label>
+                    </div>
+                    <div class="input_type_check">
+                      <input type="checkbox" name="coupon_category" value="premium" id="premium" disabled>
+                      <label for="premium">프리미엄구독</label>
+                    </div>
+                    <div class="input_type_check">
+                      <input type="checkbox" name="coupon_category" value="friend" id="friend" disabled>
+                      <label for="friend">지인추천</label>
+                    </div>
+                    <div class="input_type_check">
+                      <input type="checkbox" name="coupon_category" value="birthday" id="birthday" disabled>
+                      <label for="birthday">기념일(생일)</label>
+                    </div>
+                    <div class="input_type_check">
+                      <input type="checkbox" name="coupon_category" value="first" id="first" disabled>
+                      <label for="first">첫 구매 고객</label>
+                    </div>
+                    <span class="bracket_right">)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">혜택구분</p>
+              <div class="sort_con">
+                <div class="input_type_radio">
+                  <input type="radio" name="coupon_advantage" value="all" id="all" checked>
+                  <label for="all">전체</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="coupon_advantage" value="amount" id="amount">
+                  <label for="amount">할인금액</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="coupon_advantage" value="rate" id="rate">
+                  <label for="rate">할인율</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="coupon_advantage" value="delivery" id="delivery">
+                  <label for="delivery">배송비 무료</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="coupon_advantage" value="travel" id="travel">
+                  <label for="travel">출장비 무료</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="coupon_advantage" value="specific" id="specific">
+                  <label for="specific">특정상품 무료</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">쿠폰상태</p>
+              <div class="sort_con">
+                <div class="input_type_radio">
+                  <input type="radio" name="coupon_state" value="all" id="all" checked>
+                  <label for="all">전체</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="coupon_state" value="waiting" id="waiting">
+                  <label for="waiting">발행대기</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="coupon_state" value="ing" id="ing">
+                  <label for="ing">발행중</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="coupon_state" value="stop" id="stop">
+                  <label for="stop">발행 중지</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="coupon_state" value="end" id="end">
+                  <label for="end">발행 종료</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn_wrap btn_sort">
+              <button class="btn_default btn_sky">조회</button>
+            </div>
+          </div>
+
+          <div class="btn_wrap btn_collect btn_between">
+            <div>
+              <button class="btn_default btn_white">삭제(회수)</button>
+              <span class="caption btn_caption">쿠폰 선택 후 [삭제(회수)]시, 이미 지급된 쿠폰은 회수되지 않으며 고객이 사용할 수 있습니다.</span>
+            </div>
+            <button class="btn_default btn_sky">쿠폰 등록</button>
+          </div>
+
+          <div class="admin_box">
+            <table class="table_checklist">
+              <thead>
+                <tr>
+                  <th style="width: 40px;"><input type="checkbox"></th>
+                  <th style="width: 137px;">No</th>
+                  <th style="width: 266px;">상품코드
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 170px;">고객명
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 200px;">휴대폰 번호
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 230px;">구매일자
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 190px;">구매상태
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 327px;">구매상품명
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>10</td>
+                  <td><span class="text_underline">제휴사에서 전달한 난수 코드</span></td>
+                  <td><span class="text_overflow">-</span></td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="table_page">
+              <div>Showing 1 to 10 of 13 entries</div>
+              <div class="page_control">
+                <span>Rows per page:</span>
+                <select><option>10</option></select>
+                <span class="text_black">1 - <span class="text_black">10</span></span>
+                <span>&nbsp;of <span>10</span></span>
+                <span class="btn_page">
+                  <button class="btn_page_prev"><span class="hidden">이전</span></button>
+                  <button class="btn_page_next"><span class="hidden">다음</span></button>
+                </span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
