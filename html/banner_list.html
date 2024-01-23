@@ -24,89 +24,90 @@
         <div class="lnb_admin">
           <ul class="menu menu_1dep">
             <li class="list_1dep">
-              <a class="btn_menu" href="/main">대시보드</a>
+              <a class="btn_menu">대시보드</a>
             </li>
             <li class="list_1dep">
-              <a class="btn_menu" href="/main#">서비스 관리</a>
+              <a class="btn_menu">서비스 관리</a>
               <ul class="menu menu_2dep">
                 <li class="list_2dep">
-                  <a class="btn_menu" href="/service/user/list">회원정보 관리</a>
+                  <a class="btn_menu">회원정보 관리</a>
                 </li>
                 <li class="list_2dep">
-                  <a class="btn_menu" href="/service/usage/list">서비스 이용현황</a>
+                  <a class="btn_menu">서비스 이용현황</a>
                 </li>
               </ul>
             </li>
             <li class="list_1dep">
-              <a class="btn_menu" href="/main#">OBD 관리</a>
+              <a class="btn_menu">OBD 관리</a>
               <ul class="menu menu_2dep">
                 <li class="list_2dep">
-                  <a class="btn_menu" href="/device/request/list">신청 현황</a>
+                  <a class="btn_menu">신청 현황</a>
                 </li>
                 <li class="list_2dep">
-                  <a class="btn_menu" href="/device/usage/list">이용 현황</a>
+                  <a class="btn_menu">이용 현황</a>
                 </li>
                 <li class="list_2dep">
-                  <a class="btn_menu" href="/device/return/list">반납 현황</a>
+                  <a class="btn_menu">반납 현황</a>
                 </li>
                 <li class="list_2dep">
-                  <a class="btn_menu" href="/device/exchange/list">교환 현황</a>
+                  <a class="btn_menu">교환 현황</a>
                 </li>
               </ul>
             </li>
             <li class="list_1dep">
-              <a class="btn_menu" href="/main#">지원 차량 관리</a>
+              <a class="btn_menu">지원 차량 관리</a>
               <ul class="menu menu_2dep">
                 <li class="list_2dep">
-                  <a class="btn_menu" href="/support/vehicle/list">지원 차량 목록</a>
+                  <a class="btn_menu">지원 차량 목록</a>
                 </li>
               </ul>
             </li>
             <li class="list_1dep">
-              <a class="btn_menu" href="/main#">프로모션 관리</a>
+              <a class="btn_menu">프로모션 관리</a>
               <ul class="menu menu_2dep">
                 <li class="list_2dep">
-                  <a class="btn_menu" href="/promotion/event/list">이벤트</a>
+                  <a class="btn_menu">이벤트</a>
                 </li>
                 <li class="list_2dep">
-                  <a class="btn_menu" href="/promotion/evlife/list">EV Life</a>
+                  <a class="btn_menu">EV Life</a>
                 </li>
               </ul>
             </li>
             <li class="list_1dep">
-              <a class="btn_menu" href="/main#">고객센터</a>
+              <a class="btn_menu">고객센터</a>
               <ul class="menu menu_2dep">
                 <li class="list_2dep">
-                  <a class="btn_menu" href="/cs/notice/list">공지사항</a>
+                  <a class="btn_menu">공지사항</a>
                 </li>
                 <li class="list_2dep">
-                  <a class="btn_menu" href="/cs/faq/list">FAQ</a>
+                  <a class="btn_menu">FAQ</a>
                 </li>
                 <li class="list_2dep">
-                  <a class="btn_menu" href="/cs/inquiry/list">1:1 문의</a>
+                  <a class="btn_menu">1:1 문의</a>
                 </li>
               </ul>
             </li>
             <li class="list_1dep">
-              <a class="btn_menu" href="/main#">화면 관리</a>
+              <a class="btn_menu">화면 관리</a>
               <ul class="menu menu_2dep">
                 <li class="list_2dep">
-                  <a class="btn_menu" href="/contents/terms/list">약관 관리</a>
+                  <a class="btn_menu">약관 관리</a>
                 </li>
                 <li class="list_2dep">
-                  <a class="btn_menu" href="/contents/category/list">카테고리 관리</a>
+                  <a class="btn_menu">카테고리 관리</a>
+                </li>
+                <li class="list_2dep">
+                  <a class="btn_menu">배너 관리</a>
                 </li>
               </ul>
             </li>
             <li class="list_1dep">
-              <a class="btn_menu" href="/carisyouUnsupportCar">카이즈유 미지원 차량 관리</a>
+              <a class="btn_menu">카이즈유 미지원 차량 관리</a>
             </li>
             <li class="list_1dep">
-              <a class="btn_menu" href="/main#">실험실</a>
+              <a class="btn_menu">실험실</a>
               <ul class="menu menu_2dep">
-                <li class="list_2dep">
-                  <a class="btn_menu" href="/was/prmtcode">프로모션 코드 관리</a>
-                </li>
+                <li class="list_2dep"><a class="btn_menu">프로모션 코드 관리</a></li>
               </ul>
             </li>
           </ul>
@@ -204,45 +205,39 @@
                 <thead>
                   <tr>
                     <th style="width: 40px;"><input type="checkbox"></th>
-                    <th style="width: 92px;">No</th>
-                    <th style="width: 135px;">상품코드</th>
-                    <th style="width: 375px;">상품명
+                    <th style="width: 119px;">No</th>
+                    <th style="width: 158px;">배너 ID</th>
+                    <th style="width: 402px;">배너명
                       <div class="btn_table_wrap">
                         <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                         <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                       </div>
                     </th>
-                    <th style="width: 145px;">원가(원)
+                    <th style="width: 168px;">배너위치
                       <div class="btn_table_wrap">
                         <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                         <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                       </div>
                     </th>
-                    <th style="width: 145px;">공급가(원)
+                    <th style="width: 168px;">게시 건수
                       <div class="btn_table_wrap">
                         <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                         <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                       </div>
                     </th>
-                    <th style="width: 157px;">상품사용여부
+                    <th style="width: 192px;">APP/PC 구분
                       <div class="btn_table_wrap">
                         <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                         <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                       </div>
                     </th>
-                    <th style="width: 135px;">등록개수
+                    <th style="width: 168px;">게시여부
                       <div class="btn_table_wrap">
                         <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                         <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                       </div>
                     </th>
-                    <th style="width: 189px;">상품유형
-                      <div class="btn_table_wrap">
-                        <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
-                        <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
-                      </div>
-                    </th>
-                    <th style="width: 147px;">상품 코드(제휴사용)
+                    <th style="width: 147px;">최신 등록/수정일
                       <div class="btn_table_wrap">
                         <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                         <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
@@ -253,15 +248,58 @@
                 <tbody>
                   <tr>
                     <td><input type="checkbox"></td>
+                    <td>5</td>
+                    <td>m01001</td>
+                    <td><span class="text_overflow text_blue"><a class="text_underline" href="#">메인 배너</a></span></td>
+                    <td>메인(상품)</td>
+                    <td>2건</td>
+                    <td>APP/PC</td>
+                    <td>게시</td>
+                    <td>2024.01.03. 15:00:25</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
                     <td>4</td>
                     <td>m01001</td>
-                    <td><span class="text_overflow text_blue"><a class="text_underline" href="#">배터리인증서배터리인증서배터리인증서배터리인증서배터리</a></span></td>
-                    <td>30,000</td>
-                    <td>30,000</td>
-                    <td>사용함</td>
-                    <td>1,000개</td>
-                    <td>제휴상품 (제휴업체명)</td>
-                    <td><button class=" btn_small">바로가기</button></td>
+                    <td><span class="text_overflow text_blue"><a class="text_underline" href="#">메인 배너2월 예정</a></span></td>
+                    <td>메인(상품)</td>
+                    <td>3건</td>
+                    <td>APP/PC</td>
+                    <td>미게시</td>
+                    <td>2024.01.03. 15:00:25</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>3</td>
+                    <td>m01001</td>
+                    <td><span class="text_overflow text_blue"><a class="text_underline" href="#">메인 이벤트 배너</a></span></td>
+                    <td>메인(이벤트)</td>
+                    <td>2건</td>
+                    <td>APP/PC</td>
+                    <td>게시</td>
+                    <td>2024.01.03. 15:00:25</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>2</td>
+                    <td>m01001</td>
+                    <td><span class="text_overflow text_blue"><a class="text_underline" href="#">스토어 안내</a></span></td>
+                    <td>스토어</td>
+                    <td>2건</td>
+                    <td>APP/PC</td>
+                    <td>게시</td>
+                    <td>2024.01.03. 15:00:25</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>1</td>
+                    <td>m01001</td>
+                    <td><span class="text_overflow text_blue"><a class="text_underline" href="#">주변충전소배너주변충전소배너주변충전소배너주변충전소배너</a></span></td>
+                    <td>주변충전소</td>
+                    <td>1건</td>
+                    <td>미노출</td>
+                    <td>게시</td>
+                    <td>2024.01.03. 15:00:25</td>
                   </tr>
                 </tbody>
               </table>

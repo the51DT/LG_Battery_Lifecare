@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배너 등록/수정</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <div class="admin">
+      <header class="header_admin">
+        <h1>
+          <a href="/"><img alt="B-Lifecare" src="https://stag-bas.batterylifecare.com/_next/static/media/logo.d9215bd2.png"/></a>
+        </h1>
+        <div class="header_tab">
+          <ul>
+            <li><a class="btn_tab" href="#">일반</a></li>
+            <li><a class="btn_tab on" href="#">상품/주문</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="lnb_admin">
+          <ul class="menu menu_1dep">
+            <li class="list_1dep">
+              <a class="btn_menu">대시보드</a>
+            </li>
+            <li class="list_1dep">
+              <a class="btn_menu">서비스 관리</a>
+              <ul class="menu menu_2dep">
+                <li class="list_2dep">
+                  <a class="btn_menu">회원정보 관리</a>
+                </li>
+                <li class="list_2dep">
+                  <a class="btn_menu">서비스 이용현황</a>
+                </li>
+              </ul>
+            </li>
+            <li class="list_1dep">
+              <a class="btn_menu">OBD 관리</a>
+              <ul class="menu menu_2dep">
+                <li class="list_2dep">
+                  <a class="btn_menu">신청 현황</a>
+                </li>
+                <li class="list_2dep">
+                  <a class="btn_menu">이용 현황</a>
+                </li>
+                <li class="list_2dep">
+                  <a class="btn_menu">반납 현황</a>
+                </li>
+                <li class="list_2dep">
+                  <a class="btn_menu">교환 현황</a>
+                </li>
+              </ul>
+            </li>
+            <li class="list_1dep">
+              <a class="btn_menu">지원 차량 관리</a>
+              <ul class="menu menu_2dep">
+                <li class="list_2dep">
+                  <a class="btn_menu">지원 차량 목록</a>
+                </li>
+              </ul>
+            </li>
+            <li class="list_1dep">
+              <a class="btn_menu">프로모션 관리</a>
+              <ul class="menu menu_2dep">
+                <li class="list_2dep">
+                  <a class="btn_menu">이벤트</a>
+                </li>
+                <li class="list_2dep">
+                  <a class="btn_menu">EV Life</a>
+                </li>
+              </ul>
+            </li>
+            <li class="list_1dep">
+              <a class="btn_menu">고객센터</a>
+              <ul class="menu menu_2dep">
+                <li class="list_2dep">
+                  <a class="btn_menu">공지사항</a>
+                </li>
+                <li class="list_2dep">
+                  <a class="btn_menu">FAQ</a>
+                </li>
+                <li class="list_2dep">
+                  <a class="btn_menu">1:1 문의</a>
+                </li>
+              </ul>
+            </li>
+            <li class="list_1dep">
+              <a class="btn_menu">화면 관리</a>
+              <ul class="menu menu_2dep">
+                <li class="list_2dep">
+                  <a class="btn_menu">약관 관리</a>
+                </li>
+                <li class="list_2dep">
+                  <a class="btn_menu">카테고리 관리</a>
+                </li>
+                <li class="list_2dep">
+                  <a class="btn_menu">배너 관리</a>
+                </li>
+              </ul>
+            </li>
+            <li class="list_1dep">
+              <a class="btn_menu">카이즈유 미지원 차량 관리</a>
+            </li>
+            <li class="list_1dep">
+              <a class="btn_menu">실험실</a>
+              <ul class="menu menu_2dep">
+                <li class="list_2dep"><a class="btn_menu">프로모션 코드 관리</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contents_admin">
+          <div class="admin_wrap">
+            <h2 class="admin_title">배너 등록/수정</h2>
+            
+            <div class="admin_box">
+              <div class="sort_wrap">
+                <p class="sort_title requir">배너명</p>
+                <div class="sort_con">
+                  <input type="text" placeholder="글자수 20자 미만, 특수 문자 입력 가능">
+                </div>
+              </div>
+
+              <div class="sort_wrap">
+                <p class="sort_title">배너 코드</p>
+                <div class="sort_con">
+                  <p>등록 후 자동 채번</p>
+                </div>
+              </div>
+
+              <div class="sort_wrap">
+                <p class="sort_title requir">배너위치</p>
+                <div class="sort_con">
+                  <div class="input_type_radio">
+                    <input type="radio" name="position" value="product" id="product" checked>
+                    <label for="product">메인(상품)</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="position" value="event" id="event">
+                    <label for="event">메인(이벤트)</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="position" value="store" id="store">
+                    <label for="store">스토어</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="position" value="around" id="around">
+                    <label for="around">주변충전소</label>
+                  </div>
+                  <span class="caption sort_caption">위치 추가는 개발팀에 문의 필요합니다.</span>
+                </div>
+              </div>
+
+              <div class="sort_wrap">
+                <p class="sort_title requir">배너 게시 여부</p>
+                <div class="sort_con">
+                  <div class="input_type_radio">
+                    <input type="radio" name="posting" value="published" id="published" checked>
+                    <label for="published">게시</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="posting" value="unpublished" id="unpublished">
+                    <label for="unpublished">미게시</label>
+                  </div>
+                  <span class="caption sort_caption">미게시를 선택하시면 해당 위치의 배너가 전체 미노출 됩니다.</span>
+                </div>
+              </div>
+
+              <div class="sort_wrap">
+                <p class="sort_title requir">배너 노출 개수</p>
+                <div class="sort_con">
+                  <div class="sort_con_double">
+                    <select name="banner_number" class="sort_select">
+                      <option>선택 (최대 10개)</option>
+                    </select>
+                    <button class="btn_middle btn_sky">추가</button>
+                    <span class="caption sort_caption">하단에 배너 별 등록할 정보가 노출되며, 배너가 2개 이상 노출되는 경우 자동으로 스와이프 처리됩니다.</span>
+                  </div>
+                  <div class="sort_con_double">
+                    <div class="move_box">
+
+                      <div class="move_box_top">
+                        <div class="box_title">
+                          <h3 class="requir">배너1</h3>
+                          <div class="btn_wrap">
+                            <button class="btn_order btn_down"></button>
+                            <button class="btn_order btn_up"></button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="move_box_bottom">
+
+                        <div class="sort_wrap">
+                          <p class="sort_title">배너설명</p>
+                          <div class="sort_con">
+                            <input type="text" placeholder="글자수 20자 미만, 특수 문자 입력 가능">
+                          </div>
+                        </div>
+
+                        <div class="sort_wrap">
+                          <p class="sort_title requir">플랫폼 노출 설정</p>
+                          <div class="sort_con">
+                            <div class="input_type_radio">
+                              <input type="radio" name="banner1_exposed" value="not_exposed" id="not_exposed">
+                              <label for="not_exposed">미노출</label>
+                            </div>
+                            <div class="input_type_radio">
+                              <input type="radio" name="banner1_exposed" value="exposed" id="exposed" checked>
+                              <label for="exposed">노출</label>
+                              <div class="sub_input">
+                                <span class="bracket_left">(</span>
+                                <div class="input_type_check">
+                                  <input type="checkbox" name="platform" value="app" id="app" checked>
+                                  <label for="app">APP</label>
+                                </div>
+                                <div class="input_type_check">
+                                  <input type="checkbox" name="platform" value="pc" id="pc" checked>
+                                  <label for="pc">PC</label>
+                                </div>
+                                <span class="bracket_right">)</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="sort_wrap">
+                          <p class="sort_title title_top">게시기간</p>
+                          <div class="sort_con">
+                            <div class="sort_con_double">
+                              <div class="input_type_radio">
+                                <input type="radio" name="period_limit" value="no_limit" id="no_limit">
+                                <label for="no_limit">기간 제한 없음</label>
+                              </div>
+                              <div class="input_type_radio">
+                                <input type="radio" name="period_limit" value="limit_setting" id="limit_setting">
+                                <label for="limit_setting">기간 설정</label>
+                              </div>
+                            </div>
+
+                            <div class="sort_con_double">
+                              <div class="sort_date">
+                                <input type="date">
+                                <select class="sort_select">
+                                  <option>00시</option>
+                                </select>
+                                <select class="sort_select">
+                                  <option>00분</option>
+                                </select> ~ 
+                                <input type="date">
+                                <select class="sort_select">
+                                  <option>00시</option>
+                                </select>
+                                <select class="sort_select">
+                                  <option>00분</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="sort_wrap">
+                          <div class="sort_double">
+                            <p class="sort_title">배너 이미지(APP)</p>
+                            <div class="sort_con">
+                              <div class="input_type_file">
+                                <input type="file">
+                              </div>
+                              <span class="caption sort_caption">jpg, jpeg ,png 파일(<span class="text_red">가로사이즈 * 세로사이즈</span>)로 등록 </span>
+                            </div>
+                          </div>
+
+                          <div class="sort_double">
+                            <p class="sort_title">랜딩 URL</p>
+                            <div class="sort_con">
+                              <div class="input_type_radio">
+                                <input type="radio" name="landing_app" value="in" id="in" checked>
+                                <label for="in">내부</label>
+                              </div>
+                              <div class="input_type_radio">
+                                <input type="radio" name="landing_app" value="out" id="out">
+                                <label for="out">내부</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="sort_double">
+                            <p class="sort_title">URL 입력</p>
+                            <div class="sort_con">
+                              <input type="text" placeholder="내부 (딥링크) / 외부경로 입력">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="sort_wrap">
+                          <div class="sort_double">
+                            <p class="sort_title">배너 이미지(PC)</p>
+                            <div class="sort_con">
+                              <div class="input_type_file">
+                                <input type="file">
+                              </div>
+                              <span class="caption sort_caption">jpg, jpeg ,png 파일(<span class="text_red">가로사이즈 * 세로사이즈</span>)로 등록 </span>
+                            </div>
+                          </div>
+
+                          <div class="sort_double">
+                            <p class="sort_title">랜딩 URL</p>
+                            <div class="sort_con">
+                              <div class="input_type_radio">
+                                <input type="radio" name="landing_pc" value="in" id="in" checked>
+                                <label for="in">내부</label>
+                              </div>
+                              <div class="input_type_radio">
+                                <input type="radio" name="landing_pc" value="out" id="out">
+                                <label for="out">내부</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="sort_double">
+                            <p class="sort_title">URL 입력</p>
+                            <div class="sort_con">
+                              <input type="text" placeholder="내부 (딥링크) / 외부경로 입력">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="sort_wrap">
+                          <p class="sort_title">최종 등록/수정일시</p>
+                          <div class="sort_con">
+                            <p>2024.01.05.10:25:02</p>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="move_box">
+
+                      <div class="move_box_top">
+                        <div class="box_title">
+                          <h3 class="requir">배너2</h3>
+                          <div class="btn_wrap">
+                            <button class="btn_order btn_down"></button>
+                            <button class="btn_order btn_up"></button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="move_box_bottom">
+
+                        <div class="sort_wrap">
+                          <p class="sort_title">배너설명</p>
+                          <div class="sort_con">
+                            <input type="text" placeholder="글자수 20자 미만, 특수 문자 입력 가능">
+                          </div>
+                        </div>
+
+                        <div class="sort_wrap">
+                          <p class="sort_title requir">플랫폼 노출 설정</p>
+                          <div class="sort_con">
+                            <div class="input_type_radio">
+                              <input type="radio" name="banner2_exposed" value="not_exposed" id="not_exposed">
+                              <label for="not_exposed">미노출</label>
+                            </div>
+                            <div class="input_type_radio">
+                              <input type="radio" name="banner2_exposed" value="exposed" id="exposed" checked>
+                              <label for="exposed">노출</label>
+                              <div class="sub_input">
+                                <span class="bracket_left">(</span>
+                                <div class="input_type_check">
+                                  <input type="checkbox" name="platform" value="app" id="app" checked>
+                                  <label for="app">APP</label>
+                                </div>
+                                <div class="input_type_check">
+                                  <input type="checkbox" name="platform" value="pc" id="pc">
+                                  <label for="pc">PC</label>
+                                </div>
+                                <span class="bracket_right">)</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="sort_wrap">
+                          <p class="sort_title title_top">게시기간</p>
+                          <div class="sort_con">
+                            <div class="sort_con_double">
+                              <div class="input_type_radio">
+                                <input type="radio" name="period_limit" value="no_limit" id="no_limit">
+                                <label for="no_limit">기간 제한 없음</label>
+                              </div>
+                              <div class="input_type_radio">
+                                <input type="radio" name="period_limit" value="limit_setting" id="limit_setting">
+                                <label for="limit_setting">기간 설정</label>
+                              </div>
+                            </div>
+
+                            <div class="sort_con_double">
+                              <div class="sort_date">
+                                <input type="date">
+                                <select class="sort_select">
+                                  <option>00시</option>
+                                </select>
+                                <select class="sort_select">
+                                  <option>00분</option>
+                                </select> ~ 
+                                <input type="date">
+                                <select class="sort_select">
+                                  <option>00시</option>
+                                </select>
+                                <select class="sort_select">
+                                  <option>00분</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="sort_wrap">
+                          <div class="sort_double">
+                            <p class="sort_title">배너 이미지(APP)</p>
+                            <div class="sort_con">
+                              <div class="input_type_file">
+                                <input type="file">
+                              </div>
+                              <span class="caption sort_caption">jpg, jpeg ,png 파일(<span class="text_red">가로사이즈 * 세로사이즈</span>)로 등록 </span>
+                            </div>
+                          </div>
+
+                          <div class="sort_double">
+                            <p class="sort_title">랜딩 URL</p>
+                            <div class="sort_con">
+                              <div class="input_type_radio">
+                                <input type="radio" name="landing_app" value="in" id="in" checked>
+                                <label for="in">내부</label>
+                              </div>
+                              <div class="input_type_radio">
+                                <input type="radio" name="landing_app" value="out" id="out">
+                                <label for="out">내부</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="sort_double">
+                            <p class="sort_title">URL 입력</p>
+                            <div class="sort_con">
+                              <input type="text" placeholder="내부 (딥링크) / 외부경로 입력">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="sort_wrap">
+                          <p class="sort_title">최종 등록/수정일시</p>
+                          <div class="sort_con">
+                            <p>2024.01.05.10:25:02</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="btn_wrap btn_sub">
+              <button class="btn_default btn_white">목록</button>
+              <button class="btn_default btn_sky">저장</button>
+            </div>
+
+            <div class="popup_wrap" id="retype">
+              <div class="admin_popup">
+                <h3>필수값을 확인하세요</h3>
+                <p><span>@항목명@</span> 을 입력하시고 다시 저장해주세요.</p>
+                <button class="btn_default btn_sky">확인</button>
+              </div>
+            </div>
+
+            <div class="popup_wrap" id="duplication">
+              <div class="admin_popup">
+                <h3>해당 위치에 게시중인 배너가 있습니다</h3>
+                <p>
+                  <span>@배너위치/ 배너명@</span> 이 현재 게시중입니다.<br>
+                  한 위치에 중복하여 배너를 게시할 수 없습니다.<br>
+                  기존에 게시되고 있던 배너를 미게시로 변경하고<br>
+                  해당 배너를 게시하시겠습니까?</p>
+                <button class="btn_default btn_sky">저장</button>
+                <button class="btn_default btn_no_border">취소</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

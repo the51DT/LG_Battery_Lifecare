@@ -271,6 +271,9 @@
 .admin_wrap .page_popup select + select {
   margin-left: 6px;
 }
+.admin_wrap .sort_date select {
+  width: 100px;
+}
 .admin_wrap select:focus {
   outline: none;
 }
@@ -361,7 +364,7 @@
 .admin_wrap input[type="date"] {
   position: relative;
   width: 143px;
-  padding: 13px 24px 13px 0;
+  padding: 13px 24px 12px 0;
   border: 1px solid #E8E8E8;
   border-radius: 4px;
   font-size: 13px;
@@ -491,10 +494,10 @@
 .sort_con_double + .sort_con_double {
   margin-top: 26px;
 }
-.sort_con_double .sort_title {
+/* .sort_con_double .sort_title {
   align-self: center;
   padding: 0;
-}
+} */
 .sort_con_sub + .sort_con_sub {
   margin-top: 18px;
 }
@@ -534,6 +537,12 @@
 }
 .sort_price {
   width: 100%;
+}
+.sort_date {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 .sort_option + .sort_date {
   margin-left: 10px;
@@ -639,6 +648,22 @@
   gap: 6px;
   margin-left: 16px;
 }
+.move_box {
+  width: 100%;
+  border: 1px solid #E8E8E8;
+  border-radius: 12px;
+}
+.move_box_top {
+  padding: 15px 24px;
+  background-color: #F5F7FA;
+}
+.move_box .box_title .btn_wrap {
+  margin-left: 8px;
+  gap: 4px;
+}
+.move_box .move_box_bottom {
+  padding: 20px 24px;
+}
 .btn_wrap {
   display: flex;
   align-items: baseline;
@@ -722,7 +747,9 @@
   color: #FFF;
 }
 .btn_sky {
+  border: none;
   background: #00BCE5;
+  color: #FFF;
 }
 .btn_white {
   background: #FFF;
