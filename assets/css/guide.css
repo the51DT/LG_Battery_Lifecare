@@ -314,6 +314,7 @@
   text-align: right;
 }
 .admin_wrap input[type="text"].sub_text_small {
+  flex-shrink: 0;
   text-align: right;
   max-width: 143px;
 }
@@ -433,6 +434,7 @@
   outline: none;
 }
 .admin_wrap input:disabled {
+  color: #A2A2A2;
   background-color: #EFEFEF;
 }
 .admin_wrap textarea {
@@ -498,10 +500,17 @@
 .sort_con_double + .sort_con_double {
   margin-top: 26px;
 }
-/* .sort_con_double .sort_title {
+.sort_con_sub {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+.sort_con_sub .sort_title {
   align-self: center;
   padding: 0;
-} */
+}
 .sort_con_sub + .sort_con_sub {
   margin-top: 18px;
 }
@@ -726,6 +735,10 @@
   background-size: cover;
 }
 
+.input_type_check button,
+.input_type_radio button {
+  margin-left: 16px;
+}
 .btn_default {
   width: 162px;
   padding: 14px;
@@ -737,7 +750,8 @@
   text-align: center;
 }
 .btn_middle {
-  padding: 14px 36px;
+  width: 120px;
+  padding: 13px;
   border-radius: 4px;
   border: 1px solid #1E1E1E;
   background: #FFF;
@@ -747,6 +761,14 @@
 }
 .btn_small {
   min-width: 70px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: #1E1E1E;
+  font-size: 13px;
+  font-weight: 700;
+  color: #FFF;
+}
+.btn_fit {
   padding: 8px 12px;
   border-radius: 4px;
   background: #1E1E1E;
@@ -813,10 +835,27 @@
   background-position: center center;
   vertical-align: bottom;
 }
+.btn_accordion.on::after {
+  transform: rotate(180deg);
+}
+.accordion_wrap {
+  display: none;
+  margin-top: 32px;
+}
+.accordion_wrap.on {
+  display: block;
+}
+.btn_m_l {
+  margin-left: 8px;
+}
 .btn_table_wrap {
   position: relative;
+  /* position: absolute;
+  top: 50%;
+  transform: translateY(-140%); */
   height: 12px;
   width: 6px;
+  margin: auto 0;
   margin-left: 6px;
   display: inline-block;
   vertical-align: middle;
@@ -904,9 +943,6 @@
   margin: 13px auto 24px;
   font-size: 14px;
   line-height: 20px;
-}
-.admin_popup button {
-  width: 120px;
 }
 .page_popup {
   position: relative;
@@ -996,11 +1032,15 @@
   color: #7C7C7C;
 }
 .table_checklist th {
+  position: relative;
+  line-height: 18px;
   text-align: left;
   padding-bottom: 20px;
   border-bottom: 1px solid #E8E8E8;
+  vertical-align: middle;
 }
 .table_checklist td {
+  line-height: 18px;
   padding: 20px 0;
   border-bottom: 1px solid #E8E8E8;
 }
@@ -1067,6 +1107,8 @@
   display: block;
   position: absolute;
   left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 10px;
   height: 10px;
   border-radius: 99px;

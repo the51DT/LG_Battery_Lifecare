@@ -295,38 +295,56 @@
               <thead>
                 <tr>
                   <th style="width: 40px;"><input type="checkbox"></th>
-                  <th style="width: 137px;">No</th>
-                  <th style="width: 266px;">상품코드
+                  <th style="width: 65px;">No</th>
+                  <th style="width: 128px;">쿠폰ID
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 170px;">고객명
+                  <th style="width: 348px;">쿠폰명
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 200px;">휴대폰 번호
+                  <th style="width: 188px;">할인 유형
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 230px;">구매일자
+                  <th style="width: 168px;">사용기간
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 190px;">구매상태
+                  <th style="width: 128px;">총 발행 수<br>잔여 쿠폰 수
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 327px;">구매상품명
+                  <th style="width: 110px;">쿠폰유형
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 160px;">쿠폰상태
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 140px;">쿠폰 발송 관리
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 85px;">설정
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
@@ -338,12 +356,132 @@
                 <tr>
                   <td><input type="checkbox"></td>
                   <td>10</td>
-                  <td><span class="text_underline">제휴사에서 전달한 난수 코드</span></td>
-                  <td><span class="text_overflow">-</span></td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
+                  <td><span class="text_underline">ABCD1234EE</span></td>
+                  <td><span class="text_overflow text_underline">신규가입 쿠폰</span></td>
+                  <td><span class="text_bold">할인금액</span><br>(3000원)</td>
+                  <td>2023-10-14 00:00 ~<br>2999-10-14 00:00</td>
+                  <td>56,548<br>25,451</td>
+                  <td>자동 발행</td>
+                  <td>발행중</td>
+                  <td><button class="btn_small btn_border">내역보기</button></td>
+                  <td><button class="btn_fit btn_border">복사</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>9</td>
+                  <td><span class="text_underline">ABCD1234EE</span></td>
+                  <td><span class="text_overflow text_underline">ESG 실천 이벤트</span></td>
+                  <td><span class="text_bold">할인금액</span><br>(3000원)</td>
+                  <td>2023-10-14 00:00 ~<br>2999-10-14 00:00</td>
+                  <td>56,548<br>25,451</td>
+                  <td>자동 발행</td>
+                  <td><span class="text_red">발행 중지</span></td>
+                  <td><button class="btn_small btn_border">내역보기</button></td>
+                  <td><button class="btn_fit btn_border">복사</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>8</td>
+                  <td><span class="text_underline">ABCD1234EE</span></td>
+                  <td><span class="text_overflow text_underline">지인추천 이벤트</span></td>
+                  <td><span class="text_bold">할인금액</span><br>(3000원)</td>
+                  <td>2023-10-14 00:00 ~<br>2999-10-14 00:00</td>
+                  <td>56,548<br>-</td>
+                  <td>수동 발행</td>
+                  <td>발행 대기</td>
+                  <td><button class="btn_small btn_border">내역보기</button></td>
+                  <td><button class="btn_fit btn_border">복사</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>7</td>
+                  <td><span class="text_underline">ABCD1234EE</span></td>
+                  <td><span class="text_overflow text_underline">웰컴 EV Life_충전권</span></td>
+                  <td><span class="text_bold">특정상품 무료</span><br>(배터리인증서 스탠다드)</td>
+                  <td>2023-10-14 00:00 ~<br>2999-10-14 00:00</td>
+                  <td>56,548<br>25,451</td>
+                  <td>자동 발행</td>
+                  <td>발행 종료</td>
+                  <td><button class="btn_small btn_border">내역보기</button></td>
+                  <td><button class="btn_fit btn_border">복사</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>6</td>
+                  <td><span class="text_underline">ABCD1234EE</span></td>
+                  <td><span class="text_overflow text_underline">배송비 무료 쿠폰</span></td>
+                  <td><span class="text_bold">배송비 무료</span><br>(OBD 배송 1회 무료)</td>
+                  <td>2023-10-14 00:00 ~<br>2999-10-14 00:00</td>
+                  <td>56,548<br>25,451</td>
+                  <td>수동 발행</td>
+                  <td>발행중<button class="btn_small btn_sky btn_m_l">발송하기</button></td>
+                  <td><button class="btn_small btn_border">내역보기</button></td>
+                  <td><button class="btn_fit btn_border">복사</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>5</td>
+                  <td><span class="text_underline">ABCD1234EE</span></td>
+                  <td><span class="text_overflow text_underline">웰컴 EV Life_충전권</span></td>
+                  <td><span class="text_bold">특정상품 무료</span><br>(배터리인증서 스탠다드)</td>
+                  <td>2023-10-14 00:00 ~<br>2999-10-14 00:00</td>
+                  <td>56,548<br>25,451</td>
+                  <td>자동 발행</td>
+                  <td>발행 종료</td>
+                  <td><button class="btn_small btn_border">내역보기</button></td>
+                  <td><button class="btn_fit btn_border">복사</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>4</td>
+                  <td><span class="text_underline">ABCD1234EE</span></td>
+                  <td><span class="text_overflow text_underline">8월 이벤트</span></td>
+                  <td><span class="text_bold">할인금액</span><br>(5000원)</td>
+                  <td>2023-10-14 00:00 ~<br>2999-10-14 00:00</td>
+                  <td>56,548<br>-1</td>
+                  <td>수동 발행</td>
+                  <td>발행 대기</td>
+                  <td><button class="btn_small btn_border">내역보기</button></td>
+                  <td><button class="btn_fit btn_border">복사</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>3</td>
+                  <td><span class="text_underline">ABCD1234EE</span></td>
+                  <td><span class="text_overflow text_underline">7월 이벤트</span></td>
+                  <td><span class="text_bold">할인금액</span><br>(5000원)</td>
+                  <td>2023-10-14 00:00 ~<br>2999-10-14 00:00</td>
+                  <td>56,548<br>25,451</td>
+                  <td>수동 발행</td>
+                  <td>발행중<button class="btn_small btn_sky btn_m_l">발송하기</button></td>
+                  <td><button class="btn_small btn_border">내역보기</button></td>
+                  <td><button class="btn_fit btn_border">복사</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>2</td>
+                  <td><span class="text_underline">ABCD1234EE</span></td>
+                  <td><span class="text_overflow text_underline">CS 쿠폰</span></td>
+                  <td><span class="text_bold">할인율</span><br>(5%)</td>
+                  <td>2023-10-14 00:00 ~<br>2999-10-14 00:00</td>
+                  <td>56,548<br>25,451</td>
+                  <td>수동 발행</td>
+                  <td>발행종료</td>
+                  <td><button class="btn_small btn_border">내역보기</button></td>
+                  <td><button class="btn_fit btn_border">복사</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>1</td>
+                  <td><span class="text_underline">ABCD1234EE</span></td>
+                  <td><span class="text_overflow text_underline">일렉베리 제휴용 발급 일렉베리 제휴용 발급 일렉베리 제휴용 발급</span></td>
+                  <td><span class="text_bold">특정상품 무료</span><br>(배터리인증서 프리미엄)</td>
+                  <td>2023-10-14 00:00 ~<br>2999-10-14 00:00</td>
+                  <td>56,548<br>25,451</td>
+                  <td>수동 발행</td>
+                  <td>발행중</td>
+                  <td><button class="btn_small btn_border">내역보기</button></td>
+                  <td><button class="btn_fit btn_border">복사</button></td>
                 </tr>
               </tbody>
             </table>

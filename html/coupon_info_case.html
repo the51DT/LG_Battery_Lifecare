@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>쿠폰 등록/수정 - 기본정보</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="admin">
+    <header class="header_admin">
+      <h1>
+        <a href="/"><img alt="B-Lifecare" src="https://stag-bas.batterylifecare.com/_next/static/media/logo.d9215bd2.png"/></a>
+      </h1>
+      <div class="header_tab">
+        <ul>
+          <li><a class="btn_tab on" href="#">일반</a></li>
+          <li><a class="btn_tab" href="#">상품/주문</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="lnb_admin">
+        <ul class="menu menu_1dep">
+          <li class="list_1dep">
+            <a class="btn_menu">대시보드</a>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">서비스 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">회원정보 관리</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">서비스 이용현황</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">OBD 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">신청 현황</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">이용 현황</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">반납 현황</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">교환 현황</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">지원 차량 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">지원 차량 목록</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">프로모션 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">이벤트</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">EV Life</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">쿠폰 관리</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">고객센터</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">공지사항</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">FAQ</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">1:1 문의</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">화면 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">약관 관리</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">카테고리 관리</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">배너 관리</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">카이즈유 미지원 차량 관리</a>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">실험실</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">프로모션 코드 관리</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contents_admin">
+        <div class="admin_wrap">
+          <h2 class="admin_title">쿠폰 등록/수정</h2>
+
+          <div class="admin_tab">
+            <p class="on">기본정보</p>
+            <p>수동쿠폰 발송 관리</p>
+            <p>발송내역 조회</p>
+          </div>
+
+          <div class="admin_box">
+            <div class="box_title">
+              <h3>기본 정보</h3>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title requir">쿠폰명</p>
+              <div class="sort_con">
+                <input type="text" placeholder="쿠폰명을 입력해주세요">
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">쿠폰설명</p>
+              <div class="sort_con">
+                <input class="sort_text" type="text" placeholder="최대 100자까지 입력가능, 특수문자">
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">쿠폰명</p>
+              <div class="sort_con">
+                <input type="text" placeholder="ABCD1234EE" disabled>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap btn_collect">
+            <button class="btn_default">발행 중지</button>
+            <button class="btn_default">발행 종료</button>
+          </div>
+
+          <div class="admin_box">
+            <div class="box_title">
+              <h3>발행 조건</h3>
+              <span class="caption">쿠폰이 발행되는 조건을 설정할 수 있고, 해당 쿠폰이 제공하는 혜택을 선택할 수 있습니다.</span>
+            </div>
+            
+            <div class="sort_wrap">
+              <p class="sort_title title_top requir">쿠폰유형</p>
+              <div class="sort_con">
+                <div class="sort_con_double">
+                  <div class="input_type_radio">
+                    <input type="radio" name="publish" value="manual" id="manual">
+                    <label for="manual">수동 발행</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="publish" value="automatic" id="automatic" checked>
+                    <label for="automatic">자동 발행</label>
+                  </div>
+                </div>
+
+                <div class="sort_con_double">
+                  <div class="sort_con_sub">
+                    <select class="sort_select">
+                      <option>자동 발행 조건 선택</option>
+                      <option>회원가입 시</option>
+                      <option>프리미엄구독 시</option>
+                      <option>프로모션 코드</option>
+                      <option selected>특정상품 구매 시</option>
+                      <option>생일 쿠폰 (7일 전 발송)</option>
+                      <option>첫 구매 고객</option>
+                    </select>
+                    <button class="btn_middle">전시상품 선택</button>
+                    <span class="caption input_caption">(2)건 선택</span>
+                  </div>
+                </div>
+
+                <div class="sort_con_double">
+                  <table class="table_list">
+                    <thead>
+                      <tr>
+                        <th width="145px">전시카테고리</th>
+                        <th width="145px">전시상품코드</th>
+                        <th width="635px">전시상품명</th>
+                        <th width="139px">판매 최종가</th>
+                        <th width="125px">상품유형</th>
+                        <th width="125px">결제방법</th>
+                        <th width="90px"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>배터리인증서</td>
+                        <td><span class="text_bold">DC001</span></td>
+                        <td><span class="text_overflow">배터리 인증서 3개월 이용권</span></td>
+                        <td>50,000</td>
+                        <td>일반상품</td>
+                        <td>정기결제</td>
+                        <td><button class="btn_small">삭제</button></td>
+                      </tr>
+                      <tr>
+                        <td>배터리인증서</td>
+                        <td><span class="text_bold">D12345</span></td>
+                        <td><span class="text_overflow">배터리 인증서 프리미엄배터리 인증서 프리미엄배터리 인증서 프리미엄배터리 인증서 프리미엄배터리 인증서 프리미엄</span></td>
+                        <td>30,000</td>
+                        <td>제휴상품</td>
+                        <td>일반결제</td>
+                        <td><button class="btn_small">삭제</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">할인 설정</p>
+              <div class="sort_con">
+                <select class="sort_select">
+                  <option>할인금액</option>
+                  <option selected>할인율</option>
+                  <option>배송비 무료</option>
+                  <option>출장비 무료</option>
+                  <option>특정상품 무료</option>
+                </select>
+                <input class="sub_text_small" type="text" placeholder="숫자만 입력"><span class="input_caption">장</span>
+              </div>
+              <p class="sort_title">할인 설정</p>
+              <div class="sort_con">
+                <select class="sort_select">
+                  <option>할인금액</option>
+                  <option>할인율</option>
+                  <option selected>배송비 무료</option>
+                  <option>출장비 무료</option>
+                  <option>특정상품 무료</option>
+                </select>
+                <span class="caption text_black">데이터분석장치 배송 1회 무료</span>
+              </div>
+              <p class="sort_title">할인 설정</p>
+              <div class="sort_con">
+                <select class="sort_select">
+                  <option>할인금액</option>
+                  <option>할인율</option>
+                  <option>배송비 무료</option>
+                  <option selected>출장비 무료</option>
+                  <option>특정상품 무료</option>
+                </select>
+                <span class="caption text_black">데이터분석장치 출장 설치 1회 무료</span>
+              </div>
+              <p class="sort_title">할인 설정</p>
+              <div class="sort_con">
+                <select class="sort_select">
+                  <option>할인금액</option>
+                  <option>할인율</option>
+                  <option>배송비 무료</option>
+                  <option>출장비 무료</option>
+                  <option selected>특정상품 무료</option>
+                </select>
+                <button class="btn_middle">전시상품 선택</button>
+                <div class="tag_wrap">
+                  <span class="tag">배터리인증서<button class="tag_del"><span class="hidden">삭제</span></button></span>
+                  <span class="tag">제휴상품<button class="tag_del"><span class="hidden">삭제</span></button></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin_box">
+            <div class="box_title">
+              <h3>사용 조건</h3>
+              <span class="caption">고객이 쿠폰을 사용 할 때 적용할 조건을 설정할 수 있습니다.</span>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">사용 기간</p>
+              <div class="sort_con">
+                <select class="sort_select">
+                  <option>기간 설정</option>
+                  <option selected>쿠폰 발급일 기준</option>
+                  <input class="sub_text_small" type="text" placeholder="숫자만 입력">
+                  <span class="caption text_black">일 간 사용가능(최대 365일)</span>
+                </select>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title title_top">쿠폰적용 상품</p>
+              <div class="sort_con">
+                <div class="sort_con_double">
+                  <div class="input_type_radio">
+                    <input type="radio" name="product" value="all" id="all">
+                    <label for="all">전체상품</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="product" value="specific" id="specific" checked>
+                    <label for="specific">특정상품</label>
+                    <button class="btn_middle">전시상품 선택</button>
+                    <span class="caption input_caption text_black">(2)건 선택</span>
+                    <span class="caption input_caption">고객의 사용조건으로 특정 상품에만 쿠폰을 사용할 수 있도록 설정할 수 있습니다. 예)배터리 인증서 프리미엄 결제 시 적용</span>
+                  </div>
+                </div>
+
+                <div class="sort_con_double">
+                  <table class="table_list">
+                    <thead>
+                      <tr>
+                        <th width="145px">전시카테고리</th>
+                        <th width="145px">전시상품코드</th>
+                        <th width="635px">전시상품명</th>
+                        <th width="139px">판매 최종가</th>
+                        <th width="125px">상품유형</th>
+                        <th width="125px">결제방법</th>
+                        <th width="90px"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>배터리인증서</td>
+                        <td><span class="text_bold">DC001</span></td>
+                        <td><span class="text_overflow">배터리 인증서 3개월 이용권</span></td>
+                        <td>50,000</td>
+                        <td>일반상품</td>
+                        <td>정기결제</td>
+                        <td><button class="btn_small">삭제</button></td>
+                      </tr>
+                      <tr>
+                        <td>배터리인증서</td>
+                        <td><span class="text_bold">D12345</span></td>
+                        <td><span class="text_overflow">배터리 인증서 프리미엄배터리 인증서 프리미엄배터리 인증서 프리미엄배터리 인증서 프리미엄배터리 인증서 프리미엄</span></td>
+                        <td>30,000</td>
+                        <td>제휴상품</td>
+                        <td>일반결제</td>
+                        <td><button class="btn_small">삭제</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">사용가능 기준 금액</p>
+              <div class="sort_con">
+                <div class="input_type_radio">
+                  <input type="radio" name="price" value="no" id="no" checked>
+                  <label for="no">제한없음</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="price" value="limit" id="limit">
+                  <label for="limit">상품금액기준</label>
+                  <input class="sub_text_small" type="text" placeholder="숫자만 입력" disabled>
+                  <span class="caption input_caption text_black">원 이상 구매 시 (판매 최종가 보다 낮은 금액 입력)</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="admin_box">
+            <div class="box_title">
+              <h3>쿠폰 정보</h3>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">이미지 설정</p>
+              <div class="sort_con">
+                <div class="input_type_radio">
+                  <input type="radio" name="image" value="default" id="default">
+                  <label for="default">기본 이미지 사용</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="image" value="self" id="self" checked>
+                  <label for="self">직접 업로드</label>
+                  <button class="btn_middle">파일 올리기</button>
+                  <span class="caption input_caption">Size : 216*105 / 이미지 파일 크기 : 최대 500KB / 업로드 가능 확장자 : .jpg, .jpeg, .gif, .png</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title title_center">이미지 미리보기</p>
+              <div class="sort_con">
+                <img src="https://via.placeholder.com/400x300/D9D9D9/1E1E1E" alt="이미지 미리보기">
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title title_center">쿠폰 유의사항</p>
+              <div class="sort_con">
+                <textarea></textarea>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="btn_wrap btn_sub">
+            <button class="btn_default btn_white">목록</button>
+            <button class="btn_default btn_sky">등록/수정</button>
+          </div>
+
+          <div class="popup_wrap" id="done">
+            <div class="admin_popup">
+              <h3>등록 완료</h3>
+              <p>쿠폰 등록이 완료 되었습니다.</p>
+              <button class="btn_middle btn_sky">확인</button>
+              <button class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+
+          <div class="popup_wrap" id="send">
+            <div class="admin_popup">
+              <h3>등록 완료</h3>
+              <p>쿠폰 등록이 완료 되었습니다.</p>
+              <button class="btn_middle btn_white">쿠폰 발송하기</button>
+              <button class="btn_middle btn_sky">확인</button>
+              <button class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+
+          <div class="popup_wrap" id="add">
+            <div class="page_popup">
+              <div class="box_title">
+                <h3>전시상품 추가</h3>
+              </div>
+              <div class="admin_box">
+                <div class="sort_wrap">
+                  <p class="sort_title">검색어</p>
+                  <div class="sort_con">
+                    <select name="product_name" class="sort_select">
+                      <option>전시 상품명</option>
+                      <option>전시상품코드</option>
+                    </select>
+                    <input type="text">
+                  </div>
+                </div>
+
+                <div class="sort_wrap">
+                  <p class="sort_title">기간검색</p>
+                  <div class="sort_con">
+                    <div class="sort_option">
+                      <input type="radio" name="period" value="1month" id="1month">
+                      <label class="period" for="1month">1개월</label>
+                    </div>
+                    <div class="sort_option">
+                      <input type="radio" name="period" value="3month" id="3month" checked>
+                      <label class="period" for="3month">3개월</label>
+                    </div>
+                    <div class="sort_option">
+                      <input type="radio" name="period" value="6month" id="6month">
+                      <label class="period" for="6month">6개월</label>
+                    </div>
+                    <div class="sort_option">
+                      <input type="radio" name="period" value="1year" id="1year">
+                      <label class="period" for="1year">1년</label>
+                    </div>
+                    <div class="sort_option">
+                      <input type="radio" name="period" value="select_day" id="select_day">
+                      <label class="period" for="select_day">기간선택</label>
+                    </div>
+                    <div class="sort_date">
+                      <input type="date"> ~ <input type="date">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sort_wrap">
+                  <p class="sort_title">상품 노출 상태</p>
+                  <div class="sort_con">
+                    <div class="input_type_radio">
+                      <input type="radio" name="product_exposure" value="all" id="all" checked>
+                      <label for="all">전체</label>
+                    </div>
+                    <div class="input_type_radio">
+                      <input type="radio" name="product_exposure" value="waiting" id="waiting">
+                      <label for="waiting">판매대기</label>
+                    </div>
+                    <div class="input_type_radio">
+                      <input type="radio" name="product_exposure" value="ing" id="ing">
+                      <label for="ing">판매중</label>
+                    </div>
+                    <div class="input_type_radio">
+                      <input type="radio" name="product_exposure" value="end" id="end">
+                      <label for="end">판매종료</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="btn_wrap btn_sort">
+                  <button class="btn_default btn_sky">검색</button>
+                </div>
+              </div>
+
+              <div class="btn_wrap btn_collect btn_between">
+                <span class="text_bold">총 <span>N</span>개</span>
+              </div>
+
+              <div class="admin_box">
+                <div class="table_scroll">
+                  <table class="table_checklist">
+                    <thead>
+                      <tr>
+                        <th style="width: 40px;"><input type="checkbox"></th>
+                        <th style="width: 37px;">No</th>
+                        <th style="width: 108px;">전시 카테고리
+                          <div class="btn_table_wrap">
+                            <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                            <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                          </div>
+                        </th>
+                        <th style="width: 80px;">상품코드
+                          <div class="btn_table_wrap">
+                            <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                            <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                          </div>
+                        </th>
+                        <th style="width: 112px;">전시 상품명
+                          <div class="btn_table_wrap">
+                            <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                            <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                          </div>
+                        </th>
+                        <th style="width: 92px;">판매최종가
+                          <div class="btn_table_wrap">
+                            <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                            <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                          </div>
+                        </th>
+                        <th style="width: 80px;">판매상태
+                          <div class="btn_table_wrap">
+                            <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                            <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                          </div>
+                        </th>
+                        <th style="width: 110px;">구매 가능 개수
+                          <div class="btn_table_wrap">
+                            <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                            <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                          </div>
+                        </th>
+                        <th style="width: 80px;">결제방법
+                          <div class="btn_table_wrap">
+                            <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                            <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                          </div>
+                        </th>
+                        <th style="width: 123px;">플랫폼 노출 위치
+                          <div class="btn_table_wrap">
+                            <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                            <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>4</td>
+                        <td>배터리인증서</td>
+                        <td class="text_bold">DC001</td>
+                        <td><span class="text_overflow text_blue"><a class="text_underline" href="#">배터리인증서 3개월 이용권</a></span></td>
+                        <td>45,000</td>
+                        <td><span class="product_state product_state_ing text_bold">판매중</span></td>
+                        <td>제한없음</td>
+                        <td>정기결제</td>
+                        <td>APP/PC</td>
+                      </tr>
+                      <!-- [start]App 노출상태가 [미노출]일 경우, 선택 불가 처리 또는 해당 리스트에 미노출 해야 함 / 2024.01.24 -->
+                      <!-- <tr>
+                        <td><input type="checkbox"></td>
+                        <td>3</td>
+                        <td>배터리인증서</td>
+                        <td class="text_bold">D12357</td>
+                        <td><span class="text_overflow text_blue"><a class="text_underline" href="#">배터리인증서 온도 감지</a></span></td>
+                        <td>1,200</td>
+                        <td><span class="product_state product_state_waiting text_bold">판매대기</span></td>
+                        <td>제한없음</td>
+                        <td>일반결제</td>
+                        <td>미노출</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>2</td>
+                        <td>제휴</td>
+                        <td class="text_bold">D12153</td>
+                        <td><span class="text_overflow text_blue"><a class="text_underline" href="#">세차 이용권 (3만원)</a></span></td>
+                        <td>990</td>
+                        <td><span class="product_state product_state_end text_bold">판매종료</span></td>
+                        <td>985개</td>
+                        <td>일반결제</td>
+                        <td>미노출</td>
+                      </tr> -->
+                      <!-- [end]App 노출상태가 [미노출]일 경우, 선택 불가 처리 또는 해당 리스트에 미노출 해야 함 / 2024.01.24 -->
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>1</td>
+                        <td>배터리인증서</td>
+                        <td class="text_bold">D12345</td>
+                        <td><span class="text_overflow text_blue"><a class="text_underline" href="#">배터리인증서 프리미엄</a></span></td>
+                        <td>50,000</td>
+                        <td><span class="product_state product_state_ing text_bold">판매중</span></td>
+                        <td>제한없음</td>
+                        <td>일반결제</td>
+                        <td>노출</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="btn_wrap btn_sub btn_center">
+                <button class="btn_default btn_white">닫기</button>
+                <button class="btn_default btn_sky">선택</button>
+              </div>
+
+              <button class="btn_close"><span class="hidden">close</span></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

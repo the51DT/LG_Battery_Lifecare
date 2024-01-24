@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>쿠폰 발송 관리 - 발송내역 조회</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="admin">
+    <header class="header_admin">
+      <h1>
+        <a href="/"><img alt="B-Lifecare" src="https://stag-bas.batterylifecare.com/_next/static/media/logo.d9215bd2.png"/></a>
+      </h1>
+      <div class="header_tab">
+        <ul>
+          <li><a class="btn_tab on" href="#">일반</a></li>
+          <li><a class="btn_tab" href="#">상품/주문</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="lnb_admin">
+        <ul class="menu menu_1dep">
+          <li class="list_1dep">
+            <a class="btn_menu">대시보드</a>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">서비스 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">회원정보 관리</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">서비스 이용현황</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">OBD 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">신청 현황</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">이용 현황</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">반납 현황</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">교환 현황</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">지원 차량 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">지원 차량 목록</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">프로모션 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">이벤트</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">EV Life</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">쿠폰 관리</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">고객센터</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">공지사항</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">FAQ</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">1:1 문의</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">화면 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">약관 관리</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">카테고리 관리</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">배너 관리</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">카이즈유 미지원 차량 관리</a>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">실험실</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">프로모션 코드 관리</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contents_admin">
+        <div class="admin_wrap">
+          <h2 class="admin_title">쿠폰 등록/수정</h2>
+
+          <div class="admin_tab">
+            <p>기본정보</p>
+            <p>수동쿠폰 발송 관리</p>
+            <p class="on">발송내역 조회</p>
+          </div>
+
+          <div class="admin_box">
+            <div class="box_title">
+              <h3>쿠폰 정보</h3>
+              <span class="btn_accordion text_bold">접기</span>
+            </div>
+
+            <div class="accordion_wrap on">
+              <div class="sort_wrap">
+                <p class="sort_title sort_info">쿠폰번호</p>
+                <div class="sort_con">
+                  <p>ABCD1234EE</p>
+                </div>
+              </div>
+              <div class="sort_wrap">
+                <p class="sort_title sort_info">생성 일자</p>
+                <div class="sort_con">
+                  <p>2023-10-14 15:13:15</p>
+                </div>
+              </div>
+              <div class="sort_wrap">
+                <p class="sort_title sort_info">쿠폰명</p>
+                <div class="sort_con">
+                  <p>신규가입 쿠폰</p>
+                </div>
+              </div>
+              <div class="sort_wrap">
+                <p class="sort_title sort_info">쿠폰설명</p>
+                <div class="sort_con">
+                  <p>상시진단_1년 무료 이용권</p>
+                </div>
+              </div>
+              <div class="sort_wrap">
+                <p class="sort_title sort_info">할인정보</p>
+                <div class="sort_con">
+                  <p>특정상품 무료(상시진단_1년 무료 이용권)</p>
+                </div>
+              </div>
+              <div class="sort_wrap">
+                <p class="sort_title sort_info">쿠폰유형</p>
+                <div class="sort_con">
+                  <p>자동발행 (회원가입 시)</p>
+                </div>
+              </div>
+              <div class="sort_wrap">
+                <p class="sort_title sort_info">쿠폰사용기간</p>
+                <div class="sort_con">
+                  <p>2023-10-14 00:00 ~ 2999-10-14 00:00</p>
+                </div>
+              </div>
+              <div class="sort_wrap">
+                <p class="sort_title sort_info">전체 발급/사용내역</p>
+                <div class="sort_con">
+                  <p>발급 쿠폰수 : 56,548 장 / (사용 쿠폰 수 : 3,450장 / 미사용 쿠폰수 : 53,098장)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin_box">
+            <div class="box_title">
+              <h3>발송 내역 상세 조회</h3>
+              <span class="caption">제휴처 쿠폰으로 발행된 경우, APP에서 사용자가 쿠폰을 등록해야 확인 가능합니다.</span>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">회원선택</p>
+              <div class="sort_con">
+                <select class="sort_select">
+                  <option>고객명</option>
+                  <option>고객 ID</option>
+                  <option>휴대폰 번호</option>
+                  <option>차량번호</option>
+                </select>
+                <input type="text" placeholder="검색어를 입력하세요">
+              </div>
+            </div>
+            <div class="sort_wrap">
+              <p class="sort_title">발급일자</p>
+              <div class="sort_con">
+                <div class="sort_date">
+                  <input type="date"> ~ <input type="date">
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="today" id="today">
+                  <label class="period" for="today">오늘</label>
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="1week" id="1week">
+                  <label class="period" for="1week">1주일</label>
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="1month" id="1month" checked>
+                  <label class="period" for="1month">1개월</label>
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="3month" id="3month">
+                  <label class="period" for="3month">3개월</label>
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="6month" id="6month">
+                  <label class="period" for="6month">6개월</label>
+                </div>
+              </div>
+            </div>
+            <div class="sort_wrap">
+              <p class="sort_title">발송 상태</p>
+              <div class="sort_con">
+                <div class="input_type_radio">
+                  <input type="radio" name="state" value="all" id="all">
+                  <label for="all">전체</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="state" value="normal" id="normal">
+                  <label for="normal">정상</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="state" value="fail" id="fail">
+                  <label for="fail">실패</label>
+                </div>
+              </div>
+            </div>
+            <div class="sort_wrap">
+              <p class="sort_title">사용여부</p>
+              <div class="sort_con">
+                <div class="input_type_radio">
+                  <input type="radio" name="use" value="all" id="all">
+                  <label for="all">전체</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="use" value="use" id="use">
+                  <label for="use">사용</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="use" value="not_use" id="not_use">
+                  <label for="not_use">미사용</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn_wrap btn_sort">
+              <button class="btn_default btn_sky">조회</button>
+            </div>
+          </div>
+
+          <div class="btn_wrap btn_collect btn_between">
+            <div>
+              <span class="text_bold">검색결과 총 <span>N</span>건</span>
+              <button class="btn_default btn_white">삭제(회수)</button>
+              <span class="caption btn_caption">고객 선택 후, 삭제(회수) 시 해당 고객에게 발급된 쿠폰이 삭제되며, 이미 사용한 쿠폰은 삭제되지 않습니다.</span>
+            </div>
+            <div>
+              <span class="text_bold">총 발송된 쿠폰 : <span>99,999</span> 장</span>
+              <button class="btn_default">엑셀 다운로드</button>
+            </div>
+          </div>
+
+          <div class="admin_box">
+            <table class="table_checklist">
+              <thead>
+                <tr>
+                  <th style="width: 40px;"><input type="checkbox"></th>
+                  <th style="width: 111px;">No</th>
+                  <th style="width: 234px;">아이디</th>
+                  <th style="width: 144px;">고객명
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 184px;">휴대폰 번호
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 204px;">발급일자
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 204px;">사용일자
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 194px;">주문번호
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 158px;">사용상태
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 87px;">발송상태
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>10</td>
+                  <td><span class="text_underline">ab****@b-lifecare.com</span></td>
+                  <td><span class="text_underline">홍*솔</span></td>
+                  <td><span class="text_underline">010-8**0-5684</span></td>
+                  <td>2023-10-14 00:00</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>미사용</td>
+                  <td>정상</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>9</td>
+                  <td><span class="text_underline">ab****@b-lifecare.com</span></td>
+                  <td><span class="text_underline">박*솔</span></td>
+                  <td><span class="text_underline">010-8**0-5684</span></td>
+                  <td>2023-10-14 00:00</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td><span class="text_red">실패</span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" disabled></td>
+                  <td>8</td>
+                  <td><span class="text_underline">ab****@b-lifecare.com</span></td>
+                  <td><span class="text_underline">최*솔</span></td>
+                  <td><span class="text_underline">010-8**0-5684</span></td>
+                  <td>2023-10-14 00:00</td>
+                  <td>2023-10-14 00:00</td>
+                  <td>2023120712345</td>
+                  <td>사용</td>
+                  <td>정상</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>7</td>
+                  <td><span class="text_underline">ab****@b-lifecare.com</span></td>
+                  <td><span class="text_underline">김*솔</span></td>
+                  <td><span class="text_underline">010-8**0-5684</span></td>
+                  <td>2023-10-14 00:00</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>미사용</td>
+                  <td>정상</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" disabled></td>
+                  <td>6</td>
+                  <td><span class="text_underline">ab****@b-lifecare.com</span></td>
+                  <td><span class="text_underline">김*솔</span></td>
+                  <td><span class="text_underline">010-8**0-5684</span></td>
+                  <td>2023-10-14 00:00</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-(제휴전용)</td>
+                  <td>정상</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>5</td>
+                  <td><span class="text_underline">ab****@b-lifecare.com</span></td>
+                  <td><span class="text_underline">김*솔</span></td>
+                  <td><span class="text_underline">010-8**0-5684</span></td>
+                  <td>2023-10-14 00:00</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>미사용</td>
+                  <td>정상</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>4</td>
+                  <td><span class="text_underline">ab****@b-lifecare.com</span></td>
+                  <td><span class="text_underline">김*솔</span></td>
+                  <td><span class="text_underline">010-8**0-5684</span></td>
+                  <td>2023-10-14 00:00</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>미사용</td>
+                  <td>정상</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>3</td>
+                  <td><span class="text_underline">ab****@b-lifecare.com</span></td>
+                  <td><span class="text_underline">김*솔</span></td>
+                  <td><span class="text_underline">010-8**0-5684</span></td>
+                  <td>2023-10-14 00:00</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>미사용</td>
+                  <td>정상</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>2</td>
+                  <td><span class="text_underline">ab****@b-lifecare.com</span></td>
+                  <td><span class="text_underline">김*솔</span></td>
+                  <td><span class="text_underline">010-8**0-5684</span></td>
+                  <td>2023-10-14 00:00</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>미사용</td>
+                  <td>정상</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>1</td>
+                  <td><span class="text_underline">ab****@b-lifecare.com</span></td>
+                  <td><span class="text_underline">김*솔</span></td>
+                  <td><span class="text_underline">010-8**0-5684</span></td>
+                  <td>2023-10-14 00:00</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>미사용</td>
+                  <td>정상</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="table_page">
+              <span>Showing 1 to 10 of 13 entries</span>
+              <div class="page_control">
+                <span>Rows per page:</span>
+                <select><option>10</option></select>
+                <span class="text_black">1 - <span class="text_black">10</span></span>
+                <span>&nbsp;of <span>10</span></span>
+                <span class="btn_page">
+                  <button class="btn_page_prev"><span class="hidden">이전</span></button>
+                  <button class="btn_page_next"><span class="hidden">다음</span></button>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="popup_wrap" id="del">
+            <div class="admin_popup">
+              <h3>쿠폰을 목록에서 삭제하시겠어요?</h3>
+              <p>쿠폰은 목록에서만 삭제됩니다.<br>
+                고객에게 발급된 쿠폰은 유지됩니다.</p>
+              <button class="btn_middle btn_white">취소</button>
+              <button class="btn_middle btn_sky">확인</button>
+              <button class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+
+          <div class="popup_wrap" id="select">
+            <div class="admin_popup">
+              <h3>선택해 주세요.</h3>
+              <p>삭제할 발송 내역을 선택해주세요.</p>
+              <button class="btn_middle btn_sky">확인</button>
+              <button class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
