@@ -60,6 +60,13 @@
 .admin_detail .admin_box + .admin_box {
   margin-top: 0;
 }
+.admin_detail_info {
+  display: flex;
+  gap: 20px;
+}
+.box_title + .admin_detail_info {
+  margin-top: 32px;
+}
 .admin_box {
   width: 100%;
   padding: 28px;
@@ -786,6 +793,11 @@
   border: 1px solid #D3D3D3;
   color: #1E1E1E;
 }
+.btn_gray {
+  background: #F5F7FA;
+  border: 1px solid #1E1E1E;
+  color: #1E1E1E;
+}
 .btn_tooltip {
   margin-left: 2px;
   width: 12px;
@@ -1124,29 +1136,68 @@
 }
 .table_detail {
   width: 100%;
-  margin-top: 32px;
   font-size: 13px;
   border-collapse: collapse;
+}
+.box_title + .table_detail {
+  margin-top: 32px;
+}
+.table_detail button {
+  display: block;
+  margin-top: 10px;
 }
 .table_detail th {
   width: 160px;
   height: 53px;
-  padding: 0 20px;
+  padding: 20px;
   background: #F5F7FA;
   font-weight: 700;
   text-align: left;
+  vertical-align: top;
   border-top: 1px solid #E8E8E8;
   border-bottom: 1px solid #E8E8E8;
+}
+.table_detail th.penalty {
+  background: #FAF5F5;
+}
+.table_detail ul {
+  margin-top: 16px;
+}
+.table_detail li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 12px;
+  font-weight: 400;
+}
+.table_detail li::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 3px;
+  height: 3px;
+  border-radius: 999px;
+  background: #1E1E1E;
+}
+.table_detail li + li {
+  margin-top: 8px;
 }
 .table_detail td {
   height: 53px;
-  padding: 0 20px;
+  padding: 20px;
   text-align: right;
+  vertical-align: top;
   border-top: 1px solid #E8E8E8;
   border-bottom: 1px solid #E8E8E8;
 }
+.table_detail td[rowspan="2"] {
+  height: 107px;
+}
 .table_detail td .btn_small {
   margin-left: 16px;
+}
+.admin_detail_info .table_detail td {
+  text-align: left;
 }
 .table_info {
   margin-top: 32px;
