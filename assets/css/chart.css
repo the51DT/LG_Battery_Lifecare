@@ -16,6 +16,7 @@
 }
 .bb-axis .tick text {
   fill: #A2A2A2;
+  font-family: 'Apple SD Gothic', sans-serif;
 }
 .bb-axis-y line,
 .bb-axis-y2 line {
