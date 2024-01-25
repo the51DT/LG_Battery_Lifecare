@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+.bb-bar {
+  stroke-width: 0;
+}
+.bb-circles {
+  display: none;
+}
+.bb-line {
+  stroke-width: 2px;
+  shape-rendering: auto;
+  stroke-linecap: round !important;
+}
+.bb-axis {
+  stroke-width: 0;
+}
+.bb-axis .tick text {
+  fill: #A2A2A2;
+}
+.bb-axis-y line,
+.bb-axis-y2 line {
+  display: none;
+}
+.bb-ygrids .bb-ygrid:first-of-type {
+  stroke: #1E1E1E;
+}
+
+.chart_caption{
+  position: relative;
+}
+.chart_caption span {
+  position: absolute;
+  left: 97px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.chart_table {
+  text-align: center;
+  font-size: 16px;
+  border-collapse: collapse;
+  margin: 0 64px 0 20px;
+}
+.chart_table th,
+.chart_table td {
+  padding: 20px;
+  border-bottom: 1px solid #E8E8E8;
+}
+.chart_th {
+  font-size: 13px;
+  text-align: left;
+}
+.chart_th1::before{
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #00BCE5;
+  margin-right: 6px;
+}
+.chart_th2::before{
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #FF8787;
+  margin-right: 6px;
+}
+.chart_th3::before{
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  background: #597EFF;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.chart_th4::before{
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  background: #FF5353;
+  margin-right: 6px;
+  vertical-align: middle;
+}
