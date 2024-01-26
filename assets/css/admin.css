@@ -177,7 +177,9 @@
 }
 .caption {
   font-size: 12px;
+  font-weight: 400;
   color: #A2A2A2;
+  vertical-align: middle;
 }
 .input_caption {
   font-size: 13px;
