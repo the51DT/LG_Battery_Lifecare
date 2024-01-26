@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>카드 승인 조회</title>
+  <title>망 취소 조회</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -56,18 +56,12 @@
 
       <div class="contents_admin">
         <div class="admin_wrap">
-          <h2 class="admin_title">카드 승인 조회<span class="caption input_caption">이니시스 결제 승인 정보 조회</span></h2>
-          
+          <h2 class="admin_title">망 취소 조회<span class="caption input_caption">이니시스 망 취소 정보 조회</span></h2>
 
           <div class="admin_box">
             <div class="sort_wrap">
-              <p class="sort_title">기간</p>
+              <p class="sort_title">취소 요청일</p>
               <div class="sort_con">
-                <select name="period search" class="sort_select">
-                  <option>카드취소일</option>
-                  <option>취소요청일</option>
-                  <option>취소완료일</option>
-                </select>
                 <div class="sort_option">
                   <input type="radio" name="period" value="today" id="today">
                   <label class="period" for="today">오늘</label>
@@ -117,23 +111,23 @@
             </div>
 
             <div class="sort_wrap">
-              <p class="sort_title requir">주문상태</p>
+              <p class="sort_title">취소/환불 상태</p>
               <div class="sort_con">
                 <div class="input_type_radio">
                   <input type="radio" name="order_state" value="all" id="all" checked>
                   <label for="all">전체</label>
                 </div>
                 <div class="input_type_radio">
+                  <input type="radio" name="order_state" value="waiting" id="waiting">
+                  <label for="waiting">취소 대기</label>
+                </div>
+                <div class="input_type_radio">
                   <input type="radio" name="order_state" value="complete" id="complete">
-                  <label for="complete">승인</label>
+                  <label for="complete">취소 완료</label>
                 </div>
                 <div class="input_type_radio">
                   <input type="radio" name="order_state" value="cancel" id="cancel">
-                  <label for="cancel">매입전취소</label>
-                </div>
-                <div class="input_type_radio">
-                  <input type="radio" name="order_state" value="cancel_complete" id="cancel_complete">
-                  <label for="cancel_complete">매입 후 취소</label>
+                  <label for="cancel">환불 불가</label>
                 </div>
               </div>
             </div>
@@ -194,25 +188,19 @@
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th class="text_red" style="width: 110px;">전시상품명
-                    <div class="btn_table_wrap">
-                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
-                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
-                    </div>
-                  </th>
                   <th style="width: 230px;">TID(거래번호)
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 90px;">취소금액
+                  <th style="width: 90px;">취소 금액
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 140px;">거래상태
+                  <th style="width: 90px;">거래상태
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
@@ -229,8 +217,7 @@
                   <td>adf@naver.com</td>
                   <td>김*다</td>
                   <td>010-8**0-5684</td>
-                  <td class="text_red">가나다라마바사아자차카타파하</td>
-                  <td><span class="text_overflow">PG사에서 전달받은 거래 번호 노출</span></td>
+                  <td>PG사에서 전달받은 거래 번호 노출</td>
                   <td>45,000</td>
                   <td>승인</td>
                 </tr>
@@ -243,8 +230,7 @@
                   <td>adf@naver.com</td>
                   <td>강*찬</td>
                   <td>010-8**0-5842</td>
-                  <td class="text_red">가나다라마바사아자차카타파하</td>
-                  <td><span class="text_overflow">PG사에서 전달받은 거래 번호 노출</span></td>
+                  <td>PG사에서 전달받은 거래 번호 노출</td>
                   <td>50,000</td>
                   <td>매입전취소</td>
                 </tr>
@@ -257,8 +243,7 @@
                   <td>adf@naver.com</td>
                   <td>이*신</td>
                   <td>010-8**0-2568</td>
-                  <td class="text_red">01234567890123456789</td>
-                  <td><span class="text_overflow">PG사에서 전달받은 거래 번호 노출</span></td>
+                  <td>PG사에서 전달받은 거래 번호 노출</td>
                   <td>50,000</td>
                   <td>매입후취소</td>
                 </tr>
@@ -271,8 +256,7 @@
                   <td>adf@naver.com</td>
                   <td>홍*동</td>
                   <td>010-8**0-6214</td>
-                  <td class="text_red">가나다라마바사아</td>
-                  <td><span class="text_overflow">PG사에서 전달받은 거래 번호 노출</span></td>
+                  <td>PG사에서 전달받은 거래 번호 노출</td>
                   <td>45,000</td>
                   <td>PG사 취소값</td>
                 </tr>
@@ -285,8 +269,7 @@
                   <td>adf@naver.com</td>
                   <td>김*현</td>
                   <td>010-8**0-6859</td>
-                  <td class="text_red">가나다라마바사아</td>
-                  <td><span class="text_overflow">PG사에서 전달받은 거래 번호 노출</span></td>
+                  <td>PG사에서 전달받은 거래 번호 노출</td>
                   <td>45,000</td>
                   <td>PG사 취소값</td>
                 </tr>

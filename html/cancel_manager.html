@@ -111,19 +111,23 @@
             </div>
 
             <div class="sort_wrap">
-              <p class="sort_title">취소 상태</p>
+              <p class="sort_title">취소/환불 상태</p>
               <div class="sort_con">
                 <div class="input_type_radio">
                   <input type="radio" name="order_state" value="all" id="all" checked>
                   <label for="all">전체</label>
                 </div>
                 <div class="input_type_radio">
+                  <input type="radio" name="order_state" value="waiting" id="waiting">
+                  <label for="waiting">취소 대기</label>
+                </div>
+                <div class="input_type_radio">
                   <input type="radio" name="order_state" value="complete" id="complete">
-                  <label for="complete">환불전</label>
+                  <label for="complete">취소 완료</label>
                 </div>
                 <div class="input_type_radio">
                   <input type="radio" name="order_state" value="cancel" id="cancel">
-                  <label for="cancel">환불 완료</label>
+                  <label for="cancel">환불 불가</label>
                 </div>
               </div>
             </div>

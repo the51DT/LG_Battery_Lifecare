@@ -229,6 +229,56 @@
                     </tbody>
                   </table>
                 </div>
+
+                <div class="sort_con_sub">
+                  <p class="sort_title text_darkblue requir">총 발급수량</p>
+                  <div class="sort_con">
+                    <input class="sub_text_small" type="text" placeholder="숫자만 입력"><span class="input_caption">장</span>
+                  </div>
+                </div>
+
+                <div class="sort_con_sub">
+                  <p class="sort_title text_darkblue requir">발급수량제한</p>
+                  <div class="input_type_radio">
+                    <input type="radio" name="quantity_limit" value="no" id="no" checked>
+                    <label for="no">제한없음</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="quantity_limit" value="day" id="day">
+                    <label for="day">일별</label>
+                    <input class="sub_text_small" type="text" placeholder="숫자만 입력" disabled><span class="input_caption">장</span>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="quantity_limit" value="month" id="month">
+                    <label for="month">월별</label>
+                    <input class="sub_text_small" type="text" placeholder="숫자만 입력" disabled><span class="input_caption">장</span>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="quantity_limit" value="first" id="first">
+                    <label for="first">선착순</label>
+                    <input class="sub_text_small" type="text" placeholder="숫자만 입력" disabled><span class="input_caption">장</span>
+                  </div>
+                </div>
+
+                <div class="sort_con_sub">
+                  <p class="sort_title text_darkblue requir">발급시점</p>
+                  <div class="input_type_radio">
+                    <input type="radio" name="time" value="instant" id="instant">
+                    <label for="instant">즉시 발급</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="time" value="reservation" id="reservation" checked>
+                    <label for="reservation">예약 발급</label>
+                    <div class="sub_input">
+                      <div class="sort_date">
+                        <input type="date">
+                        <select>
+                          <option>00시</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -526,7 +576,7 @@
                             <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                           </div>
                         </th>
-                        <th style="width: 80px;">상품코드
+                        <th style="width: 100px;">전시상품코드
                           <div class="btn_table_wrap">
                             <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                             <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
