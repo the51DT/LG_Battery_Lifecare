@@ -1150,6 +1150,10 @@
   display: block;
   margin-top: 10px;
 }
+.table_detail .btn_cancle {
+  display: inline !important;
+  margin-top: 0 !important;
+}
 .table_detail th {
   width: 160px;
   height: 53px;
