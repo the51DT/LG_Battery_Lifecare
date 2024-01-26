@@ -326,7 +326,8 @@
   max-width: 143px;
 }
 .admin_wrap .table_detail input[type="text"] {
-  width: 310px;
+  max-width: 310px;
+  width: 58%;
 }
 .admin_wrap .period {
   padding: 10px 21px;
@@ -1204,6 +1205,12 @@
 .table_detail td .btn_small {
   margin-left: 16px;
 }
+.table_detail .sort_select {
+  max-width: 230px;
+  width: 40%;
+  text-overflow: ellipsis;
+}
+.table_detail .sort_select
 .admin_detail_info .table_detail td {
   text-align: left;
 }
