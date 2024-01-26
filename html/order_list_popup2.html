@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>주문 통합 리스트</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- 차트용 -->
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://naver.github.io/billboard.js/release/latest/dist/billboard.pkgd.min.js"></script>
+  <script src="https://naver.github.io/billboard.js/release/latest/dist/plugin/billboardjs-plugin-tableview.min.js"></script>
+  <link rel="stylesheet" href="https://naver.github.io/billboard.js/release/latest/dist/theme/datalab.min.css">
+  <link rel="stylesheet" href="../assets/css/chart.css">
 </head>
 <body>
   <div class="admin">
@@ -61,7 +67,7 @@
             <div class="box_title">
               <h3>전시상품 카테고리명</h3>
               <span class="caption">업데이트 일시 : 2023-12-21(목)</span>
-              <button class="btn_small btn_border">상세보기</button>
+              <button class="btn_small">주문 통계(일별) 다운로드</button>
             </div>
 
             <div class="sort_wrap">
@@ -97,7 +103,64 @@
               <span class="btn_accordion text_bold">접기</span>
             </div>
             <div class="accordion_wrap on">
-              차트
+              <div class="chart_caption"><span>X10000</span></div>
+              <div id="chart"></div>
+              <table class="chart_table">
+                <thead>
+                  <tr>
+                    <th width="136px"></th>
+                    <th width="194px">23.12.15(금)</th>
+                    <th width="194px">23.12.16(토)</th>
+                    <th width="194px">23.12.17(일)</th>
+                    <th width="194px">23.12.18(월)</th>
+                    <th width="194px">23.12.19(화)</th>
+                    <th width="194px">23.12.20(수)</th>
+                    <th width="194px">23.12.21(목)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="chart_th chart_th1">구매금액(원)</th>
+                    <td>50,000,000</td>
+                    <td>75,000,000</td>
+                    <td>40,000,000</td>
+                    <td>80,000,000</td>
+                    <td>90,000,000</td>
+                    <td>100,000,000</td>
+                    <td>125,000,000</td>
+                  </tr>
+                  <tr>
+                    <th class="chart_th chart_th2">환불금액(원)</th>
+                    <td>10,000,000</td>
+                    <td>30,000,000</td>
+                    <td>15,000,000</td>
+                    <td>48,000,000</td>
+                    <td>10,000,000</td>
+                    <td>12,500,000</td>
+                    <td>20,500,000</td>
+                  </tr>
+                  <tr>
+                    <th class="chart_th chart_th3">구매건수</th>
+                    <td>100</td>
+                    <td>150</td>
+                    <td>80</td>
+                    <td>160</td>
+                    <td>180</td>
+                    <td>200</td>
+                    <td>250</td>
+                  </tr>
+                  <tr>
+                    <th class="chart_th chart_th4">환불건수</th>
+                    <td>20</td>
+                    <td>60</td>
+                    <td>35</td>
+                    <td>60</td>
+                    <td>20</td>
+                    <td>25</td>
+                    <td>21</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 
@@ -195,68 +258,74 @@
               <thead>
                 <tr>
                   <th style="width: 40px;"><input type="checkbox"></th>
-                  <th style="width: 65px;">No</th>
-                  <th style="width: 168px;">주문일
+                  <th style="width: 54px;">No</th>
+                  <th style="width: 157px;">주문일
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 138px;">주문번호
+                  <th style="width: 127px;">주문번호
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 98px;">주문자
+                  <th style="width: 127px;">주문자 ID
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 138px;">휴대폰번호
+                  <th style="width: 87px;">주문자
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 188px;">전시 상품명
+                  <th style="width: 127px;">휴대폰번호
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 148px;">총 상품구매금액
+                  <th style="width: 177px;">전시 상품명
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 148px;">총 실제결제금액
+                  <th style="width: 137px;">총 상품구매금액
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 110px;">결제방법
+                  <th style="width: 137px;">총 실제결제금액
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 110px;">결제수단
+                  <th style="width: 99px;">결제방법
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 110px;">결제상태
+                  <th style="width: 99px;">결제수단
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 99px;">취소방법
+                  <th style="width: 99px;">결제상태
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 93px;">취소방법
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
@@ -270,6 +339,7 @@
                   <td><span class="text_bold">5</span></td>
                   <td>2023-12-07 10:27:56</td>
                   <td><a class="text_blue text_underline" href="#">2023120712345</a></td>
+                  <td>adf@naver.com</td>
                   <td>김*다</td>
                   <td>010-8**0-5684</td>
                   <td><span class="text_overflow">배터리인증서 3개월 이용권</span></td>
@@ -285,6 +355,7 @@
                   <td><span class="text_bold">4</span></td>
                   <td>2023-12-07 10:27:56</td>
                   <td><a class="text_blue text_underline" href="#">2023120712345</a></td>
+                  <td>adf@naver.com</td>
                   <td>강*찬</td>
                   <td>010-8**0-5842</td>
                   <td><span class="text_overflow">배터리인증서 프리미엄</span></td>
@@ -300,6 +371,7 @@
                   <td><span class="text_bold">3</span></td>
                   <td>2023-12-07 10:27:56</td>
                   <td><a class="text_blue text_underline" href="#">2023120712345</a></td>
+                  <td>adf@naver.com</td>
                   <td>이*신</td>
                   <td>010-8**0-2568</td>
                   <td><span class="text_overflow">배터리인증서 3개월 이용권</span></td>
@@ -315,6 +387,7 @@
                   <td><span class="text_bold">2</span></td>
                   <td>2023-12-07 10:27:56</td>
                   <td><a class="text_blue text_underline" href="#">2023120712345</a></td>
+                  <td>adf@naver.com</td>
                   <td>홍*동</td>
                   <td>010-8**0-6214</td>
                   <td><span class="text_overflow">배터리인증서 3개월 이용권</span></td>
@@ -330,6 +403,7 @@
                   <td><span class="text_bold">1</span></td>
                   <td>2023-12-07 10:27:56</td>
                   <td><a class="text_blue text_underline" href="#">2023120712345</a></td>
+                  <td>adf@naver.com</td>
                   <td>김*현</td>
                   <td>010-8**0-6859</td>
                   <td><span class="text_overflow">배터리인증서 3개월 이용권배</span></td>
@@ -460,5 +534,105 @@
       </div>
     </div>
   </div>
+
+  <!-- 차트용 -->
+  <script>
+    var chart = bb.generate({
+    data: {
+      columns: [
+        ["data1", 50000000, 75000000, 40000000, 80000000, 90000000, 100000000, 125000000],
+        ["data2", 10000000, 30000000, 15000000, 48000000, 10000000, 12500000, 20500000],
+        ["data3", 100, 150, 80, 160, 180, 200, 250],
+        ["data4", 20, 60, 35, 60, 20, 25, 21]
+      ],
+      types: {
+        data1: "bar",
+        data2: "bar",
+        data3: "line",
+        data4: "line"
+      },
+      colors: {
+        data1: "#00BCE5",
+        data2: "#FF8787",
+        data3: "#597EFF",
+        data4: "#FF5353"
+      },
+      names: {
+        data1: "구매금액(원)",
+        data2: "환불금액(원)",
+        data3: "구매건수",
+        data4: "환불건수"
+      },
+      axes: {
+        data1: "y",
+        data2: "y",
+        data3: "y2",
+        data4: "y2"
+      }
+    },
+    axis: {
+      x: {
+        show: false,
+        type: "category",
+        categories: [
+          "23.12.15(금)",
+          "23.12.16(토)",
+          "23.12.17(일)",
+          "23.12.18(월)",
+          "23.12.19(화)",
+          "23.12.20(수)",
+          "23.12.21(목)"
+        ]
+      },
+      y: {
+        min: 0,
+        max: 140000000,
+        tick: {
+          format: function(x) {
+            return x.toString().replace(/0000$/, "").replace(/\B(?=(\d{3})+(?!\d))/g,",");
+          }
+        }
+      },
+      y2: {
+        show: true,
+        type: "indexed",
+        min: 0,
+        max: 350
+      }
+    },
+    bar: {
+      width: {
+        ratio: 0.1
+      },
+      padding: 6,
+      radius: 2,
+    },
+    tooltip: {
+      show: false
+    },
+    grid: {
+      y: {
+        show: true
+      }
+    },
+    legend: {
+      show: false
+    },
+    padding: {
+      mode: "fit",
+      top: 0,
+      right: 40,
+      bottom: 0,
+      left: 90
+    },
+    // plugins: [
+    // new bb.plugin.tableview({ // for ESM specify as: new tableview()
+    //   categoryTitle: " ",
+    //   style: true
+    //   }),
+    // ],
+    bindto: "#chart"
+  });
+  </script>
 </body>
 </html>
