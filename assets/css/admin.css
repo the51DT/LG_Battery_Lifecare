@@ -564,6 +564,9 @@
   flex-wrap: wrap;
   gap: 6px;
 }
+.sort_option {
+  padding: 12px 0;
+}
 .sort_option + .sort_date {
   margin-left: 10px;
 }
