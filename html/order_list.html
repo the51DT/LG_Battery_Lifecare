@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>주문 통합 리스트</title>
+  <title>매출 현황 관리</title>
   <link rel="stylesheet" href="../assets/css/style.css">
   <!-- 차트용 -->
   <script src="https://d3js.org/d3.v6.min.js"></script>
@@ -44,9 +44,9 @@
           <li class="list_1dep">
             <a class="btn_menu">주문 관리</a>
             <ul class="menu menu_2dep">
-              <li class="list_2dep"><a class="btn_menu">주문 통합 리스트</a></li>
-              <li class="list_2dep"><a class="btn_menu">결제완료 리스트</a></li>
-              <li class="list_2dep"><a class="btn_menu">결제 중단/실패 리스트</a></li>
+              <li class="list_2dep"><a class="btn_menu">매출 현황 관리</a></li>
+              <li class="list_2dep"><a class="btn_menu">주문 결과 조회</a></li>
+              <li class="list_2dep"><a class="btn_menu">결제 중단/실패 조회</a></li>
             </ul>
           </li>
           <li class="list_1dep">
@@ -62,7 +62,7 @@
 
       <div class="contents_admin">
         <div class="admin_wrap">
-          <h2 class="admin_title">주문 통합 리스트</h2>
+          <h2 class="admin_title">매출 현황 관리</h2>
 
           <div class="admin_box">
             <div class="box_title">
@@ -162,273 +162,6 @@
                   </tr>
                 </tbody>
               </table>
-            </div>
-          </div>
-
-          <div class="admin_box">
-            <div class="sort_wrap">
-              <p class="sort_title">검색어</p>
-              <div class="sort_con">
-                <select name="product_name" class="sort_select">
-                  <option>주문자명</option>
-                  <option>주문자 ID</option>
-                  <option>주문자 휴대폰번호</option>
-                  <option>주문번호</option>
-                  <option>전시 상품명</option>
-                </select>
-                <input type="text">
-              </div>
-            </div>
-
-            <div class="sort_wrap">
-              <p class="sort_title">기간검색</p>
-              <div class="sort_con">
-                <select name="period search" class="sort_select">
-                  <option>주문일</option>
-                  <option>결제일</option>
-                </select>
-                <div class="sort_option">
-                  <input type="radio" name="period" value="today" id="today">
-                  <label class="period" for="today">오늘</label>
-                </div>
-                <div class="sort_option">
-                  <input type="radio" name="period" value="1day_ago" id="1day_ago">
-                  <label class="period" for="1day_ago">1일전</label>
-                </div>
-                <div class="sort_option">
-                  <input type="radio" name="period" value="3days" id="3days">
-                  <label class="period" for="3days">3일</label>
-                </div>
-                <div class="sort_option">
-                  <input type="radio" name="period" value="7days" id="7days" checked>
-                  <label class="period" for="7days">7일</label>
-                </div>
-                <div class="sort_option">
-                  <input type="radio" name="period" value="1month" id="1month">
-                  <label class="period" for="1month">1개월</label>
-                </div>
-                <div class="sort_option">
-                  <input type="radio" name="period" value="3month" id="3month">
-                  <label class="period" for="3month">3개월</label>
-                </div>
-                <div class="sort_option">
-                  <input type="radio" name="period" value="select_day" id="select_day">
-                  <label class="period" for="select_day">기간선택</label>
-                </div>
-                <div class="sort_date">
-                  <input type="date"> ~ <input type="date">
-                </div>
-              </div>
-            </div>
-
-            <div class="sort_wrap">
-              <p class="sort_title requir">주문상태</p>
-              <div class="sort_con">
-                <div class="input_type_radio">
-                  <input type="radio" name="order_state" value="all" id="all" checked>
-                  <label for="all">전체</label>
-                </div>
-                <div class="input_type_radio">
-                  <input type="radio" name="order_state" value="complete" id="complete">
-                  <label for="complete">결제완료</label>
-                </div>
-                <div class="input_type_radio">
-                  <input type="radio" name="order_state" value="cancel" id="cancel">
-                  <label for="cancel">결제취소</label>
-                </div>
-                <div class="input_type_radio">
-                  <input type="radio" name="order_state" value="cancel_complete" id="cancel_complete">
-                  <label for="cancel_complete">취소완료</label>
-                </div>
-              </div>
-            </div>
-
-            <div class="btn_wrap btn_sort">
-              <button class="btn_default btn_sky">검색</button>
-            </div>
-
-          </div>
-
-          <div class="btn_wrap btn_collect">
-            <button class="btn_default">조회결과 다운로드</button>
-            <button class="btn_default">전체 다운로드</button>
-          </div>
-
-          <div class="admin_box">
-            <table class="table_checklist">
-              <thead>
-                <tr>
-                  <th style="width: 40px;"><input type="checkbox"></th>
-                  <th style="width: 54px;">No</th>
-                  <th style="width: 157px;">주문일
-                    <div class="btn_table_wrap">
-                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
-                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
-                    </div>
-                  </th>
-                  <th style="width: 127px;">주문번호
-                    <div class="btn_table_wrap">
-                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
-                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
-                    </div>
-                  </th>
-                  <th style="width: 127px;">주문자 ID
-                    <div class="btn_table_wrap">
-                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
-                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
-                    </div>
-                  </th>
-                  <th style="width: 87px;">주문자
-                    <div class="btn_table_wrap">
-                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
-                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
-                    </div>
-                  </th>
-                  <th style="width: 127px;">휴대폰번호
-                    <div class="btn_table_wrap">
-                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
-                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
-                    </div>
-                  </th>
-                  <th style="width: 177px;">전시 상품명
-                    <div class="btn_table_wrap">
-                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
-                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
-                    </div>
-                  </th>
-                  <th style="width: 137px;">총 상품구매금액
-                    <div class="btn_table_wrap">
-                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
-                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
-                    </div>
-                  </th>
-                  <th style="width: 137px;">총 실제결제금액
-                    <div class="btn_table_wrap">
-                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
-                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
-                    </div>
-                  </th>
-                  <th style="width: 99px;">결제방법
-                    <div class="btn_table_wrap">
-                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
-                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
-                    </div>
-                  </th>
-                  <th style="width: 99px;">결제수단
-                    <div class="btn_table_wrap">
-                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
-                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
-                    </div>
-                  </th>
-                  <th style="width: 99px;">결제상태
-                    <div class="btn_table_wrap">
-                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
-                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
-                    </div>
-                  </th>
-                  <th style="width: 93px;">취소상태
-                    <div class="btn_table_wrap">
-                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
-                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
-                    </div>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td><span class="text_bold">5</span></td>
-                  <td>2023-12-07 10:27:56</td>
-                  <td><a class="text_blue text_underline" href="#">2023120712345</a></td>
-                  <td>adf@naver.com</td>
-                  <td>김*다</td>
-                  <td>010-8**0-5684</td>
-                  <td><span class="text_overflow">배터리인증서 3개월 이용권</span></td>
-                  <td>45,000</td>
-                  <td>45,000</td>
-                  <td>정기결제</td>
-                  <td>신용카드</td>
-                  <td>결제완료</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td><span class="text_bold">4</span></td>
-                  <td>2023-12-07 10:27:56</td>
-                  <td><a class="text_blue text_underline" href="#">2023120712345</a></td>
-                  <td>adf@naver.com</td>
-                  <td>강*찬</td>
-                  <td>010-8**0-5842</td>
-                  <td><span class="text_overflow">배터리인증서 프리미엄</span></td>
-                  <td>50,000</td>
-                  <td>50,000</td>
-                  <td>일반결제</td>
-                  <td>신용카드</td>
-                  <td>결제완료</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td><span class="text_bold">3</span></td>
-                  <td>2023-12-07 10:27:56</td>
-                  <td><a class="text_blue text_underline" href="#">2023120712345</a></td>
-                  <td>adf@naver.com</td>
-                  <td>이*신</td>
-                  <td>010-8**0-2568</td>
-                  <td><span class="text_overflow">배터리인증서 3개월 이용권</span></td>
-                  <td>50,000</td>
-                  <td>50,000</td>
-                  <td>정기결제</td>
-                  <td>간편결제</td>
-                  <td><span class="text_red">결제취소</span></td>
-                  <td>자동취소</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td><span class="text_bold">2</span></td>
-                  <td>2023-12-07 10:27:56</td>
-                  <td><a class="text_blue text_underline" href="#">2023120712345</a></td>
-                  <td>adf@naver.com</td>
-                  <td>홍*동</td>
-                  <td>010-8**0-6214</td>
-                  <td><span class="text_overflow">배터리인증서 3개월 이용권</span></td>
-                  <td>45,000</td>
-                  <td>45,000</td>
-                  <td>정기결제</td>
-                  <td>간편결제</td>
-                  <td><span class="text_red">결제취소</span></td>
-                  <td>관리자 취소</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td><span class="text_bold">1</span></td>
-                  <td>2023-12-07 10:27:56</td>
-                  <td><a class="text_blue text_underline" href="#">2023120712345</a></td>
-                  <td>adf@naver.com</td>
-                  <td>김*현</td>
-                  <td>010-8**0-6859</td>
-                  <td><span class="text_overflow">배터리인증서 3개월 이용권배</span></td>
-                  <td>45,000</td>
-                  <td>45,000</td>
-                  <td>정기결제</td>
-                  <td>신용카드</td>
-                  <td>결제완료</td>
-                  <td>-</td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="table_page">
-              <div>Showing 1 to 10 of 13 entries</div>
-              <div class="page_control">
-                <span>Rows per page:</span>
-                <select><option>10</option></select>
-                <span class="text_black">1 - <span class="text_black">10</span></span>
-                <span>&nbsp;of <span>10</span></span>
-                <span class="btn_page">
-                  <button class="btn_page_prev"><span class="hidden">이전</span></button>
-                  <button class="btn_page_next"><span class="hidden">다음</span></button>
-                </span>
-              </div>
             </div>
           </div>
 
