@@ -213,7 +213,7 @@
               <div class="sort_con">
                 <div class="input_type_radio">
                   <input type="radio" name="limit" value="no" id="no" checked>
-                  <label for="no">제한없음</label>
+                  <label for="no">조건없음</label>
                 </div>
                 <div class="input_type_radio">
                   <input type="radio" name="limit" value="day" id="day">
@@ -265,10 +265,21 @@
 
           <div class="popup_wrap on" id="done">
             <div class="admin_popup">
+              <h3>발송 정보를 최종 확인해주세요</h3>
+              <p>발송 조건에 설정한 내용을 다시 확인해주세요.<br>
+                쿠폰 발송 후에는 수정 및 회수가 불가합니다.</p>
+              <button class="btn_middle btn_white">취소</button>
+              <button class="btn_middle btn_sky">확인</button>
+              <button class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+
+          <div class="popup_wrap" id="done">
+            <div class="admin_popup">
               <h3>발송 완료</h3>
               <p>쿠폰 발송이 완료 되었습니다.<br>
                 처리 결과 : 성공 <span>00</span>건 / 실패 <span>00</span>건</p>
-              <button class="btn_default btn_sky">발송 내역 확인하러 가기</button>
+              <button class="btn_middle btn_sky">발송 내역 확인하러 가기</button>
               <button class="btn_close"><span class="hidden">닫기</span></button>
             </div>
           </div>

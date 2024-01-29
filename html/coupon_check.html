@@ -228,13 +228,17 @@
                   <input type="radio" name="period" value="6month" id="6month">
                   <label class="period" for="6month">6개월</label>
                 </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="1year" id="1year">
+                  <label class="period" for="1year">1년</label>
+                </div>
               </div>
             </div>
             <div class="sort_wrap">
               <p class="sort_title">발송 상태</p>
               <div class="sort_con">
                 <div class="input_type_radio">
-                  <input type="radio" name="state" value="all" id="all">
+                  <input type="radio" name="state" value="all" id="all" checked>
                   <label for="all">전체</label>
                 </div>
                 <div class="input_type_radio">
@@ -251,7 +255,7 @@
               <p class="sort_title">사용여부</p>
               <div class="sort_con">
                 <div class="input_type_radio">
-                  <input type="radio" name="use" value="all" id="all">
+                  <input type="radio" name="use" value="all" id="all" checked>
                   <label for="all">전체</label>
                 </div>
                 <div class="input_type_radio">
@@ -489,7 +493,7 @@
 
           <div class="popup_wrap" id="select">
             <div class="admin_popup">
-              <h3>선택해 주세요.</h3>
+              <h3>선택해 주세요</h3>
               <p>삭제할 발송 내역을 선택해주세요.</p>
               <button class="btn_middle btn_sky">확인</button>
               <button class="btn_close"><span class="hidden">닫기</span></button>
