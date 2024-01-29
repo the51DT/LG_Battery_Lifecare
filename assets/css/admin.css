@@ -1229,7 +1229,7 @@
   width: 40%;
   text-overflow: ellipsis;
 }
-.table_detail .sort_select
+.table_detail .sort_select,
 .admin_detail_info .table_detail td {
   text-align: left;
 }
