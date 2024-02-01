@@ -31,7 +31,8 @@
 }
 .chart_caption span {
   position: absolute;
-  left: 97px;
+  top: 32px;
+  left: 90px;
   font-size: 12px;
   font-weight: 700;
 }

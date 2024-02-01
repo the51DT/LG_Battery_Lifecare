@@ -646,8 +646,10 @@
   margin-top: 16px;
 }
 .sort_table {
-  height: 364px;
   align-items: flex-start;
+}
+.sort_table .btn_wrap {
+  width: 100%;
 }
 .sort_summary {
   display: flex;
