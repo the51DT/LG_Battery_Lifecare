@@ -56,6 +56,7 @@
 .admin_detail .admin_box {
   width: calc(50% - 10px);
   height: 377px;
+  overflow: hidden;
 }
 .admin_detail .admin_box:last-of-type {
   min-height: 377px;
@@ -492,6 +493,15 @@
   padding-bottom: 20px;
   flex-wrap: wrap;
   border-bottom: 1px solid #E8E8E8;
+  overflow: hidden;
+  overflow: overlay;
+}
+.sort_wrap::-webkit-scrollbar {
+  height: 8px;
+}
+.sort_wrap::-webkit-scrollbar-thumb {
+  background-color: hsla(0, 0%, 42%, 0.49);
+  border-radius: 999px;
 }
 .sort_wrap:last-of-type {
   padding-bottom: 0;
@@ -519,7 +529,6 @@
 .sort_con_double {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 6px;
   font-size: 13px;
@@ -537,6 +546,9 @@
 .sort_con_sub .sort_title {
   align-self: center;
   padding: 0;
+}
+.sort_con_sub .sort_con {
+  width: calc(100% - 158px);
 }
 .sort_con_sub + .sort_con_sub {
   margin-top: 18px;
