@@ -56,7 +56,6 @@
 .admin_detail .admin_box {
   width: calc(50% - 10px);
   height: 377px;
-  overflow: hidden;
 }
 .admin_detail .admin_box:last-of-type {
   min-height: 377px;
@@ -493,8 +492,8 @@
   padding-bottom: 20px;
   flex-wrap: wrap;
   border-bottom: 1px solid #E8E8E8;
-  overflow: hidden;
-  overflow: overlay;
+  overflow-x: overlay;
+  overflow-y: hidden;
 }
 .sort_wrap::-webkit-scrollbar {
   height: 8px;
@@ -530,6 +529,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 6px;
   font-size: 13px;
 }
@@ -1111,6 +1111,9 @@
   border-collapse: collapse;
   border-top: 1px solid #E8E8E8;
   border-bottom: 1px solid #E8E8E8;
+}
+.sort_wrap .table_list {
+  table-layout: fixed;
 }
 .table_list thead {
   background: #F5F7FA;
