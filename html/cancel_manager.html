@@ -118,16 +118,20 @@
                   <label for="all">전체</label>
                 </div>
                 <div class="input_type_radio">
-                  <input type="radio" name="order_state" value="waiting" id="waiting">
-                  <label for="waiting">취소 대기</label>
+                  <input type="radio" name="order_state" value="complete_user" id="complete_user">
+                  <label for="complete_user">취소완료(사용자)</label>
                 </div>
                 <div class="input_type_radio">
                   <input type="radio" name="order_state" value="complete" id="complete">
-                  <label for="complete">취소 완료</label>
+                  <label for="complete">취소완료(관리자)</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="order_state" value="waiting" id="waiting">
+                  <label for="waiting">취소요청</label>
                 </div>
                 <div class="input_type_radio">
                   <input type="radio" name="order_state" value="cancel" id="cancel">
-                  <label for="cancel">환불 불가</label>
+                  <label for="cancel">환불불가</label>
                 </div>
               </div>
             </div>
@@ -267,7 +271,7 @@
                   <td>010-8**0-6214</td>
                   <td><span class="text_overflow">제 차량이 없어요</span></td>
                   <td>45,000</td>
-                  <td><span class="text_red">환불 불가</span></td>
+                  <td><span class="text_red">환불불가</span></td>
                   <td>담당자명 노출</td>
                 </tr>
                 <tr>
