@@ -1248,24 +1248,6 @@
 .admin_detail_info .table_detail td {
   text-align: left;
 }
-.table_info {
-  margin-top: 32px;
-  font-size: 13px;
-  border-collapse: collapse;
-}
-.table_info th {
-  text-align: left;
-  color: #7C7C7C;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #E8E8E8;
-}
-.table_info td {
-  padding-top: 20px;
-}
-.table_info th:first-child,
-.table_info td:first-child {
-  padding-left: 20px;
-}
 
 .text_field {
   width: 100%;
