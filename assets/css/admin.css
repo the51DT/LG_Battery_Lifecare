@@ -899,6 +899,7 @@
   margin-left: 8px;
 }
 .btn_table_wrap {
+  display: inline-block;
   position: relative;
   /* position: absolute;
   top: 50%;
@@ -907,8 +908,10 @@
   width: 6px;
   margin: auto 0;
   margin-left: 6px;
-  display: inline-block;
   vertical-align: middle;
+  /* [start] 리스트 정렬 제거 - .btn_table_wrap display: none 처리 / 2024.02.05 */
+  display: none;
+  /* [end] 리스트 정렬 제거 - .btn_table_wrap display: none 처리 / 2024.02.05 */
 }
 .btn_table_top {
   position: absolute;
