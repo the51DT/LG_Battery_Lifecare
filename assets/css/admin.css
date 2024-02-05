@@ -898,6 +898,20 @@
 .btn_m_l {
   margin-left: 8px;
 }
+/* [start] 배너, 쿠폰 리스트 정렬 / 2024.02.05 */
+.btn_table {
+  display: inline-block;
+  position: relative;
+  /* position: absolute;
+  top: 50%;
+  transform: translateY(-140%); */
+  height: 12px;
+  width: 6px;
+  margin: auto 0;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+/* [end] 배너, 쿠폰 리스트 정렬 / 2024.02.05 */
 .btn_table_wrap {
   display: inline-block;
   position: relative;
