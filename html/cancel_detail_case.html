@@ -240,12 +240,12 @@
                   <th>환불불가</th>
                   <td>
                     <div class="input_type_check">
-                      <input type="checkbox" name="refund" value="impossible" id="impossible">
+                      <input type="checkbox" name="refund" value="impossible" id="impossible" disabled>
                       <label for="impossible">환불 불가 설정(사유 입력 필수)</label>
                     </div>
-                    <textarea placeholder="환불 불가 사유 입력(직접 입력) , 최대 1000자"></textarea>
+                    <textarea placeholder="환불 불가 사유 입력(직접 입력) , 최대 1000자" disabled></textarea>
                     <div class="input_type_check">
-                      <input type="checkbox" name="refund" value="alarm" id="alarm">
+                      <input type="checkbox" name="refund" value="alarm" id="alarm" disabled>
                       <label for="alarm">고객에게 알림 발송</label>
                     </div>
                   </td>
@@ -257,7 +257,7 @@
             </div>
           </div>
 
-          <div class="popup_wrap on" id="retype">
+          <div class="popup_wrap" id="retype">
             <div class="admin_popup">
               <h3>결제를 취소 하시겠습니까?</h3>
               <p>취소 시 PG사에 신용카드 취소 요청 됩니다.</p>

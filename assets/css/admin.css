@@ -487,6 +487,9 @@
 .admin_wrap textarea:focus {
   outline: none;
 }
+.admin_wrap textarea:disabled {
+  background-color: #EFEFEF;
+}
 
 .sort_wrap{
   display: flex;
