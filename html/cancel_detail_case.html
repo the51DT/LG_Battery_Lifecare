@@ -223,6 +223,21 @@
                   <td style="padding: 0; vertical-align: middle;"><span class="input_caption">취소요청</span><button class="btn_small btn_cancle">결제 취소</button></td>
                 </tr>
                 <tr>
+                  <th>취소/환불 선택</th>
+                  <td>
+                    <div class="input_type_radio">
+                      <div class="input_type_radio">
+                        <input type="radio" name="select" value="cancel" id="cancel">
+                        <label for="cancel">결제취소</label>
+                      </div>
+                      <div class="input_type_radio">
+                        <input type="radio" name="select" value="impossible" id="impossible">
+                        <label for="impossible">환불 불가</label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
                   <th>취소사유</th>
                   <td style="padding: 0; vertical-align: middle;">
                     <select name="reason" class="sort_select">
@@ -239,10 +254,6 @@
                 <tr>
                   <th>환불불가</th>
                   <td>
-                    <div class="input_type_check">
-                      <input type="checkbox" name="refund" value="impossible" id="impossible" disabled>
-                      <label for="impossible">환불 불가 설정(사유 입력 필수)</label>
-                    </div>
                     <textarea placeholder="환불 불가 사유 입력(직접 입력) , 최대 1000자" disabled></textarea>
                     <div class="input_type_check">
                       <input type="checkbox" name="refund" value="alarm" id="alarm" disabled>

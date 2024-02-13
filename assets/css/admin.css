@@ -1273,6 +1273,9 @@
 .admin_detail_info .table_detail td {
   text-align: left;
 }
+.table_detail .input_type_radio {
+  justify-content: end;
+}
 
 .text_field {
   width: 100%;
