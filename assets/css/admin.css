@@ -1287,6 +1287,9 @@
 .table_detail .input_type_radio {
   justify-content: end;
 }
+.table_detail_gray th {
+  color: #7C7C7C;
+}
 .table_detail_gray td {
   text-align: left;
   background-color: #F5F7FA66;
