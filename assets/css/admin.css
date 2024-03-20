@@ -758,6 +758,9 @@
   margin-top: 20px;
   justify-content: end;
 }
+.btn_sub + .admin_box {
+  margin-top: 60px;
+}
 .btn_between {
   justify-content: space-between;
 }
@@ -1283,6 +1286,10 @@
 }
 .table_detail .input_type_radio {
   justify-content: end;
+}
+.table_detail_gray td {
+  text-align: left;
+  background-color: #F5F7FA66;
 }
 
 .text_field {
