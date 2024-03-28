@@ -107,6 +107,19 @@
 .side_con {
   margin-top: 27px;
 }
+.side_no_con {
+  padding-top: 124px;
+  text-align: center;
+  font-size: 13px;
+  color: #a2a2a2;
+}
+.side_no_con button{
+  margin-top: 24px;
+}
+.admin_box>.side_no_con {
+  height: 461px;
+  padding-top: 169px;
+}
 .side_wrap {
   display: flex;
   padding: 20px 17.5px;
