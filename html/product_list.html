@@ -102,13 +102,17 @@
             <div class="sort_wrap">
               <p class="sort_title requir">상품사용여부</p>
               <div class="sort_con">
-                <div class="input_type_check">
-                  <input type="checkbox" name="checkbox1" value="checkbox1" id="checkbox1" checked>
-                  <label for="checkbox1">사용함</label>
+                <div class="input_type_radio">
+                  <input type="radio" name="use" value="all" id="all" checked>
+                  <label for="all">전체</label>
                 </div>
-                <div class="input_type_check">
-                  <input type="checkbox" name="checkbox2" value="checkbox2" id="checkbox2" checked>
-                  <label for="checkbox2">사용안함</label>
+                <div class="input_type_radio">
+                  <input type="radio" name="use" value="use" id="use">
+                  <label for="use">사용함</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="use" value="not" id="not">
+                  <label for="not">사용안함</label>
                 </div>
               </div>
             </div>
