@@ -455,7 +455,23 @@
 .admin_wrap .input_type_check input[type="checkbox"] + label {
   margin-left: 10px;
 }
-.admin_wrap input[type="file"] {
+.admin_wrap .input_type_file input[type="text"]:disabled {
+  width: 314px;
+  background-color: #FFF;
+}
+.admin_wrap .input_type_file input[type="file"] {
+  display: none;
+}
+.admin_wrap .input_type_file .input_type_file_button {
+  max-width: 120px;
+  padding: 13px 35px;
+  border: 1px solid #1e1e1e;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+/* .admin_wrap input[type="file"] {
   width: 100%;
   max-width: calc(100% - 130px);
   margin: 0;
@@ -479,7 +495,7 @@
   font-family: "Apple SD Gothic", sans-serif;
   font-size: 13px;
   font-weight: 700;
-}
+} */
 .admin_wrap input:focus {
   outline: none;
 }
@@ -721,6 +737,8 @@
   margin-left: 26px;
 }
 .input_type_file {
+  display: flex;
+  gap: 6px;
   flex-shrink: 0;
   width: 100%;
   max-width: 440px;
