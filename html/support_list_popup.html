@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지원 차량 목록 리스트</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="admin">
+    <header class="header_admin">
+      <h1><a href="/"><img alt="B-Lifecare" src="https://stag-bas.batterylifecare.com/_next/static/media/logo.d9215bd2.png"></a></h1>
+      <div class="header_tab">
+        <ul>
+          <li><a class="btn_tab" href="#">일반</a></li>
+          <li><a class="btn_tab on" href="#">상품/주문</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="lnb_admin">
+        <ul class="menu menu_1dep">
+          <li class="list_1dep">
+            <a class="btn_menu">상품 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">상품 리스트</a></li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">전시 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">전시상품 카테고리</a></li>
+              <li class="list_2dep"><a class="btn_menu">전시상품 리스트</a></li>
+              <li class="list_2dep"><a class="btn_menu">전시상품 진열 관리</a></li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">주문 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">매출 현황 관리</a></li>
+              <li class="list_2dep"><a class="btn_menu">주문 결과 조회</a></li>
+              <li class="list_2dep"><a class="btn_menu">결제 중단/실패 조회</a></li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">승인/취소/환불 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">카드 승인 조회(이니시스)</a></li>
+              <li class="list_2dep"><a class="btn_menu">관리자 카드취소 조회</a></li>
+              <li class="list_2dep"><a class="btn_menu">망 취소 조회(이니시스)</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contents_admin">
+        <div class="admin_wrap">
+          <h2 class="admin_title">지원 차량 목록</h2>
+
+          <div class="admin_box">
+            <div class="sort_wrap">
+              <p class="sort_title">차량정보</p>
+              <div class="sort_con">
+                <select name="car_info" class="sort_select">
+                  <option>선택</option>
+                </select>
+                <input type="text">
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">지원여부</p>
+              <div class="sort_con">
+                <select name="car_info" class="sort_select">
+                  <option>선택</option>
+                </select>
+                <input type="text">
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">기간</p>
+              <div class="sort_con">
+                <select name="car_info" class="sort_select">
+                  <option>선택</option>
+                </select>
+                <div class="sort_date">
+                  <input type="date">
+                </div>
+              </div>
+            </div>
+
+            <div class="btn_wrap btn_sort">
+              <button class="btn_default btn_sky">검색</button>
+            </div>
+          </div>
+
+          <div class="btn_wrap btn_collect btn_between">
+            <button class="btn_default btn_white">차종 삭제</button>
+            <button class="btn_default btn_sky">신규 등록</button>
+          </div>
+
+          <div class="admin_box">
+            <table class="table_checklist">
+              <thead>
+                <tr>
+                  <th style="width: 44px; padding-left: 20px;"><input type="checkbox"></th>
+                  <th style="width: 97px; padding-left: 16px;">No</th>
+                  <th style="width: 136px;">지원여부
+                    <!-- [start] 리스트 정렬 제거 - .btn_table_wrap display: none 처리 / 2024.02.05 -->
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                    <!-- [end] 리스트 정렬 제거 - .btn_table_wrap display: none 처리 / 2024.02.05 -->
+                  </th>
+                  <th style="width: 136px;">제조사
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 180px;">대표차종명
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 144px;">대표 차종ID
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 160px;">등록일
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 160px;">업데이트일
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 507px;">등록자
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding-left: 20px;"><input type="checkbox"></td>
+                  <td style="padding-left: 20px;"><span class="text_bold">5</span></td>
+                  <td>지원</td>
+                  <td>기아</td>
+                  <td>니로 EV</td>
+                  <td>4626</td>
+                  <td>2023-05-07</td>
+                  <td>2023-05-07</td>
+                  <td>castlea</td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px;"><input type="checkbox"></td>
+                  <td style="padding-left: 20px;"><span class="text_bold">4</span></td>
+                  <td>미지원</td>
+                  <td>기아</td>
+                  <td>봉고</td>
+                  <td>1215</td>
+                  <td>2023-05-07</td>
+                  <td>2023-05-07</td>
+                  <td>castlea</td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px;"><input type="checkbox"></td>
+                  <td style="padding-left: 20px;"><span class="text_bold">3</span></td>
+                  <td>지원</td>
+                  <td>기아</td>
+                  <td>볼트 EV</td>
+                  <td>1215</td>
+                  <td>2023-05-07</td>
+                  <td>2023-05-07</td>
+                  <td>castlea</td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px;"><input type="checkbox"></td>
+                  <td style="padding-left: 20px;"><span class="text_bold">2</span></td>
+                  <td>지원</td>
+                  <td>기아</td>
+                  <td>e-트론</td>
+                  <td>1215</td>
+                  <td>2023-05-07</td>
+                  <td>2023-05-07</td>
+                  <td>castlea</td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px;"><input type="checkbox"></td>
+                  <td style="padding-left: 20px;"><span class="text_bold">1</span></td>
+                  <td>지원</td>
+                  <td>기아</td>
+                  <td>GV60</td>
+                  <td>1215</td>
+                  <td>2023-05-07</td>
+                  <td>2023-05-07</td>
+                  <td>castlea</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="table_page">
+              <div>Showing 1 to 10 of 13 entries</div>
+              <div class="page_control">
+                <span>Rows per page:</span>
+                <select><option>10</option></select>
+                <span class="text_black">1 - <span class="text_black">10</span></span>
+                <span>&nbsp;of <span>10</span></span>
+                <span class="btn_page">
+                  <button class="btn_page_prev"><span class="hidden">이전</span></button>
+                  <button class="btn_page_next"><span class="hidden">다음</span></button>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="popup_wrap on" id="delete">
+            <div class="admin_popup">
+              <h3>선택한 차종을 삭제하시겠어요?</h3>
+              <p>대표차종에 등록된 차종이 함께 삭제됩니다.<br>삭제하시겠습니까?</p>
+              <button class="btn_middle btn_white">취소</button>
+              <button class="btn_middle btn_sky">변경</button>
+              <button class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

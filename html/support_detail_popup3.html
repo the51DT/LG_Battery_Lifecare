@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>지원 차량 목록 상세</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="admin">
+    <header class="header_admin">
+      <h1>
+        <a href="/"><img alt="B-Lifecare" src="https://stag-bas.batterylifecare.com/_next/static/media/logo.d9215bd2.png"/></a>
+      </h1>
+      <div class="header_tab">
+        <ul>
+          <li><a class="btn_tab on" href="#">일반</a></li>
+          <li><a class="btn_tab" href="#">상품/주문</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="lnb_admin">
+        <ul class="menu menu_1dep">
+          <li class="list_1dep">
+            <a class="btn_menu">대시보드</a>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">서비스 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">회원정보 관리</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">서비스 이용현황</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">OBD 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">신청 현황</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">이용 현황</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">반납 현황</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">교환 현황</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">지원 차량 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">지원 차량 목록</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">프로모션 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">이벤트</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">EV Life</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">쿠폰 관리</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">고객센터</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">공지사항</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">FAQ</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">1:1 문의</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">화면 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep">
+                <a class="btn_menu">약관 관리</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">카테고리 관리</a>
+              </li>
+              <li class="list_2dep">
+                <a class="btn_menu">배너 관리</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">카이즈유 미지원 차량 관리</a>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">실험실</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">프로모션 코드 관리</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contents_admin">
+        <div class="admin_wrap">
+          <h2 class="admin_title">지원 차량 목록</h2>
+          
+          <div class="admin_box">
+            <div class="sort_wrap">
+              <p class="sort_title requir">제조사</p>
+              <div class="sort_con">
+                <select name="manufacturing" class="sort_select">
+                  <option>선택 (최대 10개)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title requir">대표차종ID</p>
+              <div class="sort_con">
+                <input type="text" placeholder="REP_CAR_CLASS_NBR 입력">
+                <button class="btn_middle btn_sky">조회</button>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">대표차종명</p>
+              <div class="sort_con">
+                <input type="text" placeholder="글자수 20자 미만, 특수 문자 입력 가능">
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">요약설명(비고)</p>
+              <div class="sort_con">
+                <input type="text" class="sort_text" placeholder="글자수 300자 미만, 특수 문자 입력 가능">
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title requir">차종 지원 여부</p>
+              <div class="sort_con">
+                <div class="input_type_radio">
+                  <input type="radio" name="supported" value="support" id="support" checked>
+                  <label for="support">지원</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="supported" value="not_supported" id="not_supported">
+                  <label for="not_supported">미지원</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title requir">차종 구좌 수</p>
+              <div class="sort_con">
+                <div class="sort_con_double">
+                  <select name="car_number" class="sort_select">
+                    <option>선택</option>
+                  </select>
+                  <button class="btn_middle btn_sky">추가</button>
+                  <span class="caption sort_caption">동일 대표차종내 세부 지원 차종 및 연형(CAR_CLASS_NBR, YEAR_TYPE)을 추가할 수 있습니다.</span>
+                </div>
+
+                <div class="sort_con_double">
+                  <div class="move_box">
+
+                    <div class="move_box_top">
+                      <div class="box_title">
+                        <h3 class="requir">차종1</h3>
+                        <div class="btn_wrap">
+                          <button class="btn_order btn_down"></button>
+                          <button class="btn_order btn_up"></button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="move_box_bottom">
+
+                      <div class="sort_wrap">
+                        <p class="sort_title requir">차종ID</p>
+                        <div class="sort_con">
+                          <input type="text" placeholder="CAR_CLASS_NBR">
+                        </div>
+                      </div>
+
+                      <div class="sort_wrap">
+                        <p class="sort_title requir">연형</p>
+                        <div class="sort_con">
+                          <input type="text" placeholder="YEAR_TYPE">
+                          <button class="btn_middle btn_sky">조회</button>
+                        </div>
+                      </div>
+
+                      <div class="sort_wrap">
+                        <p class="sort_title requir">차종명</p>
+                        <div class="sort_con">
+                          <input type="text" placeholder="CAR_CLASS_NM">
+                          <span class="caption sort_caption">차종ID, 연형 조회 시 일치하는 차종명이 자동으로 표시됩니다. 조회 불가한 경우 직접 입력해주세요.</span>
+                        </div>
+                      </div>
+
+                      <div class="sort_wrap">
+                        <p class="sort_title requir">지원 여부 설정</p>
+                        <div class="sort_con">
+                          <div class="input_type_radio">
+                            <input type="radio" name="car1_supported" value="car1_support" id="car1_support" checked>
+                            <label for="car1_support">지원</label>
+                          </div>
+                          <div class="input_type_radio">
+                            <input type="radio" name="car1_supported" value="car1_not_supported" id="car1_not_supported">
+                            <label for="car1_not_supported">미지원</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="sort_wrap">
+                        <p class="sort_title requir">지원기간</p>
+                        <div class="sort_con">
+                          <div class="sort_date">
+                            <input type="date">
+                            <select class="sort_select">
+                              <option>00시</option>
+                            </select>
+                            <select class="sort_select">
+                              <option>00분</option>
+                            </select> ~ 
+                            <input type="date">
+                            <select class="sort_select">
+                              <option>00시</option>
+                            </select>
+                            <select class="sort_select">
+                              <option>00분</option>
+                            </select>
+                          </div>
+                          <button class="btn_middle btn_sky">종료일 없음</button>
+                        </div>
+                      </div>
+
+                      <div class="sort_wrap">
+                        <p class="sort_title requir">비체크업 타입</p>
+                        <div class="sort_con">
+                          <select name="B-checkup" class="sort_select">
+                            <option>선택</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="sort_wrap">
+                        <p class="sort_title">최종 등록일</p>
+                        <div class="sort_con">
+                          <p>2024-01-01</p>
+                        </div>
+                      </div>
+
+                      <div class="sort_wrap">
+                        <p class="sort_title">업데이트일</p>
+                        <div class="sort_con">
+                          <p>2024-01-01</p>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="move_box">
+
+                    <div class="move_box_top">
+                      <div class="box_title">
+                        <h3 class="requir">차종2</h3>
+                        <div class="btn_wrap">
+                          <button class="btn_order btn_down"></button>
+                          <button class="btn_order btn_up"></button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="move_box_bottom">
+
+                      <div class="sort_wrap">
+                        <p class="sort_title requir">차종ID</p>
+                        <div class="sort_con">
+                          <input type="text" placeholder="CAR_CLASS_NBR">
+                        </div>
+                      </div>
+
+                      <div class="sort_wrap">
+                        <p class="sort_title requir">연형</p>
+                        <div class="sort_con">
+                          <input type="text" placeholder="YEAR_TYPE">
+                          <button class="btn_middle btn_sky">조회</button>
+                        </div>
+                      </div>
+
+                      <div class="sort_wrap">
+                        <p class="sort_title requir">차종명</p>
+                        <div class="sort_con">
+                          <input type="text" placeholder="CAR_CLASS_NM">
+                          <span class="caption sort_caption">차종ID, 연형 조회 시 일치하는 차종명이 자동으로 표시됩니다. 조회 불가한 경우 직접 입력해주세요.</span>
+                        </div>
+                      </div>
+
+                      <div class="sort_wrap">
+                        <p class="sort_title requir">지원 여부 설정</p>
+                        <div class="sort_con">
+                          <div class="input_type_radio">
+                            <input type="radio" name="car2_supported" value="car2_support" id="car2_support">
+                            <label for="car2_support">지원</label>
+                          </div>
+                          <div class="input_type_radio">
+                            <input type="radio" name="car2_supported" value="car2_not_supported" id="car2_not_supported" checked>
+                            <label for="car2_not_supported">미지원</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="sort_wrap">
+                        <p class="sort_title requir">지원기간</p>
+                        <div class="sort_con">
+                          <div class="sort_date">
+                            <input type="date">
+                            <select class="sort_select">
+                              <option>00시</option>
+                            </select>
+                            <select class="sort_select">
+                              <option>00분</option>
+                            </select> ~ 
+                            <input type="date">
+                            <select class="sort_select">
+                              <option>00시</option>
+                            </select>
+                            <select class="sort_select">
+                              <option>00분</option>
+                            </select>
+                          </div>
+                          <button class="btn_middle btn_sky">종료일 없음</button>
+                        </div>
+                      </div>
+
+                      <div class="sort_wrap">
+                        <p class="sort_title requir">비체크업 타입</p>
+                        <div class="sort_con">
+                          <select name="B-checkup" class="sort_select">
+                            <option>선택</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="sort_wrap">
+                        <p class="sort_title">최종 등록일</p>
+                        <div class="sort_con">
+                          <p>2024-01-01</p>
+                        </div>
+                      </div>
+
+                      <div class="sort_wrap">
+                        <p class="sort_title">업데이트일</p>
+                        <div class="sort_con">
+                          <p>2024-01-01</p>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="btn_wrap btn_sub">
+            <button class="btn_default btn_white">목록</button>
+            <button class="btn_default btn_sky">저장</button>
+          </div>
+
+          <div class="popup_wrap" id="no_info_1">
+            <div class="admin_popup">
+              <h3>일치하는 정보가 없습니다.</h3>
+              <p>대표차종ID를 다시 확인해주세요.<br>조회 불가한 경우, [사용]을 선택해<br>대표차종명을 직접 입력해 사용할 수 있습니다.</p>
+              <button class="btn_middle btn_white">다시 입력</button>
+              <button class="btn_middle btn_sky">사용</button>
+              <button class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+
+          <div class="popup_wrap" id="no_info_2">
+            <div class="admin_popup">
+              <h3>일치하는 정보가 없습니다.</h3>
+              <p>차종ID, 연형을 다시 확인해주세요.<br>조회 불가한 경우, [사용]을 선택해<br>차종명을 직접 입력해 사용할 수 있습니다.</p>
+              <button class="btn_middle btn_white">다시 입력</button>
+              <button class="btn_middle btn_sky">사용</button>
+              <button class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+
+          <div class="popup_wrap on" id="required">
+            <div class="admin_popup">
+              <h3>필수값을 확인하세요</h3>
+              <p><span>@항목명@</span> 을 입력하시고 다시 저장해주세요.</p>
+              <button class="btn_middle btn_sky">확인</button>
+              <button class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
