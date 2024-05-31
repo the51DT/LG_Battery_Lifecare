@@ -656,7 +656,7 @@
                 </div>
     
                 <div class="sort_wrap">
-                  <p class="sort_title">기간검색</p>
+                  <p class="sort_title">상품 등록일</p>
                   <div class="sort_con">
                     <div class="sort_option">
                       <input type="radio" name="period" value="1month" id="1month">
@@ -685,7 +685,7 @@
                 </div>
     
                 <div class="sort_wrap">
-                  <p class="sort_title">상품 노출 상태</p>
+                  <p class="sort_title">상품사용여부</p>
                   <div class="sort_con">
                     <div class="input_type_radio">
                       <input type="radio" name="product_exposure" value="all" id="all" checked>
@@ -703,7 +703,7 @@
                 </div>
     
                 <div class="sort_wrap">
-                  <p class="sort_title">상품 분류</p>
+                  <p class="sort_title">상품유형</p>
                   <div class="sort_con">
                     <div class="input_type_radio">
                       <input type="radio" name="product_classification" value="all" id="all" checked>
@@ -795,7 +795,7 @@
                         <td><input type="checkbox"></td>
                         <td>2</td>
                         <td class="text_bold">PB00001</td>
-                        <td><span class="text_overflow text_blue"><a class="text_underline" href="#">세차이용권 (3만원)</a></span></td>
+                        <td><span class="text_overflow">세차이용권 (3만원)</span></td>
                         <td>30,000</td>
                         <td>30,000</td>
                         <td>사용함</td>
@@ -833,7 +833,7 @@
                         <td><input type="checkbox"></td>
                         <td>1</td>
                         <td class="text_bold">PA00001</td>
-                        <td><span class="text_overflow text_blue"><a class="text_underline" href="#">배터리 인증서 프리미엄 배터</a></span></td>
+                        <td><span class="text_overflow">배터리 인증서 프리미엄 배터</span></td>
                         <td>50,000</td>
                         <td>50,000</td>
                         <td>사용함</td>
@@ -852,6 +852,24 @@
               </div>
 
               <button class="btn_close"><span class="hidden">close</span></button>
+            </div>
+          </div>
+
+          <div class="popup_wrap" id="retype">
+            <div class="admin_popup">
+              <h3>필수값을 확인하세요</h3>
+              <p><span>@항목명@</span> 을 입력하시고 다시 저장해주세요.</p>
+              <button class="btn_middle btn_sky">확인</button>
+              <button class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+
+          <div class="popup_wrap" id="select_item">
+            <div class="admin_popup">
+              <h3>상품을 선택해주세요</h3>
+              <p>선택된 상품이 없습니다.<br>상품을 선택하고 다시 저장해주세요.</p>
+              <button class="btn_middle btn_sky">확인</button>
+              <button class="btn_close"><span class="hidden">닫기</span></button>
             </div>
           </div>
         </div>
