@@ -360,6 +360,9 @@
   text-align: right;
   max-width: 143px;
 }
+.admin_wrap input[type="text"].text_small {
+  max-width: 230px;
+}
 .admin_wrap .table_detail input[type="text"] {
   max-width: calc(100% - 16px);
   margin: 10px auto;
