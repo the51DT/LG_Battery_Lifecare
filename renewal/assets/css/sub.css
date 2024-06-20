@@ -110,7 +110,7 @@ textarea::-webkit-scrollbar-track {border-radius:0.4rem; background:var(--bg_01,
 
 .battery .method .list_wrap{width: 100vw; margin: 0 0 0 -6rem; padding: 10rem 0; background: #2C2C2C;}
 .battery .method .list_wrap ul{display: flex; flex-direction: column; align-items: center;}
-.battery .method .list_wrap li{width: 96rem; padding: 0.2rem 6rem; background: url(../img/guide/guide_check_pc.svg) no-repeat;}
+.battery .method .list_wrap li{width: 102rem; padding: 0 0 0 6rem; background: url(../img/guide/guide_check_pc.svg) no-repeat;}
 .battery .method .list_wrap li+li{margin-top: 4rem;}
 .battery .method .list_wrap strong{font-weight: 700; font-size: 2.4rem; color: var(--fc_02, #50CCE0);}
 .battery .method .list_wrap p{margin-top: 1rem; font-size: 1.8rem; line-height: 147%; color: #EFEFEF;}
@@ -192,9 +192,8 @@ textarea::-webkit-scrollbar-track {border-radius:0.4rem; background:var(--bg_01,
     .battery .certification .img_wrap .card{width: 13.3rem; height: 20rem; background-size: contain; background-repeat: no-repeat;}
     .battery .certification .img_wrap .card2{margin-left: 3.5rem;}
 
-    .battery .method .list_wrap{margin: 0 0 0 -2rem; padding: 4rem 0 4.7rem;}
-    .battery .method .list_wrap ul{width: calc(100% - 4rem);}
-    .battery .method .list_wrap li{width: 29.7rem; padding: 0 0 0 3.8rem; background: url(../img/guide/guide_check_mo.svg) no-repeat;}
+    .battery .method .list_wrap{margin: 0 0 0 -2rem; padding: 4rem 2rem 4.7rem;}
+    .battery .method .list_wrap li{width: 33.5rem; padding: 0 0 0 3.8rem; background: url(../img/guide/guide_check_mo.svg) no-repeat;}
     .battery .method .list_wrap li+li{margin-top: 2rem;}
     .battery .method .list_wrap strong{font-weight: 400; font-size: 2rem;}
     .battery .method .list_wrap p{margin-top: 0.8rem; font-size: 1.5rem;}
