@@ -116,10 +116,10 @@ textarea::-webkit-scrollbar-track {border-radius:0.4rem; background:var(--bg_01,
 .battery .method .list_wrap p{margin-top: 1rem; font-size: 1.8rem; line-height: 147%; color: #EFEFEF;}
 
 .battery .necessary{margin-bottom: 18rem;}
-.battery .necessary .img_wrap{text-align: center;}
+.battery .necessary .img_wrap{display: flex; justify-content: center; column-gap: 2rem;}
 .battery .necessary .img_wrap .card{display: inline-block; width: 30.4rem; height: 59.7rem; background-size: contain; background-repeat: no-repeat;}
 .battery .necessary .img_wrap .card1{background-image: url(../img/battery/battery_necessary_card1.png);}
-.battery .necessary .img_wrap .card2{margin-left: 2rem; background-image: url(../img/battery/battery_necessary_card2.png);}
+.battery .necessary .img_wrap .card2{background-image: url(../img/battery/battery_necessary_card2.png);}
 
 .battery .key_info{margin-bottom: 10rem; padding: 12rem 0 0;}
 .battery .key_info .list_wrap{display: flex; flex-direction: column; align-items: center; row-gap: 2rem; width: 100%; padding: 8rem 0; background-color: #2C2C2C;}
@@ -199,9 +199,10 @@ textarea::-webkit-scrollbar-track {border-radius:0.4rem; background:var(--bg_01,
     .battery .method .list_wrap p{margin-top: 0.8rem; font-size: 1.5rem;}
 
     .battery .necessary{margin-bottom: 4rem;}
+    .battery .necessary .img_wrap {column-gap: 0.9rem;}
     .battery .necessary .img_wrap .card{width: 16.3rem; height: 49.4rem; background-size: contain; background-repeat: no-repeat;}
     .battery .necessary .img_wrap .card1{background-image: url(../img/battery/battery_necessary_card1_mo.png);}
-    .battery .necessary .img_wrap .card2{margin-left: 0.9rem; background-image: url(../img/battery/battery_necessary_card2_mo.png);}
+    .battery .necessary .img_wrap .card2{background-image: url(../img/battery/battery_necessary_card2_mo.png);}
 
     .battery .key_info{margin-bottom: 4rem; padding: 8rem 2rem; background-color: #2C2C2C;}
     .battery .key_info .list_wrap{row-gap: 6rem; padding: 0; background-color: transparent;}
