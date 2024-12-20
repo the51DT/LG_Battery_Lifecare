@@ -4,7 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>B-Lifecare 어드민 페이지 리스트</title>
-    <link rel="stylesheet" href="./assets/css/ia.css" />
+    <style>
+      .ia_wrap {background:#fff; color:#000;}
+      .ia_table {background: #F5F7FA; width: 100%;}
+      .ia_table thead {background: #50CCE0;}
+      .ia_table tr {padding: 12px 0;}
+      .ia_table td:nth-child(5) {text-align: center;}
+      .ia_table .divide {background: darkgray;}
+      .ia_table .state::before {content: ''; display: block; margin: 0 auto; width: calc(100% - 35px); height: 100%; border-radius: 8px; padding: 4px; text-align: center;}
+      .ia_table .ing .state::before {content: '진행중'; background: lightgray;}
+      .ia_table .end .state::before {content: '완료'; background: lightgreen;}
+      .ia_table .modify .state::before {content: '수정중'; background: yellow;}
+      .ia_table .x .state::before {content: '취소'; background: lightcoral;}
+    </style>
   </head>
   <body>
     <div class="ia_wrap">
@@ -42,7 +54,7 @@
               <td>가이드</td>
               <td><p>가이드</p></td>
               <td></td>
-              <td><a href="./html/guide.html" target="_blank">guide</a></td>
+              <td><a href="./admin/html/guide.html" target="_blank">guide</a></td>
               <td></td>
               <td class="state"></td>
               <td>
@@ -66,7 +78,7 @@
               <td>상품 리스트</td>
               <td><p>상품 리스트</p></td>
               <td>[BLAD-PR01-PG00]</td>
-              <td><a href="./html/product_list.html" target="_blank">product_list</a></td>
+              <td><a href="./admin/html/product_list.html" target="_blank">product_list</a></td>
               <td>24.01.18</td>
               <td class="state"></td>
               <td>
@@ -77,7 +89,7 @@
               <td></td>
               <td><p>상품 리스트<br>- 필수값 팝업</p></td>
               <td></td>
-              <td><a href="./html/product_list_popup.html" target="_blank">product_list_popup</a></td>
+              <td><a href="./admin/html/product_list_popup.html" target="_blank">product_list_popup</a></td>
               <td>24.01.19</td>
               <td class="state"></td>
               <td>
@@ -88,7 +100,7 @@
               <td></td>
               <td><p>상품 등록<br>- 기본정보</p></td>
               <td>[BLAD-PR02-PG00]</td>
-              <td><a href="./html/product_info.html" target="_blank">product_info</a></td>
+              <td><a href="./admin/html/product_info.html" target="_blank">product_info</a></td>
               <td>24.01.18</td>
               <td class="state"></td>
               <td>
@@ -99,7 +111,7 @@
               <td></td>
               <td><p>상품 등록<br>- 기본정보<br>- 필수값 팝업</p></td>
               <td></td>
-              <td><a href="./html/product_info_popup.html" target="_blank">product_info_popup</a></td>
+              <td><a href="./admin/html/product_info_popup.html" target="_blank">product_info_popup</a></td>
               <td>24.01.19</td>
               <td class="state"></td>
               <td>
@@ -110,7 +122,7 @@
               <td></td>
               <td><p>상품 등록<br>- 기본정보/상품코드 등록 후</p></td>
               <td></td>
-              <td><a href="./html/product_info_after.html" target="_blank">product_info_after</a></td>
+              <td><a href="./admin/html/product_info_after.html" target="_blank">product_info_after</a></td>
               <td>24.01.18</td>
               <td class="state"></td>
               <td>
@@ -121,7 +133,7 @@
               <td></td>
               <td><p>상품 등록<br>- 기본정보/상품코드 등록 후<br>- 상품 개수 팝업</p></td>
               <td></td>
-              <td><a href="./html/product_info_after_popup.html" target="_blank">product_info_after_popup</a></td>
+              <td><a href="./admin/html/product_info_after_popup.html" target="_blank">product_info_after_popup</a></td>
               <td>24.01.23</td>
               <td class="state"></td>
               <td>
@@ -132,7 +144,7 @@
               <td></td>
               <td><p>상품 등록<br>- 제휴사 상품 정보</p></td>
               <td>[BLAD-PR02-PG01]</td>
-              <td><a href="./html/product_alliance.html" target="_blank">product_alliance</a></td>
+              <td><a href="./admin/html/product_alliance.html" target="_blank">product_alliance</a></td>
               <td>24.01.18</td>
               <td class="state"></td>
               <td>
@@ -143,7 +155,7 @@
               <td></td>
               <td><p>상품 등록<br>- 제휴사 상품 정보<br>- 삭제 확인 팝업</p></td>
               <td></td>
-              <td><a href="./html/product_alliance_popup1.html" target="_blank">product_alliance_popup1</a></td>
+              <td><a href="./admin/html/product_alliance_popup1.html" target="_blank">product_alliance_popup1</a></td>
               <td>24.01.23</td>
               <td class="state"></td>
               <td>
@@ -154,7 +166,7 @@
               <td></td>
               <td><p>상품 등록<br>- 제휴사 상품 정보<br>- 상품 개수 팝업</p></td>
               <td></td>
-              <td><a href="./html/product_alliance_popup2.html" target="_blank">product_alliance_popup2</a></td>
+              <td><a href="./admin/html/product_alliance_popup2.html" target="_blank">product_alliance_popup2</a></td>
               <td>24.03.13</td>
               <td class="state"></td>
               <td>
@@ -170,7 +182,7 @@
               <td>전시 카테고리</td>
               <td><p>전시상품 카테고리</p></td>
               <td>[BLAD-DP01-PG00]</td>
-              <td><a href="./html/exhibition_category.html" target="_blank">exhibition_category</a></td>
+              <td><a href="./admin/html/exhibition_category.html" target="_blank">exhibition_category</a></td>
               <td>24.01.18</td>
               <td class="state"></td>
               <td>
@@ -181,7 +193,7 @@
               <td></td>
               <td><p>전시상품 카테고리<br>- 삭제확인 팝업</p></td>
               <td></td>
-              <td><a href="./html/exhibition_category_popup1.html" target="_blank">exhibition_category_popup1</a></td>
+              <td><a href="./admin/html/exhibition_category_popup1.html" target="_blank">exhibition_category_popup1</a></td>
               <td>24.01.19</td>
               <td class="state"></td>
               <td>
@@ -192,7 +204,7 @@
               <td></td>
               <td><p>전시상품 카테고리<br>- 필수값 팝업</p></td>
               <td></td>
-              <td><a href="./html/exhibition_category_popup2.html" target="_blank">exhibition_category_popup2</a></td>
+              <td><a href="./admin/html/exhibition_category_popup2.html" target="_blank">exhibition_category_popup2</a></td>
               <td>24.01.19</td>
               <td class="state"></td>
               <td>
@@ -203,7 +215,7 @@
               <td></td>
               <td><p>전시상품 카테고리<br>- 사용 안함 변경 팝업</p></td>
               <td></td>
-              <td><a href="./html/exhibition_category_popup3.html" target="_blank">exhibition_category_popup3</a></td>
+              <td><a href="./admin/html/exhibition_category_popup3.html" target="_blank">exhibition_category_popup3</a></td>
               <td>24.03.06</td>
               <td class="state"></td>
               <td>
@@ -214,7 +226,7 @@
               <td>전시상품 리스트</td>
               <td><p>전시상품 리스트</p></td>
               <td>[BLAD-DP02-PG00]</td>
-              <td><a href="./html/exhibition_list.html" target="_blank">exhibition_list</a></td>
+              <td><a href="./admin/html/exhibition_list.html" target="_blank">exhibition_list</a></td>
               <td>24.01.18</td>
               <td class="state"></td>
               <td>
@@ -225,7 +237,7 @@
               <td></td>
               <td><p>전시상품 리스트<br>- 판매종료 팝업</p></td>
               <td></td>
-              <td><a href="./html/exhibition_list_popup.html" target="_blank">exhibition_list_popup</a></td>
+              <td><a href="./admin/html/exhibition_list_popup.html" target="_blank">exhibition_list_popup</a></td>
               <td>24.03.25</td>
               <td class="state"></td>
               <td>
@@ -236,7 +248,7 @@
               <td></td>
               <td><p>전시상품 등록/수정</p></td>
               <td>[BLAD-DP03-PG01]</td>
-              <td><a href="./html/exhibition_register.html" target="_blank">exhibition_register</a></td>
+              <td><a href="./admin/html/exhibition_register.html" target="_blank">exhibition_register</a></td>
               <td>24.01.19</td>
               <td class="state"></td>
               <td>
@@ -247,7 +259,7 @@
               <td></td>
               <td><p>전시상품 등록/수정<br>- 플래그 선택 팝업</p></td>
               <td></td>
-              <td><a href="./html/exhibition_register_popup1.html" target="_blank">exhibition_register_popup1</a></td>
+              <td><a href="./admin/html/exhibition_register_popup1.html" target="_blank">exhibition_register_popup1</a></td>
               <td>24.01.19</td>
               <td class="state"></td>
               <td>
@@ -258,7 +270,7 @@
               <td></td>
               <td><p>전시상품 등록/수정<br>- 카테고리 선택 팝업</p></td>
               <td></td>
-              <td><a href="./html/exhibition_register_popup2.html" target="_blank">exhibition_register_popup2</a></td>
+              <td><a href="./admin/html/exhibition_register_popup2.html" target="_blank">exhibition_register_popup2</a></td>
               <td>24.01.19</td>
               <td class="state"></td>
               <td>
@@ -269,7 +281,7 @@
               <td></td>
               <td><p>전시상품 등록/수정<br>- 저장 완료 팝업</p></td>
               <td></td>
-              <td><a href="./html/exhibition_register_popup3.html" target="_blank">exhibition_register_popup3</a></td>
+              <td><a href="./admin/html/exhibition_register_popup3.html" target="_blank">exhibition_register_popup3</a></td>
               <td>24.01.19</td>
               <td class="state"></td>
               <td>
@@ -280,7 +292,7 @@
               <td></td>
               <td><p>전시상품 등록/수정<br>- 판매가 툴팁 팝업</p></td>
               <td></td>
-              <td><a href="./html/exhibition_register_popup4.html" target="_blank">exhibition_register_popup4</a></td>
+              <td><a href="./admin/html/exhibition_register_popup4.html" target="_blank">exhibition_register_popup4</a></td>
               <td>24.01.19</td>
               <td class="state"></td>
               <td>
@@ -291,7 +303,7 @@
               <td></td>
               <td><p>전시상품 등록/수정<br>- 상품 추가 팝업</p></td>
               <td>[BLAD-DP03-PO00]</td>
-              <td><a href="./html/exhibition_register_popup5.html" target="_blank">exhibition_register_popup5</a></td>
+              <td><a href="./admin/html/exhibition_register_popup5.html" target="_blank">exhibition_register_popup5</a></td>
               <td>24.01.19</td>
               <td class="state"></td>
               <td>
@@ -302,7 +314,7 @@
               <td></td>
               <td><p>전시상품 등록/수정<br>- 상품 선택 팝업</p></td>
               <td></td>
-              <td><a href="./html/exhibition_register_popup5-1.html" target="_blank">exhibition_register_popup5-1</a></td>
+              <td><a href="./admin/html/exhibition_register_popup5-1.html" target="_blank">exhibition_register_popup5-1</a></td>
               <td>24.05.31</td>
               <td class="state"></td>
               <td>
@@ -313,7 +325,7 @@
               <td></td>
               <td><p>전시상품 등록/수정<br>- 필수값 팝업</p></td>
               <td></td>
-              <td><a href="./html/exhibition_register_popup6.html" target="_blank">exhibition_register_popup6</a></td>
+              <td><a href="./admin/html/exhibition_register_popup6.html" target="_blank">exhibition_register_popup6</a></td>
               <td>24.05.31</td>
               <td class="state"></td>
               <td>
@@ -324,7 +336,7 @@
               <td>전시상품 진열 관리</td>
               <td><p>전시상품 진열 관리</p></td>
               <td>[BLAD-DP04-PG00]</td>
-              <td><a href="./html/exhibition_management.html" target="_blank">exhibition_management</a></td>
+              <td><a href="./admin/html/exhibition_management.html" target="_blank">exhibition_management</a></td>
               <td>24.01.22</td>
               <td class="state"></td>
               <td>
@@ -335,7 +347,7 @@
               <td></td>
               <td><p>전시상품 진열 관리<br>- 빈 화면 케이스</p></td>
               <td></td>
-              <td><a href="./html/exhibition_management_case.html" target="_blank">exhibition_management_case</a></td>
+              <td><a href="./admin/html/exhibition_management_case.html" target="_blank">exhibition_management_case</a></td>
               <td>24.03.28</td>
               <td class="state"></td>
               <td>
@@ -346,7 +358,7 @@
               <td></td>
               <td><p>전시상품 진열 관리<br>- 저장 팝업</p></td>
               <td></td>
-              <td><a href="./html/exhibition_management_popup.html" target="_blank">exhibition_management_popup</a></td>
+              <td><a href="./admin/html/exhibition_management_popup.html" target="_blank">exhibition_management_popup</a></td>
               <td>24.01.22</td>
               <td class="state"></td>
               <td>
@@ -362,7 +374,7 @@
               <td>매출 현황 관리</td>
               <td><p>매출 현황 관리</p></td>
               <td>[BLAD-OD01-PG00]</td>
-              <td><a href="./html/order_list.html" target="_blank">order_list</a></td>
+              <td><a href="./admin/html/order_list.html" target="_blank">order_list</a></td>
               <td>24.01.25</td>
               <td class="state"></td>
               <td>
@@ -373,7 +385,7 @@
               <td></td>
               <td><p>매출 현황 관리<br>- 월별 팝업</p></td>
               <td>[BLAD-OD01-PO00]</td>
-              <td><a href="./html/order_list_popup1.html" target="_blank">order_list_popup1</a></td>
+              <td><a href="./admin/html/order_list_popup1.html" target="_blank">order_list_popup1</a></td>
               <td>24.01.22</td>
               <td class="state"></td>
               <td>
@@ -384,7 +396,7 @@
               <td></td>
               <td><p>매출 현황 관리<br>- 기간별 팝업</p></td>
               <td></td>
-              <td><a href="./html/order_list_popup2.html" target="_blank">order_list_popup2</a></td>
+              <td><a href="./admin/html/order_list_popup2.html" target="_blank">order_list_popup2</a></td>
               <td>24.01.22</td>
               <td class="state"></td>
               <td>
@@ -395,7 +407,7 @@
               <td></td>
               <td><p>주문 상세</p></td>
               <td>[BLAD-OD01-PG01]</td>
-              <td><a href="./html/order_detail.html" target="_blank">order_detail</a></td>
+              <td><a href="./admin/html/order_detail.html" target="_blank">order_detail</a></td>
               <td>24.01.22</td>
               <td class="state"></td>
               <td>
@@ -406,7 +418,7 @@
               <td>주문 결과 조회</td>
               <td><p>주문 결과 조회</p></td>
               <td>[BLAD-OD02-PG00]</td>
-              <td><a href="./html/order_complete.html" target="_blank">order_complete</a></td>
+              <td><a href="./admin/html/order_complete.html" target="_blank">order_complete</a></td>
               <td>24.01.22</td>
               <td class="state"></td>
               <td>
@@ -417,7 +429,7 @@
               <td>결제 중단/실패 조회</td>
               <td><p>결제 중단/실패 조회</p></td>
               <td>[BLAD-OD03-PG00]</td>
-              <td><a href="./html/order_fail.html" target="_blank">order_fail</a></td>
+              <td><a href="./admin/html/order_fail.html" target="_blank">order_fail</a></td>
               <td>24.01.22</td>
               <td class="state"></td>
               <td>
@@ -433,7 +445,7 @@
               <td>카드 승인 조회(이니시스)</td>
               <td><p>카드 승인 조회(이니시스)</p></td>
               <td>[BLAD-CR01-PG00]</td>
-              <td><a href="./html/cancel_list.html" target="_blank">cancel_list</a></td>
+              <td><a href="./admin/html/cancel_list.html" target="_blank">cancel_list</a></td>
               <td>24.01.22</td>
               <td class="state"></td>
               <td>
@@ -444,7 +456,7 @@
               <td>관리자 카드취소 조회</td>
               <td><p>관리자 카드취소 조회</p></td>
               <td>[BLAD-CR02-PG00]</td>
-              <td><a href="./html/cancel_manager.html" target="_blank">cancel_manager</a></td>
+              <td><a href="./admin/html/cancel_manager.html" target="_blank">cancel_manager</a></td>
               <td>24.01.22</td>
               <td class="state"></td>
               <td>
@@ -455,7 +467,7 @@
               <td></td>
               <td><p>주문 상세</p></td>
               <td>[BLAD-OD01-PG01]</td>
-              <td><a href="./html/cancel_detail.html" target="_blank">cancel_detail</a></td>
+              <td><a href="./admin/html/cancel_detail.html" target="_blank">cancel_detail</a></td>
               <td>24.01.22</td>
               <td class="state"></td>
               <td>
@@ -466,7 +478,7 @@
               <td></td>
               <td><p>주문 상세<br>- 환불불가 비활성화 case</p></td>
               <td></td>
-              <td><a href="./html/cancel_detail_case.html" target="_blank">cancel_detail_case</a></td>
+              <td><a href="./admin/html/cancel_detail_case.html" target="_blank">cancel_detail_case</a></td>
               <td>24.02.06</td>
               <td class="state"></td>
               <td>
@@ -477,7 +489,7 @@
               <td></td>
               <td><p>주문 상세<br>- 취소 확인 팝업</p></td>
               <td></td>
-              <td><a href="./html/cancel_detail_popup1.html" target="_blank">cancel_detail_popup1</a></td>
+              <td><a href="./admin/html/cancel_detail_popup1.html" target="_blank">cancel_detail_popup1</a></td>
               <td>24.01.26</td>
               <td class="state"></td>
               <td>
@@ -488,7 +500,7 @@
               <td></td>
               <td><p>주문 상세<br>- 환불 불가 팝업</p></td>
               <td></td>
-              <td><a href="./html/cancel_detail_popup2.html" target="_blank">cancel_detail_popup2</a></td>
+              <td><a href="./admin/html/cancel_detail_popup2.html" target="_blank">cancel_detail_popup2</a></td>
               <td>24.01.26</td>
               <td class="state"></td>
               <td>
@@ -499,7 +511,7 @@
               <td></td>
               <td><p>주문 상세<br>- 오류 팝업</p></td>
               <td></td>
-              <td><a href="./html/cancel_detail_popup3.html" target="_blank">cancel_detail_popup3</a></td>
+              <td><a href="./admin/html/cancel_detail_popup3.html" target="_blank">cancel_detail_popup3</a></td>
               <td>24.02.16</td>
               <td class="state"></td>
               <td>
@@ -510,7 +522,7 @@
               <td>망 취소 조회(이니시스)</td>
               <td><p>망 취소 조회(이니시스)</p></td>
               <td>[BLAD-CR03-PG00]</td>
-              <td><a href="./html/cancel_net.html" target="_blank">cancel_net</a></td>
+              <td><a href="./admin/html/cancel_net.html" target="_blank">cancel_net</a></td>
               <td>24.01.22</td>
               <td class="state"></td>
               <td>
@@ -526,7 +538,7 @@
               <td>배너 관리</td>
               <td><p>배너 관리</p></td>
               <td>[BLAD-SR03-PG00]</td>
-              <td><a href="./html/banner_list.html" target="_blank">banner_list</a></td>
+              <td><a href="./admin/html/banner_list.html" target="_blank">banner_list</a></td>
               <td>24.01.22</td>
               <td class="state"></td>
               <td>
@@ -538,7 +550,7 @@
               <td></td>
               <td><p>배너 관리</p></td>
               <td></td>
-              <td><a href="./html/banner_list_popup.html" target="_blank">banner_list_popup</a></td>
+              <td><a href="./admin/html/banner_list_popup.html" target="_blank">banner_list_popup</a></td>
               <td>24.02.22</td>
               <td class="state"></td>
               <td>
@@ -550,7 +562,7 @@
               <td></td>
               <td><p>배너 등록/수정</p></td>
               <td>[BLAD-SR03-PG01]</td>
-              <td><a href="./html/banner_edit.html" target="_blank">banner_edit</a></td>
+              <td><a href="./admin/html/banner_edit.html" target="_blank">banner_edit</a></td>
               <td>24.01.23</td>
               <td class="state"></td>
               <td>
@@ -562,7 +574,7 @@
               <td></td>
               <td><p>배너 등록/수정<br>- 필수값 팝업</p></td>
               <td></td>
-              <td><a href="./html/banner_edit_popup1.html" target="_blank">banner_edit_popup1</a></td>
+              <td><a href="./admin/html/banner_edit_popup1.html" target="_blank">banner_edit_popup1</a></td>
               <td>24.01.23</td>
               <td class="state"></td>
               <td>
@@ -574,7 +586,7 @@
               <td></td>
               <td><p>배너 등록/수정<br>- 중복 위치 팝업</p></td>
               <td></td>
-              <td><a href="./html/banner_edit_popup2.html" target="_blank">banner_edit_popup2</a></td>
+              <td><a href="./admin/html/banner_edit_popup2.html" target="_blank">banner_edit_popup2</a></td>
               <td>24.01.23</td>
               <td class="state"></td>
               <td>
@@ -586,7 +598,7 @@
               <td></td>
               <td><p>배너 등록/수정<br>- 중복 위치 팝업</p></td>
               <td></td>
-              <td><a href="./html/banner_edit_popup3.html" target="_blank">banner_edit_popup3</a></td>
+              <td><a href="./admin/html/banner_edit_popup3.html" target="_blank">banner_edit_popup3</a></td>
               <td>24.02.22</td>
               <td class="state"></td>
               <td>
@@ -602,7 +614,7 @@
               <td>지원 차량 목록</td>
               <td><p>지원 차량 목록 리스트</p></td>
               <td></td>
-              <td><a href="./html/support_list.html" target="_blank">support_list</a></td>
+              <td><a href="./admin/html/support_list.html" target="_blank">support_list</a></td>
               <td>24.05.14</td>
               <td class="state"></td>
               <td>
@@ -614,7 +626,7 @@
               <td></td>
               <td><p>지원 차량 목록 리스트<br>- 삭제 팝업</p></td>
               <td></td>
-              <td><a href="./html/support_list_popup.html" target="_blank">support_list_popup</a></td>
+              <td><a href="./admin/html/support_list_popup.html" target="_blank">support_list_popup</a></td>
               <td>24.05.14</td>
               <td class="state"></td>
               <td>
@@ -626,7 +638,7 @@
               <td></td>
               <td><p>지원 차량 목록 상세</p></td>
               <td></td>
-              <td><a href="./html/support_detail.html" target="_blank">support_detail</a></td>
+              <td><a href="./admin/html/support_detail.html" target="_blank">support_detail</a></td>
               <td>24.05.14</td>
               <td class="state"></td>
               <td>
@@ -638,7 +650,7 @@
               <td></td>
               <td><p>지원 차량 목록 상세<br>- 대표차종ID 팝업</p></td>
               <td></td>
-              <td><a href="./html/support_detail_popup1.html" target="_blank">support_detail_popup1</a></td>
+              <td><a href="./admin/html/support_detail_popup1.html" target="_blank">support_detail_popup1</a></td>
               <td>24.05.14</td>
               <td class="state"></td>
               <td>
@@ -650,7 +662,7 @@
               <td></td>
               <td><p>지원 차량 목록 상세<br>- 차종ID, 연형 팝업</p></td>
               <td></td>
-              <td><a href="./html/support_detail_popup2.html" target="_blank">support_detail_popup2</a></td>
+              <td><a href="./admin/html/support_detail_popup2.html" target="_blank">support_detail_popup2</a></td>
               <td>24.05.14</td>
               <td class="state"></td>
               <td>
@@ -662,7 +674,7 @@
               <td></td>
               <td><p>지원 차량 목록 상세<br>- 필수값 팝업</p></td>
               <td></td>
-              <td><a href="./html/support_detail_popup3.html" target="_blank">support_detail_popup3</a></td>
+              <td><a href="./admin/html/support_detail_popup3.html" target="_blank">support_detail_popup3</a></td>
               <td>24.05.14</td>
               <td class="state"></td>
               <td>
@@ -674,7 +686,7 @@
               <td></td>
               <td><p>지원 차량 목록 상세<br>- 구좌 수 변경 팝업</p></td>
               <td></td>
-              <td><a href="./html/support_detail_popup4.html" target="_blank">support_detail_popup4</a></td>
+              <td><a href="./admin/html/support_detail_popup4.html" target="_blank">support_detail_popup4</a></td>
               <td>24.06.03</td>
               <td class="state"></td>
               <td>
@@ -698,7 +710,7 @@
               <td>쿠폰 관리</td>
               <td><p>쿠폰 관리</p></td>
               <td>[BLAD-PM03-PG00]</td>
-              <td><a href="./html/coupon_list.html" target="_blank">coupon_list</a></td>
+              <td><a href="./admin/html/coupon_list.html" target="_blank">coupon_list</a></td>
               <td>24.01.23</td>
               <td class="state"></td>
               <td>
@@ -709,7 +721,7 @@
               <td></td>
               <td><p>쿠폰 등록/수정<br>- 기본정보<br>- 쿠폰유형 / 자동발행 일반 case<br>- 할인 설정 / 할인 금액 case<br>- 사용기간 / 기간설정 case</p></td>
               <td>[BLAD-PM03-PG01]</td>
-              <td><a href="./html/coupon_info.html" target="_blank">coupon_info</a></td>
+              <td><a href="./admin/html/coupon_info.html" target="_blank">coupon_info</a></td>
               <td>24.01.24</td>
               <td class="state"></td>
               <td>
@@ -720,7 +732,7 @@
               <td></td>
               <td><p>쿠폰 등록/수정<br>- 기본정보<br>- 쿠폰유형 / 자동발행 특정상품 case<br>- 할인 설정 / full case<br>- 사용기간 / 쿠폰 발급일 기준 case</p></td>
               <td></td>
-              <td><a href="./html/coupon_info_case.html" target="_blank">coupon_info_case</a></td>
+              <td><a href="./admin/html/coupon_info_case.html" target="_blank">coupon_info_case</a></td>
               <td>24.01.24</td>
               <td class="state"></td>
               <td>
@@ -731,7 +743,7 @@
               <td></td>
               <td><p>쿠폰 등록/수정<br>- 기본정보<br>- 자동 쿠폰 등록 팝업</p></td>
               <td></td>
-              <td><a href="./html/coupon_info_popup1.html" target="_blank">coupon_info_popup1</a></td>
+              <td><a href="./admin/html/coupon_info_popup1.html" target="_blank">coupon_info_popup1</a></td>
               <td>24.01.24</td>
               <td class="state"></td>
               <td>
@@ -742,7 +754,7 @@
               <td></td>
               <td><p>쿠폰 등록/수정<br>- 기본정보<br>- 수동 쿠폰 등록 팝업</p></td>
               <td></td>
-              <td><a href="./html/coupon_info_popup2.html" target="_blank">coupon_info_popup2</a></td>
+              <td><a href="./admin/html/coupon_info_popup2.html" target="_blank">coupon_info_popup2</a></td>
               <td>24.01.24</td>
               <td class="state"></td>
               <td>
@@ -753,7 +765,7 @@
               <td></td>
               <td><p>쿠폰 등록/수정<br>- 기본정보<br>- 전시상품 추가 팝업</p></td>
               <td>[BLAD-PM03-PO00]</td>
-              <td><a href="./html/coupon_info_popup3.html" target="_blank">coupon_info_popup3</a></td>
+              <td><a href="./admin/html/coupon_info_popup3.html" target="_blank">coupon_info_popup3</a></td>
               <td>24.01.24</td>
               <td class="state"></td>
               <td>
@@ -764,7 +776,7 @@
               <td></td>
               <td><p>쿠폰 등록/수정<br>- 기본정보<br>- 발행 중지 팝업</p></td>
               <td></td>
-              <td><a href="./html/coupon_info_popup4.html" target="_blank">coupon_info_popup4</a></td>
+              <td><a href="./admin/html/coupon_info_popup4.html" target="_blank">coupon_info_popup4</a></td>
               <td>24.01.29</td>
               <td class="state"></td>
               <td>
@@ -775,7 +787,7 @@
               <td></td>
               <td><p>쿠폰 등록/수정<br>- 기본정보<br>- 발행 재개 팝업</p></td>
               <td></td>
-              <td><a href="./html/coupon_info_popup5.html" target="_blank">coupon_info_popup5</a></td>
+              <td><a href="./admin/html/coupon_info_popup5.html" target="_blank">coupon_info_popup5</a></td>
               <td>24.01.29</td>
               <td class="state"></td>
               <td>
@@ -786,7 +798,7 @@
               <td></td>
               <td><p>쿠폰 등록/수정<br>- 기본정보<br>- 발행 종료 팝업</p></td>
               <td></td>
-              <td><a href="./html/coupon_info_popup6.html" target="_blank">coupon_info_popup6</a></td>
+              <td><a href="./admin/html/coupon_info_popup6.html" target="_blank">coupon_info_popup6</a></td>
               <td>24.01.29</td>
               <td class="state"></td>
               <td>
@@ -797,7 +809,7 @@
               <td></td>
               <td><p>쿠폰 등록/수정<br>- 수동쿠폰 발송 관리</p></td>
               <td>[BLAD-PM03-PG02]</td>
-              <td><a href="./html/coupon_manual.html" target="_blank">coupon_manual</a></td>
+              <td><a href="./admin/html/coupon_manual.html" target="_blank">coupon_manual</a></td>
               <td>24.01.24</td>
               <td class="state"></td>
               <td>
@@ -808,7 +820,7 @@
               <td></td>
               <td><p>쿠폰 등록/수정<br>- 수동쿠폰 발송 관리<br>- 정보 확인 팝업</p></td>
               <td></td>
-              <td><a href="./html/coupon_manual_popup1.html" target="_blank">coupon_manual_popup1</a></td>
+              <td><a href="./admin/html/coupon_manual_popup1.html" target="_blank">coupon_manual_popup1</a></td>
               <td>24.01.29</td>
               <td class="state"></td>
               <td>
@@ -819,7 +831,7 @@
               <td></td>
               <td><p>쿠폰 등록/수정<br>- 수동쿠폰 발송 관리<br>- 발송 완료 팝업</p></td>
               <td></td>
-              <td><a href="./html/coupon_manual_popup2.html" target="_blank">coupon_manual_popup2</a></td>
+              <td><a href="./admin/html/coupon_manual_popup2.html" target="_blank">coupon_manual_popup2</a></td>
               <td>24.01.24</td>
               <td class="state"></td>
               <td>
@@ -830,7 +842,7 @@
               <td></td>
               <td><p>쿠폰 등록/수정<br>- 발송내역 조회</p></td>
               <td>[BLAD-PM03-PG03]</td>
-              <td><a href="./html/coupon_check.html" target="_blank">coupon_check</a></td>
+              <td><a href="./admin/html/coupon_check.html" target="_blank">coupon_check</a></td>
               <td>24.01.24</td>
               <td class="state"></td>
               <td>
@@ -841,7 +853,7 @@
               <td></td>
               <td><p>쿠폰 등록/수정<br>- 발송내역 조회<br>- 삭제 팝업</p></td>
               <td></td>
-              <td><a href="./html/coupon_check_popup1.html" target="_blank">coupon_check_popup1</a></td>
+              <td><a href="./admin/html/coupon_check_popup1.html" target="_blank">coupon_check_popup1</a></td>
               <td>24.01.24</td>
               <td class="state"></td>
               <td>
@@ -852,7 +864,7 @@
               <td></td>
               <td><p>쿠폰 등록/수정<br>- 발송내역 조회<br>- 선택 팝업</p></td>
               <td></td>
-              <td><a href="./html/coupon_check_popup2.html" target="_blank">coupon_check_popup2</a></td>
+              <td><a href="./admin/html/coupon_check_popup2.html" target="_blank">coupon_check_popup2</a></td>
               <td>24.01.24</td>
               <td class="state"></td>
               <td>
@@ -868,7 +880,7 @@
               <td>회원</td>
               <td><p>회원정보 관리<br>- 기본정보</p></td>
               <td>[BLAD-SM01-PG01]</td>
-              <td><a href="./html/member_info.html" target="_blank">member_info</a></td>
+              <td><a href="./admin/html/member_info.html" target="_blank">member_info</a></td>
               <td>24.01.24</td>
               <td class="state"></td>
               <td>
@@ -879,7 +891,7 @@
               <td></td>
               <td><p>회원정보 관리<br>- 서비스이용정보</p></td>
               <td>[BLAD-SM01-PG02]</td>
-              <td><a href="./html/member_service.html" target="_blank">member_service</a></td>
+              <td><a href="./admin/html/member_service.html" target="_blank">member_service</a></td>
               <td>24.01.24</td>
               <td class="state"></td>
               <td>
@@ -905,6 +917,30 @@
               <td>[BLAP-BP01-PG01]</td>
               <td><a href="./renewal/html/battery.html" target="_blank">battery</a></td>
               <td>24.06.20</td>
+              <td class="state"></td>
+              <td>
+                <p></p>
+              </td>
+            </tr>
+
+            <tr class="divide">
+              <td colspan="9"></td>
+            </tr>
+
+            <tr>
+              <td colspan="9" style="text-align: center; font-weight: 700; font-size: 18px;">인증서 다운로드 양식</td>
+            </tr>
+
+            <tr class="divide">
+              <td colspan="9"></td>
+            </tr>
+
+            <tr class="ing">
+              <td>인증서 다운로드 양식</td>
+              <td><p>인증서 다운로드 양식</p></td>
+              <td></td>
+              <td><a href="./chargediag/html/chargediag.html" target="_blank">chargediag</a></td>
+              <td>24.12.19</td>
               <td class="state"></td>
               <td>
                 <p></p>

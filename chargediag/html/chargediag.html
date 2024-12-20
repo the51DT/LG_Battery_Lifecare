@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B-Lifecare 인증서 다운로드 양식</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="chargediag">
+    <div class="header">
+      <h1><img src="../assets/images/logo.svg"/></h1>
+      <div>
+        <span>발급번호</span>
+        <span class="doc_num">MEY049 d638 1605 1747</span>
+      </div>
+    </div>
+
+    <div class="banner">
+      <p class="banner_tit"><img src="../assets/images/standard.svg"/><span>Certificate</span></p>
+      <div class="banner_box">
+        <div>
+          <span>발급일자</span>
+          <span class="date">2021.07.01</span>
+        </div>
+        <div class="banner_box_line"></div>
+        <div>
+          <span>유효기한</span>
+          <span><span class="period">2021.07.31</span> 까지</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="battery_flex">
+      <!-- battery_box 클래스 div 에 good, bad 각 클래스 추가 시 우수(파랑), 관리필요(빨강) 상태로 전환 / 기본은 보통(노랑) -->
+      <div class="battery_box">
+        <div class="battery_per">
+          <div class="battery_img"><span class="battery_num">98.89</span>%</div>
+        </div>
+        <div class="battery_gage">
+          <div class="battery_r"></div>
+          <div class="battery_y"></div>
+          <div class="battery_b"></div>
+          <div class="battery_pos"></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="car_tit">
+          <p class="car_name">아이오닉 5</p>
+          <span>차대번호 <span class="car_uniq">KMHELI3CPYA000001</span></span>
+        </div>
+        <div class="car_info">
+          <div>
+            <span>차량번호</span>
+            <span class="car_num">39더1234</span>
+          </div>
+          <div>
+            <span>연식</span>
+            <span class="car_year">2022</span>
+          </div>
+          <div>
+            <span>누적주행거리</span>
+            <span class="car_mileage">13,322km</span>
+          </div>
+        </div>
+        <p class="border_tit">출고성능 대비 현재성능</p>
+        <div class="table_tag">
+          <div class="tag">
+            <div>현재</div>
+            <div>출고기준</div>
+          </div>
+          <div class="tag_row">
+            <p>배터리 최대 성능</p>
+            <p class="perform_now"><span>##</span>kWh</p>
+            <p class="perform_delivery"><span>##</span>kWh</p>
+          </div>
+          <div class="tag_row">
+            <p>완충 시 주행가능거리</p>
+            <p class="fully_now"><span>##</span>km</p>
+            <p class="fully_delivery"><span>##</span>km</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="border_tit">충전 진단 정보</p>
+    <div class="charge_flex">
+      <div>
+        <div class="table_border">
+          <p class="tit">배터리 정보</p>
+          <div>
+            <p>전압</p>
+            <p class="voltage"><span>##</span>V</p>
+          </div>
+          <div>
+            <p>누적충전량</p>
+            <p class="charge"><span>###.###</span>Ah</p>
+          </div>
+          <div>
+            <p>누적방전량</p>
+            <p class="discharge"><span>###.###</span>Ah</p>
+          </div>
+        </div>
+        <div class="table_border">
+          <p class="tit">절연저항</p>
+          <div>
+            <p>절연저항</p>
+            <p class="resist"><span>###,###</span>kΩ</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="table_border">
+          <p class="tit">셀 밸런싱 상태</p>
+          <div>
+            <p>셀 전압 최대</p>
+            <p class="voltage_max"><span>#.##</span>V</p>
+          </div>
+          <div>
+            <p>셀 전압 최소</p>
+            <p class="voltage_min"><span>#.##</span>V</p>
+          </div>
+        </div>
+        <div class="table_border">
+          <p class="tit">배터리 온도</p>
+          <div>
+            <p>최고 온도</p>
+            <p class="temp_high"><span>##</span>℃</p>
+          </div>
+          <div>
+            <p>최저 온도</p>
+            <p class="temp_low"><span>##</span>℃</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table_flex">
+      <div>
+        <p class="border_tit">잔여 보증 거리 및 기간 정보</p>
+        <div class="table_tag">
+          <div class="tag">
+            <div>현재</div>
+            <div>출고기준</div>
+          </div>
+          <div class="tag_row">
+            <p>잔여보증거리</p>
+            <p class="distance_now"><span>###,###</span>km</p>
+            <p class="distance_delivery"><span>20만</span>km</p>
+          </div>
+          <div class="tag_row">
+            <p>잔여보증기간</p>
+            <p class="period_now">3년 10개월</p>
+            <p class="period_delivery">7년</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="border_tit">배터리 관련 진단코드(DTC) 검출</p>
+        <p class="dtc">진단코드가<span class="dtc_num">8</span>개 검출되었습니다.</p>
+      </div>
+    </div>
+
+    <div class="caution">
+      <p class="caution_tit">B-Lifecare 인증서 주의사항</p>
+      <ul class="caution_list">
+        <li>본 시험 결과는 실제 주행 및 충전 시험을 바탕으로 얻어진 것으로서, 시험 환경에 따라 달라지거나 실제와 비교하여 오차가 존재할 수 있습니다.</li>
+        <li>본 시험 결과는 배터리의 특정 항목에 대한 시험 당시의 결과일 뿐이며, 과거 또는 미래의 배터리 성능을 나타내는 것이 아닙니다. 따라서 당사는 본 결과를 통하여 향후 배터리 성능이 이와 동일함을 보장하지 않으며, 향후  배터리와 관련하여 발생할 수 있는 어떠한 문제에 대하여 본 결과를 근거로 법적 책임을 부담하지 아니합니다.</li>
+        <li>본 시험 결과를 확대 해석하거나 오남용 하여 발생하는 사항에 대하여 당사는 어떠한 책임도 부담하지 아니합니다.</li>
+        <li>본 시험 결과를 당사의 사전 서면 동의 없이 본 사이트 이외의 곳에 무단으로 복사, 전재, 배포 등을 하여서는 아니됩니다.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../assets/js/chargediag.js"></script>
+</body>
+</html>

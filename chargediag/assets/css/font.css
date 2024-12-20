@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Apple SD Gothic B";
+  src: url('../font/AppleSDGothicNeoB.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  unicode-range: U+0-10FFFF;
+}
+@font-face {
+  font-family: "Apple SD Gothic M";
+  src: url('../font/AppleSDGothicNeoM.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  unicode-range: U+0-10FFFF;
+}
+@font-face {
+  font-family: "Apple SD Gothic R";
+  src: url('../font/AppleSDGothicNeoR.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  unicode-range: U+0-10FFFF;
+}
