@@ -4,11 +4,11 @@
   width: 1240px;
   height: auto;
   margin: 0 auto;
-  padding: 82px 52px 48px;
+  padding: 82px 52px 64px;
   background-image: url(../images/bg.svg);
   background-size: 414px 455px;
   background-repeat: no-repeat;
-  background-position: right 64px bottom 48px;
+  background-position: right 52px bottom 24px;
   font-family: "Apple SD Gothic R";
 }
 
@@ -79,8 +79,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  width: 297px;
-  height: 36px;
+  width: 331px;
+  height: 38px;
   padding: 10px 20px;
   border-radius: 12px;
   background: #FFFFFF1A;
@@ -94,8 +94,8 @@
 .banner_box div {
   display: flex;
   gap: 6px;
-  font-size: 12px;
-  line-height: 15.73px;
+  font-size: 14px;
+  line-height: 18.35px;
 }
 .banner_box div > span:first-child {
   opacity: 0.6;
@@ -103,22 +103,22 @@
 
 .battery_flex {
   display: flex;
-  gap: 33px;
+  gap: 32px;
   margin-bottom: 66px;
 }
 .battery_flex > div {
   width: calc(50% - (33px / 2));
 }
 .battery_box {
-  height: 353px;
-  border: 1px solid #7c7c7c;
+  height: 349px;
+  border: 1px solid #D3D3D3;
   border-radius: 12px;
   background-color: #EFEFEF;
 }
 .battery_per {
   display: flex;
+  justify-content: center;
   align-items: center;
-  width: 419px;
   margin: 81px auto 102px;
 }
 .battery_per::before {
@@ -138,7 +138,7 @@
 }
 .battery_per::after {
   content: '보통';
-  margin-left: auto;
+  margin-left: 24px;
   padding: 5px 15px;
   border-radius: 30px;
   border: 1px solid #A76E00;
@@ -271,68 +271,83 @@
 }
 .car_tit {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 8px;
-  margin: 13px 0;
+  padding-left: 8px;
+  margin-bottom: 16px;
 }
 .car_name {
   font-family: "Apple SD Gothic B";
-  font-size: 20px;
+  font-size: 24px;
+  line-height: 30px;
 }
 .car_tit span {
-  font-size: 15px;
+  font-size: 18px;
+  line-height: 24px;
 }
 .car_info {
   display: flex;
   justify-content: center;
-  padding: 20px;
-  margin-bottom: 50px;
+  padding: 20px 40px;
+  margin-bottom: 42px;
   border-radius: 12px;
   background-color: #F4F4F4;
 }
 .car_info > div {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 17px;
-  width: 133px;
+  gap: 8px;
+  width: 157.33px;
 }
-.car_info > div + div {
-  border-left: 1px solid #e8e8e8;
+.car_info > div + div::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  height: 42px;
+  border-left: 1px solid #d3d3d3;
 }
 .car_info > div span:first-child {
   font-size: 18px;
+  line-height: 24px;
   color: #1e1e1e;
 }
 .car_info > div span:last-child {
   font-family: "Apple SD Gothic B";
   font-size: 18px;
+  line-height: 24px;
   color: #00b4cb;
 }
 
 .border_tit {
-  padding-bottom: 8.5px;
+  padding-left: 8px;
+  padding-bottom: 10.5px;
   border-bottom: 3px solid #5d5d5d;
   font-family: "Apple SD Gothic B";
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 26px;
   color: #1e1e1e;
 }
 .table_tag {
-  padding: 19px 12px 0 28px;
+  padding: 12.5px 8px 0;
 }
 .tag {
   display: flex;
   justify-content: flex-end;
-  gap: 35px;
-  margin-bottom: 22px;
+  gap: 30px;
+  margin-bottom: 14px;
 }
 .tag > div {
   display: flex;
   justify-content: center;
-  align-items: center ;
-  width: 82px;
-  padding: 3px 0 1px;
+  align-items: center;
+  width: 83.29px;
+  margin: 0 24.61px;
+  padding: 8px;
   border: 1px solid #1e1e1e;
   border-radius: 27.5px;
   background-color: #fff;
@@ -350,12 +365,12 @@
   align-items: center;
   font-family: "Apple SD Gothic B";
   color: #1e1e1e;
-  text-align: center;
-  font-size: 20px;
+  text-align: right;
+  font-size: 18px;
+  line-height: 24px;
 }
 .tag_row + .tag_row {
-  margin-top: 22px;
-  font-size: 18px;
+  margin-top: 18px;
 }
 .tag_row p:first-child {
   font-size: 16px;
@@ -364,45 +379,49 @@
 }
 .tag_row p:nth-child(2) {
   flex-shrink: 0;
-  width: 154px;
+  width: 148px;
 }
 .tag_row p:last-child {
   flex-shrink: 0;
-  width: 82px;
+  width: 148px;
   font-family: "Apple SD Gothic R";
   color: #A2A2A2;
 }
 .charge_flex {
   display: flex;
   justify-content: space-between;
+  gap: 32px;
   width: 100%;
-  padding: 36px 20px 0;
+  padding: 22.5px 8px 0;
 }
 .charge_flex > div {
-  width: 511px;
+  width: 100%;
 }
 .table_border .tit {
   margin-bottom: 20px;
   font-family: "Apple SD Gothic B";
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 24px;
 }
 .table_border {
-  padding-bottom: 24px;
+  padding-bottom: 16px;
   color: #1e1e1e;
+  height: 142px;
 }
 .table_border + .table_border {
-  padding-top: 24px;
+  padding-top: 16px;
   padding-bottom: 0;
   border-top: 1px solid #e8e8e8;
+  height: auto;
 }
 .table_border > div {
   display: flex;
   justify-content: space-between;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 22px;
 }
 .table_border > div + div {
-  margin-top: 5px;
+  margin-top: 8px;
 }
 .table_border > div p:first-child {
   color: #7C7C7C;
@@ -410,7 +429,7 @@
 .table_flex {
   display: flex;
   gap: 35px;
-  margin-top: 60px;
+  margin-top: 52px;
 }
 .table_flex > div {
   width: calc(50% - (35px /2));
@@ -418,40 +437,41 @@
 .dtc {
   display: flex;
   align-items: center;
-  gap: 3px;
-  height: 44px;
-  margin-top: 20px;
-  margin-left: 21px;
-  font-size: 16px;
-  color: #7c7c7c;
+  margin-top: 22.5px;
+  margin-left: 8px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1e1e1e;
 }
 .dtc_num {
   display: block;
-  width: 26px;
+  padding-left: 6px;
   font-family: "Apple SD Gothic B";
-  font-size: 18px;
-  line-height: 40px;
-  color: #000;
-  text-align: center;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: right;
 }
 
 .caution {
-  width: 684px;
-  margin-top: 252px;
+  width: 680px;
+  margin-top: 169px;
 }
 .caution_tit {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-family: "Apple SD Gothic B";
-  font-size: 14px;
-  line-height: 18px;
-  color: #5D5D5D;
+  font-size: 18px;
+  line-height: 24px;
+  color: #4c4c4c;
 }
 .caution_list {
-  padding-left: 20px;
+  padding-left: 14px;
 }
 .caution_list li {
   list-style: disc;
   font-size: 14px;
-  line-height: 18px;
-  color: #909090;
+  line-height: 22px;
+  color: #7c7c7c;
+}
+.caution_list li + li {
+  margin-top: 4px;
 }
