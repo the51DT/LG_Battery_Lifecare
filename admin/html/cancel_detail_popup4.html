@@ -121,11 +121,11 @@
               <table class="table_detail">
                 <tr>
                   <th>결제방법</th>
-                  <td>신용카드</td>
+                  <td>일반결제</td>
                 </tr>
                 <tr>
                   <th>결제상세</th>
-                  <td>신용카드(45,000원)</td>
+                  <td><span>540,000원</span><span class="border">신용카드</span></td>
                 </tr>
                 <tr>
                   <th>결제카드</th>
@@ -185,26 +185,70 @@
                 </tr>
               </table>
             </div>
-            <div class="admin_box">
-              <div class="box_title">
-                <h3>주문자 정보</h3>
-                <button class="btn_small btn_border">회원정보 바로가기</button>
+            <!-- [start] admin_detail_col 클래스 마지막에 오면 가로로 나열됨 -->
+            <div class="admin_detail_col">
+              <div class="admin_box">
+                <div class="box_title">
+                  <h3>주문자 정보</h3>
+                  <button class="btn_small btn_border">회원정보 바로가기</button>
+                </div>
+                <table class="table_detail">
+                  <tr>
+                    <th>주문자명</th>
+                    <td>이순신</td>
+                  </tr>
+                  <tr>
+                    <th>주문자ID</th>
+                    <td>adf@naver.com</td>
+                  </tr>
+                  <tr>
+                    <th>휴대폰번호</th>
+                    <td>010-5325-5865</td>
+                  </tr>
+                </table>
               </div>
-              <table class="table_detail">
-                <tr>
-                  <th>주문자명</th>
-                  <td>이순신</td>
-                </tr>
-                <tr>
-                  <th>주문자ID</th>
-                  <td>adf@naver.com</td>
-                </tr>
-                <tr>
-                  <th>휴대폰번호</th>
-                  <td>010-5325-5865</td>
-                </tr>
-              </table>
+              <div class="admin_box">
+                <div class="box_title">
+                  <h3>사용정보</h3>
+                  <!-- [start] B-Lifecare 에서 제공하는 서비스를 결제한 경우 - 바로가기 버튼 -->
+                  <!-- <button class="btn_small btn_border">서비스 이용 현황 바로가기</button> -->
+                  <!-- [end] B-Lifecare 에서 제공하는 서비스를 결제한 경우 - 바로가기 버튼  -->
+                </div>
+                <table class="table_detail">
+                  <!-- [start] B-Lifecare 에서 제공하는 서비스를 결제한 경우 - 사용안함 -->
+                  <!-- <tr>
+                    <th>배터리 퇴화 케어 Pass</th>
+                    <td>사용여부 : N</td>
+                  </tr> -->
+                  <!-- [end] B-Lifecare 에서 제공하는 서비스를 결제한 경우 - 사용안함  -->
+                  <!-- [start] B-Lifecare 에서 제공하는 서비스를 결제한 경우 - 사용함 -->
+                  <!-- <tr>
+                    <th>배터리 퇴화 케어 Pass</th>
+                    <td>
+                      사용여부 : Y<br>
+                      최초 사용일자 : 2024-04-15<br>
+                      차량번호 : 12가1234<br>
+                      차종 : 아이오닉5
+                    </td>
+                  </tr> -->
+                  <!-- [end] B-Lifecare 에서 제공하는 서비스를 결제한 경우 - 사용함  -->
+                  <tr>
+                    <th>배터리 인증서 프리미엄 이용권</th>
+                    <td>
+                      사용여부 : Y<br>
+                      최초 사용일자 : 2024-04-15<br>
+                      차량번호 : 12가1234<br>
+                      차종 : 아이오닉5
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>배터리인증서 프리미엄 이용권</th>
+                    <td>사용여부 : N</td>
+                  </tr>
+                </table>
+              </div>
             </div>
+            <!-- [end] admin_detail_col 클래스 마지막에 오면 가로로 나열됨 -->
             <div class="admin_box">
               <div class="box_title">
                 <h3>취소 정보</h3>
@@ -215,12 +259,12 @@
                   <td>2023-12-08 10:10:00</td>
                 </tr>
                 <tr>
-                  <th>취소 처리 완료 일시</th>
-                  <td>-</td>
+                  <th>취소처리 완료 일시</th>
+                  <td>2023-12-08 10:10:00</td>
                 </tr>
                 <tr>
-                  <th>취소금액</th>
-                  <td>45,000원</td>
+                  <th>취소금액/범위</th>
+                  <td><span>540,000원</span><span class="border">전체취소</span></td>
                 </tr>
                 <tr>
                   <th>취소상태</th>
@@ -276,7 +320,7 @@
             <button class="btn_default btn_white">목록</button>
           </div>
 
-          <div class="popup_wrap on" id="retype">
+          <div class="popup_wrap" id="retype">
             <div class="admin_popup">
               <h3>결제를 취소 하시겠습니까?</h3>
               <p>취소 시 PG사에 신용카드 취소 요청 됩니다.</p>
@@ -301,22 +345,22 @@
           </div>
 
           <div class="popup_wrap" id="error">
-              <div class="admin_popup">
-                <h3>결제취소 중 오류가 발생하였습니다</h3>
-                <p>
-                  PG사 결제 취소 중 오류가 발생하여<br>
-                  결제취소가 완료되지 않았습니다.<br>
-                  다시 시도하시겠습니까?
-                </p>
-                <button class="btn_middle btn_white">아니요</button>
-                <button class="btn_middle btn_sky">환불 불가 설정</button>
-                <button class="btn_close">
-                  <span class="hidden">닫기</span>
-                </button>
-              </div>
+            <div class="admin_popup">
+              <h3>결제취소 중 오류가 발생하였습니다</h3>
+              <p>
+                PG사 결제 취소 중 오류가 발생하여<br>
+                결제취소가 완료되지 않았습니다.<br>
+                다시 시도하시겠습니까?
+              </p>
+              <button class="btn_middle btn_white">아니요</button>
+              <button class="btn_middle btn_sky">환불 불가 설정</button>
+              <button class="btn_close">
+                <span class="hidden">닫기</span>
+              </button>
             </div>
+          </div>
 
-          <div class="popup_wrap" id="cancel">
+          <div class="popup_wrap on" id="cancel">
             <div class="page_popup">
               <div class="box_title">
                 <h3>결제 취소</h3>

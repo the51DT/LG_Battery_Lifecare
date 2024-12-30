@@ -55,11 +55,7 @@
 }
 .admin_detail .admin_box {
   width: calc(50% - 10px);
-  height: 377px;
-}
-.admin_detail .admin_box:last-of-type {
-  min-height: 377px;
-  height: 100%;
+  height: auto;
 }
 .admin_detail .admin_box + .admin_box {
   margin-top: 0;
@@ -78,6 +74,20 @@
 }
 .box_title + .admin_detail_info {
   margin-top: 32px;
+}
+.admin_detail_col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: calc(50% - 10px);
+}
+.admin_detail_col .admin_box {
+  width: 100%;
+  flex-basis: 50%;
+}
+.admin_detail_col:last-child {
+  flex-direction: row;
+  width: 100%;
 }
 .admin_box {
   width: 100%;
@@ -208,6 +218,10 @@
   font-weight: 400;
   color: #a2a2a2;
   vertical-align: middle;
+}
+.caption.full {
+  margin-top: 12px;
+  width: 100%;
 }
 .input_caption {
   font-size: 13px;
@@ -581,6 +595,9 @@
 .sort_con_double + .sort_con_double {
   margin-top: 26px;
 }
+.sort_con_double + .sort_con_sub {
+  margin-top: 20px;
+}
 .sort_con_sub {
   width: 100%;
   display: flex;
@@ -591,6 +608,7 @@
 .sort_con_sub .sort_title {
   align-self: center;
   padding: 0;
+  width: 132px;
 }
 .sort_con_sub .sort_con {
   width: calc(100% - 158px);
@@ -794,6 +812,10 @@
 }
 .btn_sub + .admin_box {
   margin-top: 60px;
+}
+.admin_box.box_middle {
+  margin-top: 24px;
+  margin-bottom: 60px;
 }
 .btn_between {
   justify-content: space-between;
@@ -1076,6 +1098,9 @@
   background: #f5f7fa;
   font-family: "Apple SD Gothic", sans-serif;
 }
+.page_popup.big {
+  width: 1076px;
+}
 .page_popup::-webkit-scrollbar {
   width: 1px;
 }
@@ -1153,13 +1178,13 @@
   position: relative;
   line-height: 18px;
   text-align: left;
-  padding-bottom: 20px;
+  padding: 0px 4px 20px;
   border-bottom: 1px solid #e8e8e8;
   vertical-align: middle;
 }
 .table_checklist td {
   line-height: 18px;
-  padding: 20px 0;
+  padding: 20px 4px;
   border-bottom: 1px solid #e8e8e8;
 }
 .table_scroll {
@@ -1260,7 +1285,7 @@
   margin-top: 0 !important;
 }
 .table_detail th {
-  width: 160px;
+  width: 200px;
   height: 53px;
   padding: 20px;
   background: #f5f7fa;
@@ -1298,6 +1323,7 @@
 .table_detail td {
   height: 53px;
   padding: 20px;
+  line-height: 20px;
   text-align: right;
   vertical-align: top;
   border-top: 1px solid #e8e8e8;
@@ -1308,6 +1334,15 @@
 }
 .table_detail td .btn_small {
   margin-left: 16px;
+}
+.table_detail td span + span {
+  display: inline-block;
+  margin-left: 20px;
+}
+.table_detail td span + span.border {
+  margin-left: 12px;
+  border-left: 1px solid #d3d3d3;
+  padding-left: 12px;
 }
 .table_detail .sort_select {
   max-width: 230px;
@@ -1398,4 +1433,23 @@
   height: 22px;
   border-left: 1px solid #e8e8e8;
   margin: 0 16px;
+}
+.price_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  padding: 6.5px 20px 6.5px 0;
+  background-color: #f5f7fa;
+  font-size: 13px;
+  font-weight: 700;
+}
+.price_box > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.price_box .price_box_num {
+  font-size: 20px;
 }

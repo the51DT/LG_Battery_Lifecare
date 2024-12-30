@@ -101,18 +101,40 @@
             <div class="sort_wrap">
               <p class="sort_title requir">상품유형구분</p>
               <div class="sort_con">
-                <div class="input_type_radio">
-                  <input type="radio" name="product_type" value="normal" id="product_type_normal" checked>
-                  <label for="product_type_normal">일반상품</label>
+                <div class="sort_con_double">
+                  <div class="input_type_radio">
+                    <input type="radio" name="product_type" value="normal" id="product_type_normal" checked>
+                    <label for="product_type_normal">일반상품</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="product_type" value="alliance" id="product_type_alliance">
+                    <label for="product_type_alliance">제휴상품</label>
+                    <input type="text" placeholder="제휴 업체명을 기입해주세요.">
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="product_type" value="etc" id="product_type_etc">
+                    <label for="product_type_etc">기타</label>
+                  </div>
                 </div>
-                <div class="input_type_radio">
-                  <input type="radio" name="product_type" value="alliance" id="product_type_alliance">
-                  <label for="product_type_alliance">제휴상품</label>
-                  <input type="text" placeholder="제휴 업체명을 기입해주세요.">
-                </div>
-                <div class="input_type_radio">
-                  <input type="radio" name="product_type" value="etc" id="product_type_etc">
-                  <label for="product_type_etc">기타</label>
+                <div class="sort_con_double sort_con_sub">
+                  <p class="sort_title requir">상품 사용기간</p>
+                  <div class="input_type_radio">
+                    <input type="radio" name="period_use" value="1m" id="period_use_1m" checked>
+                    <label for="period_use_1m">1개월</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="period_use" value="3m" id="period_use_3m">
+                    <label for="period_use_3m">3개월</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="period_use" value="6m" id="period_use_6m">
+                    <label for="period_use_6m">6개월</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="period_use" value="1y" id="period_use_1y">
+                    <label for="period_use_1y">1년</label>
+                  </div>
+                  <span class="caption sort_caption">구매일로 부터 설정한 기간 동안 상품 사용이 가능합니다.</span>
                 </div>
               </div>
             </div>

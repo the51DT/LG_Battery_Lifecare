@@ -316,6 +316,62 @@
               </div>
             </div>
 
+          <div class="popup_wrap" id="cancel">
+            <div class="page_popup">
+              <div class="box_title">
+                <h3>결제 취소</h3>
+              </div>
+              <div class="admin_box">
+                <div class="sort_wrap">
+                  <p class="sort_title">취소 범위</p>
+                  <div class="sort_con">
+                    <div class="input_type_radio">
+                      <input type="radio" name="cancel_range" value="all" id="all">
+                      <label for="all">전체 취소</label>
+                    </div>
+                    <div class="input_type_radio">
+                      <input type="radio" name="cancel_range" value="part" id="part" checked>
+                      <label for="part">부분 취소</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sort_wrap">
+                  <p class="sort_title">취소사유</p>
+                  <div class="sort_con">
+                    <select name="product_name" class="sort_select">
+                      <option>기타(직접입력)</option>
+                    </select>
+                    <input type="text" placeholder="상품을 사용하지 않을 것 같아서 취소해요">
+                  </div>
+                </div>
+
+                <!-- [start] 부분 취소 선택 시 노출 -->
+                <div class="sort_wrap">
+                  <p class="sort_title title_center">부분 취소 금액</p>
+                  <div class="sort_con">
+                    <input type="text" class="text_small" placeholder="숫자만입력">
+                    <span class="input_caption text_bold">원</span>
+                    <!-- [start] 전체 결제 금액보다 큰 금액 입력 시 alert 메시지 노출 -->
+                    <p class="caption full text_red">결제 금액보다 큰 금액은 입력할 수 없습니다.</p>
+                    <!-- [end] 전체 결제 금액보다 큰 금액 입력 시 alert 메시지 노출 -->
+                  </div>
+                  <div class="price_box">
+                    <p class="sort_title">잔액(남은 금액)</p>
+                    <div><span class="price_box_num">0</span>원</div>
+                  </div>
+                </div>
+                <!-- [end] 부분 취소 선택 시 노출 -->
+              </div>
+              <div class="btn_wrap btn_sub btn_center">
+                <button class="btn_default btn_white">닫기</button>
+                <button class="btn_default btn_sky">결제 취소</button>
+              </div>
+
+              <button class="btn_close"><span class="hidden">close</span></button>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

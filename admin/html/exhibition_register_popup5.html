@@ -162,29 +162,32 @@
                         <th width="135px">원가</th>
                         <th width="135px">공급가</th>
                         <th width="115px">상품유형</th>
-                        <th width="145px">판매 가능 개수</th>
+                        <th width="145px">구매 가능 개수</th>
+                        <th width="145px">상품 사용기간</th>
                         <th width="165px">상품 요약 설명</th>
                         <th width="90px"></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td><span class="text_bold">DC001</span></td>
+                        <td><span class="text_bold">PACSL202402131326120320</span></td>
                         <td><span class="text_overflow">배터리 인증서 프리미엄</span></td>
                         <td>50,000</td>
                         <td>50,000</td>
                         <td>일반상품</td>
                         <td>제한없음</td>
+                        <td>3개월</td>
                         <td>프리미엄상품권</td>
                         <td><button class="btn_small">삭제</button></td>
                       </tr>
                       <tr>
-                        <td><span class="text_bold">D12357</span></td>
+                        <td><span class="text_bold">PACSL202402131326120320</span></td>
                         <td><span class="text_overflow">배터리 인증서 온도 감지 배터리 인증서 온도 감지 배터리 인증서 온도 감지</span></td>
                         <td>30,000</td>
                         <td>30,000</td>
                         <td>제휴상품</td>
                         <td><span class="text_red">10,000</span></td>
+                        <td>2023-01-01 <br>~ 2023-12-31</td>
                         <td>제휴사 제공 상품권</td>
                         <td><button class="btn_small">삭제</button></td>
                       </tr>
@@ -271,6 +274,33 @@
                     </select>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title">판매조건</p>
+              <div class="sort_con">
+                <div class="sort_con_double">
+                  <div class="input_type_radio">
+                    <input type="radio" name="conditions" value="no_conditions" id="no_conditions">
+                    <label for="no_conditions">조건없음</label>
+                  </div>
+                  <div class="input_type_radio">
+                    <input type="radio" name="conditions" value="conditions" id="conditions" checked>
+                    <label for="conditions">조건있음</label>
+                  </div>
+                </div>
+                <!-- [start] 조건있음 체크됐을때 노출 -->
+                <div class="sort_con_double">
+                  <div class="input_type_check">
+                    <input type="checkbox" name="conditions_count" value="conditions_count" id="conditions_count" checked>
+                    <label for="conditions_count">구매 횟수 제한</label>
+                    <span class="sort_caption">회원(ID)당 월</span>
+                    <input type="text" class="text_small" placeholder="글자수 8자 미만(띄어쓰기 포함)">
+                    <span class="input_caption">회 구매제한</span>
+                  </div>
+                </div>
+                <!-- [end] 조건있음 체크됐을때 노출 -->
               </div>
             </div>
 
@@ -639,7 +669,7 @@
           </div>
   
           <div class="popup_wrap on" id="add">
-            <div class="page_popup">
+            <div class="page_popup big">
               <div class="box_title">
                 <h3>상품 추가</h3>
               </div>
@@ -782,6 +812,12 @@
                             <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                           </div>
                         </th>
+                        <th style="width: 100px;">등록개수
+                          <div class="btn_table_wrap">
+                            <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                            <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                          </div>
+                        </th>
                         <th style="width: 125px;">등록일
                           <div class="btn_table_wrap">
                             <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
@@ -801,6 +837,7 @@
                         <td>사용함</td>
                         <td>1,000개</td>
                         <td>제휴상품 (제휴업체명)</td>
+                        <td>2023-01-01 <br>~ 2023-12-31</td>
                         <td>2024-01-05 15:00</td>
                       </tr>
                       <!-- [start]상품 검색 중 목록에 미노출 되는 경우 1. 상품 사용여부 : 사용안함 / 2024.01.22 -->
@@ -839,6 +876,7 @@
                         <td>사용함</td>
                         <td>제한없음</td>
                         <td>일반상품</td>
+                        <td>1개월</td>
                         <td>2024-01-05 15:00</td>
                       </tr>
                     </tbody>
@@ -868,6 +906,15 @@
             <div class="admin_popup">
               <h3>상품을 선택해주세요</h3>
               <p>선택된 상품이 없습니다.<br>상품을 선택하고 다시 저장해주세요.</p>
+              <button class="btn_middle btn_sky">확인</button>
+              <button class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+
+          <div class="popup_wrap" id="not_possible">
+            <div class="admin_popup">
+              <h3>상품을 등록할 수 없습니다</h3>
+              <p>상품 사용기간이 만료된 후에는 판매할 수 없습니다.<br>판매기간을 다시 선택해주세요.</p>
               <button class="btn_middle btn_sky">확인</button>
               <button class="btn_close"><span class="hidden">닫기</span></button>
             </div>
