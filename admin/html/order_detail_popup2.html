@@ -78,10 +78,10 @@
                 <tr>
                   <td><span class="text_bold">DC001</span></td>
                   <td><span class="text_overflow">배터리 인증서 프리미엄</span></td>
-                  <td>45,000</td>
-                  <td>정기결제</td>
-                  <td>결제 완료</td>
-                  <td><span class="text_red">취소요청</span></td>
+                  <td>50,000</td>
+                  <td>50,000</td>
+                  <td>일반상품</td>
+                  <td><span class="text_red">취소완료(사용자)</span></td>
                 </tr>
               </tbody>
             </table>
@@ -267,15 +267,15 @@
                   <td><span>540,000원</span><span class="border">전체취소</span></td>
                 </tr>
                 <tr>
-                  <th>취소상태</th>
-                  <td style="padding: 0; vertical-align: middle;"><span class="input_caption">취소요청</span><button class="btn_small btn_cancle">결제 취소</button></td>
+                  <th>처리상태</th>
+                  <td>취소완료(사용자)</td>
                 </tr>
                 <tr>
                   <th>취소/환불 선택</th>
                   <td>
                     <div class="input_type_radio">
                       <div class="input_type_radio">
-                        <input type="radio" name="select" value="cancel" id="cancel">
+                        <input type="radio" name="select" value="cancel" id="cancel" checked>
                         <label for="cancel">결제취소</label>
                       </div>
                       <div class="input_type_radio">
@@ -286,81 +286,23 @@
                   </td>
                 </tr>
                 <tr>
-                  <th>취소사유</th>
-                  <td style="padding: 0; vertical-align: middle;">
-                    <select name="reason" class="sort_select">
-                      <option>취소사유 선택</option>
-                      <option>원하는 혜택이 없어요</option>
-                      <option>평가인증서를 받기 너무 어려워요</option>
-                      <option>App을 잘 안보게 돼요</option>
-                      <option>제 차량이 없어요</option>
-                      <option>기타(직접입력)</option>
-                    </select>
-                    <input type="text" disabled>
-                  </td>
-                </tr>
-                <tr>
-                  <th>환불불가</th>
+                  <th style="padding-top: 30px;">취소사유</th>
                   <td>
-                    <textarea placeholder="환불 불가 사유 입력(직접 입력) , 최대 1000자"></textarea>
-                    <div class="input_type_check">
-                      <input type="checkbox" name="refund" value="alarm" id="alarm">
-                      <label for="alarm">고객에게 알림 발송(앱 푸시)</label>
-                    </div>
+                    <select name="reason" class="sort_select" disabled>
+                      <option>APP을 잘 안보게 돼요</option>
+                    </select>
                   </td>
                 </tr>
               </table>
-              <div class="btn_wrap btn_sub">
-                <button class="btn_default btn_sky">저장</button>
-              </div>
             </div>
           </div>
 
           <div class="btn_wrap btn_sub">
             <button class="btn_default btn_white">목록</button>
+            <button class="btn_default btn_sky">취소/환불</button>
           </div>
 
-          <div class="popup_wrap" id="retype">
-            <div class="admin_popup">
-              <h3>결제를 취소 하시겠습니까?</h3>
-              <p>취소 시 PG사에 신용카드 취소 요청 됩니다.</p>
-              <button class="btn_middle btn_white">아니요</button>
-              <button class="btn_middle btn_sky">결제 취소</button>
-              <button class="btn_close"><span class="hidden">닫기</span></button>
-            </div>
-          </div>
-
-          <div class="popup_wrap" id="retype">
-            <div class="admin_popup">
-              <h3>환불 불가로 설정하시겠습니까?</h3>
-              <p>
-                환불 불가 사유를 정확하게 입력하셨는지<br>
-                확인해주세요. 입력한 사유는 고객에게<br>
-                알림 발송(앱 푸시)을 체크한 경우 같이 전달됩니다.
-              </p>
-              <button class="btn_middle btn_white">아니요</button>
-              <button class="btn_middle btn_sky">환불 불가 설정</button>
-              <button class="btn_close"><span class="hidden">닫기</span></button>
-            </div>
-          </div>
-
-          <div class="popup_wrap" id="error">
-            <div class="admin_popup">
-              <h3>결제취소 중 오류가 발생하였습니다</h3>
-              <p>
-                PG사 결제 취소 중 오류가 발생하여<br>
-                결제취소가 완료되지 않았습니다.<br>
-                다시 시도하시겠습니까?
-              </p>
-              <button class="btn_middle btn_white">아니요</button>
-              <button class="btn_middle btn_sky">환불 불가 설정</button>
-              <button class="btn_close">
-                <span class="hidden">닫기</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="popup_wrap on" id="cancel">
+          <div class="popup_wrap" id="cancel">
             <div class="page_popup">
               <div class="box_title">
                 <h3>결제 취소</h3>
@@ -386,7 +328,7 @@
                     <select name="product_name" class="sort_select">
                       <option>기타(직접입력)</option>
                     </select>
-                    <input type="text" placeholder="상품을 사용하지 않을 것 같아서 취소해요">
+                    <input class="full" type="text" placeholder="상품을 사용하지 않을 것 같아서 취소해요">
                   </div>
                 </div>
 
@@ -409,13 +351,24 @@
               </div>
               <div class="btn_wrap btn_sub btn_center">
                 <button class="btn_default btn_white">닫기</button>
+                <!-- [start] 결제 완료 상태일 때 노출 -->
                 <button class="btn_default btn_sky">결제 취소</button>
+                <!-- [end] 결제 완료 상태일 때 노출 -->
               </div>
 
               <button class="btn_close"><span class="hidden">close</span></button>
             </div>
           </div>
 
+          <div class="popup_wrap on" id="retype">
+            <div class="admin_popup">
+              <h3>결제 취소를 진행하시겠습니까?</h3>
+              <p>취소 시 PG사에 신용카드 취소 요청 됩니다.</p>
+              <button class="btn_middle btn_white">아니요</button>
+              <button class="btn_middle btn_sky">결제 취소 진행</button>
+              <button class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
