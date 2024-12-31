@@ -283,25 +283,31 @@
                     <td>
                       <div class="input_type_radio">
                         <div class="input_type_radio">
-                          <input
-                            type="radio"
-                            name="select"
-                            value="cancel"
-                            id="cancel"
-                          />
-                          <label for="cancel">결제취소</label>
+                          <input type="radio" name="select" value="all" id="all">
+                          <label for="all">전체취소</label>
                         </div>
                         <div class="input_type_radio">
-                          <input
-                            type="radio"
-                            name="select"
-                            value="impossible"
-                            id="impossible"
-                            checked
-                          />
+                          <input type="radio" name="select" value="part" id="part" checked>
+                          <label for="part">부분취소</label>
+                        </div>
+                        <div class="input_type_radio">
+                          <input type="radio" name="select" value="impossible" id="impossible">
                           <label for="impossible">환불 불가</label>
                         </div>
                       </div>
+                      <!-- [start] 부분취소 선택 시에만 노출 -->
+                      <div class="part_area">
+                        <div>
+                          <input type="text" placeholder="부분 취소 금액 입력 (숫자만 입력)">
+                          <span class="input_caption">원</span>
+                          <p class="text_red">결제 금액보다 큰 금액은 입력할 수 없습니다.</p>
+                        </div>
+                        <div>
+                          <p>잔액(남은 금액)</p>
+                          <p><span>0</span>원</p>
+                        </div>
+                      </div>
+                      <!-- [end] 부분취소 선택 시에만 노출 -->
                     </td>
                   </tr>
                   <tr>
