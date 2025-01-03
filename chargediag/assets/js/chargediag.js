@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   // 숫자 데이터 말풍선에 넣기
-  const gageValue = document.querySelector(".battery_num").innerText;
-  const gagePos = document.querySelector(".battery_pos");
+  const gageValue = document.querySelector(".chargediag_battery_num").innerText;
+  const gagePos = document.querySelector(".chargediag_battery_pos");
 
   gagePos.innerText = gageValue;
 
   // 관리필요, 보통, 우수 기준숫자 넘어갔는지 확인 후 색 변경
-  const gageWrap = document.querySelector(".battery_box");
+  const gageWrap = document.querySelector(".chargediag_battery_box");
   const gageValueNum = Number(gageValue);
   const badNum = 92.57; // 관리필요 - 보통 기준숫자
   const goodNum = 97.80; // 보통 - 우수 기준숫자

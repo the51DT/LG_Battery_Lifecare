@@ -15,21 +15,21 @@
   font-family: "Apple SD Gothic R";
 }
 
-.chargediag .header {
+.chargediag .chargediag_header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 23px;
 }
-.chargediag .header h1 {
+.chargediag .chargediag_header h1 {
   display: flex;
   align-items: center;
   height: 26px;
 }
-.chargediag .header h1 img {
+.chargediag .chargediag_header h1 img {
   width: 150px;
 }
-.chargediag .header div {
+.chargediag .chargediag_header div {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -37,12 +37,12 @@
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
 }
-.chargediag .doc_num {
+.chargediag .chargediag_doc_num {
   font-size: 14px;
   color: #000;
 }
 
-.chargediag .banner {
+.chargediag .chargediag_banner {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -55,7 +55,7 @@
   background: linear-gradient(169deg, #51CCE1 0%, #0689D1 118.84%);
   color: #fff;
 }
-.chargediag .banner::after {
+.chargediag .chargediag_banner::after {
   content: '';
   position: absolute;
   top: 38px;
@@ -67,18 +67,18 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.chargediag .banner_tit {
+.chargediag .chargediag_banner_tit {
   display: flex;
   gap: 10px;
   height: 52px;
   margin-bottom: 16px;
 }
-.chargediag .banner_tit span {
+.chargediag .chargediag_banner_tit span {
   font-family: "Apple SD Gothic M";
   font-size: 55px;
   line-height: 60px;
 }
-.chargediag .banner_box {
+.chargediag .chargediag_banner_box {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -89,42 +89,42 @@
   background: #FFFFFF1A;
   backdrop-filter: blur(4px)
 }
-.chargediag .banner_box_line {
+.chargediag .chargediag_banner_box_line {
   width: 1px;
   height: 10px;
   background-color: rgba(255, 255, 255, 0.2);
 }
-.chargediag .banner_box div {
+.chargediag .chargediag_banner_box div {
   display: flex;
   gap: 6px;
   font-size: 14px;
   line-height: 18.35px;
 }
-.chargediag .banner_box div > span:first-child {
+.chargediag .chargediag_banner_box div > span:first-child {
   opacity: 0.6;
 }
 
-.chargediag .battery_flex {
+.chargediag .chargediag_battery_flex {
   display: flex;
   gap: 32px;
   margin-bottom: 66px;
 }
-.chargediag .battery_flex > div {
+.chargediag .chargediag_battery_flex > div {
   width: calc(50% - (33px / 2));
 }
-.chargediag .battery_box {
+.chargediag .chargediag_battery_box {
   height: 349px;
   border: 1px solid #D3D3D3;
   border-radius: 12px;
   background-color: #EFEFEF;
 }
-.chargediag .battery_per {
+.chargediag .chargediag_battery_per {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 81px auto 102px;
 }
-.chargediag .battery_per::before {
+.chargediag .chargediag_battery_per::before {
   content: '';
   display: block;
   width: 56px;
@@ -133,13 +133,13 @@
   background-position: center;
   background-size: contain;
 }
-.chargediag .battery_box.good .battery_per::before {
+.chargediag .chargediag_battery_box.good .chargediag_battery_per::before {
   background-image: url(../images/battery_b.png);
 }
-.chargediag .battery_box.bad .battery_per::before {
+.chargediag .chargediag_battery_box.bad .chargediag_battery_per::before {
   background-image: url(../images/battery_r.png);
 }
-.chargediag .battery_per::after {
+.chargediag .chargediag_battery_per::after {
   content: '보통';
   margin-left: 24px;
   padding: 5px 15px;
@@ -151,17 +151,17 @@
   line-height: 32px;
   color: #fff;
 }
-.chargediag .battery_box.good .battery_per::after {
+.chargediag .chargediag_battery_box.good .chargediag_battery_per::after {
   content: '우수';
   border-color: #02788B;
   background-color: #50CCE0;
 }
-.chargediag .battery_box.bad .battery_per::after {
+.chargediag .chargediag_battery_box.bad .chargediag_battery_per::after {
   content: '관리필요';
   border-color: #D61010;
   background-color: #FF8787;
 }
-.chargediag .battery_gage {
+.chargediag .chargediag_battery_gage {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -170,13 +170,13 @@
   height: 10px;
   margin: 0 auto;
 }
-.chargediag .battery_gage > div:not(.battery_pos) {
+.chargediag .chargediag_battery_gage > div:not(.chargediag_battery_pos) {
   position: relative;
   width: 151px;
   height: 100%;
   flex: 0 0 auto;
 }
-.chargediag .battery_gage > div:not(.battery_pos)::before {
+.chargediag .chargediag_battery_gage > div:not(.chargediag_battery_pos)::before {
   position: absolute;
   top: -6.5px;
   left: 50%;
@@ -185,7 +185,7 @@
   color: #5c5c5c;
   transform: translate(-50%, -100%);
 }
-.chargediag .battery_gage > div:not(.battery_pos)::after {
+.chargediag .chargediag_battery_gage > div:not(.chargediag_battery_pos)::after {
   position: absolute;
   bottom: -6px;
   right: 0;
@@ -194,33 +194,33 @@
   color: #5c5c5c;
   transform: translate(50%, 100%);
 }
-.chargediag .battery_r {
+.chargediag .chargediag_battery_r {
   background-color: #FF5353;
   border-radius: 2px 0px 0px 2px;
 }
-.chargediag .battery_r::before {
+.chargediag .chargediag_battery_r::before {
   content: '관리필요';
 }
-.chargediag .battery_r::after {
+.chargediag .chargediag_battery_r::after {
   content: '92.57';
 }
-.chargediag .battery_y {
+.chargediag .chargediag_battery_y {
   background-color: #FFC045;
 }
 .chargediag .battery_y::before {
   content: '보통';
 }
-.chargediag .battery_y::after {
+.chargediag .chargediag_battery_y::after {
   content: '97.80';
 }
-.chargediag .battery_b {
+.chargediag .chargediag_battery_b {
   background-color: #50CCE0;
   border-radius: 0px 2px 2px 0px;
 }
-.chargediag .battery_b::before {
+.chargediag .chargediag_battery_b::before {
   content: '우수';
 }
-.chargediag .battery_pos {
+.chargediag .chargediag_battery_pos {
   position: absolute;
   top: -12px;
   left: 100%;
@@ -236,13 +236,13 @@
   text-align: center;
   z-index: 1;
 }
-.chargediag .battery_box.good .battery_pos {
+.chargediag .chargediag_battery_box.good .chargediag_battery_pos {
   color: #50CCE0;
 }
-.chargediag .battery_box.bad .battery_pos {
+.chargediag .chargediag_battery_box.bad .chargediag_battery_pos {
   color: #FF5353;
 }
-.chargediag .battery_pos::after {
+.chargediag .chargediag_battery_pos::after {
   content: '';
   position: absolute;
   bottom: -7px;
@@ -254,13 +254,13 @@
   background-image: url(../images/mark_y.png);
   background-size: contain;
 }
-.chargediag .battery_box.good .battery_pos::after {
+.chargediag .chargediag_battery_box.good .chargediag_battery_pos::after {
   background-image: url(../images/mark_b.png);
 }
-.chargediag .battery_box.bad .battery_pos::after {
+.chargediag .chargediag_battery_box.bad .chargediag_battery_pos::after {
   background-image: url(../images/mark_r.png);
 }
-.chargediag .battery_img {
+.chargediag .chargediag_battery_img {
   height: 57px;
   font-family: "Apple SD Gothic B";
   font-size: 40px;
@@ -268,27 +268,27 @@
   letter-spacing: -0.01em;
   color: #a2a2a2;
 }
-.chargediag .battery_num {
+.chargediag .chargediag_battery_num {
   font-size: 70px;
   color: #000;
 }
-.chargediag .car_tit {
+.chargediag .chargediag_car_tit {
   display: flex;
   align-items: flex-end;
   gap: 8px;
   padding-left: 8px;
   margin-bottom: 16px;
 }
-.chargediag .car_name {
+.chargediag .chargediag_car_name {
   font-family: "Apple SD Gothic B";
   font-size: 24px;
   line-height: 30px;
 }
-.chargediag .car_tit span {
+.chargediag .chargediag_car_tit span {
   font-size: 18px;
   line-height: 24px;
 }
-.chargediag .car_info {
+.chargediag .chargediag_car_info {
   display: flex;
   justify-content: center;
   padding: 20px 40px;
@@ -296,7 +296,7 @@
   border-radius: 12px;
   background-color: #F4F4F4;
 }
-.chargediag .car_info > div {
+.chargediag .chargediag_car_info > div {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -326,7 +326,7 @@
   color: #00b4cb;
 }
 
-.chargediag .border_tit {
+.chargediag .chargediag_border_tit {
   padding-left: 8px;
   padding-bottom: 10.5px;
   border-bottom: 3px solid #5d5d5d;
@@ -335,16 +335,16 @@
   line-height: 26px;
   color: #1e1e1e;
 }
-.chargediag .table_tag {
+.chargediag .chargediag_table_tag {
   padding: 12.5px 8px 0;
 }
-.chargediag .tag {
+.chargediag .chargediag_tag {
   display: flex;
   justify-content: flex-end;
   gap: 30px;
   margin-bottom: 14px;
 }
-.chargediag .tag > div {
+.chargediag .chargediag_tag > div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -359,11 +359,11 @@
   text-align: center;
   color: #1e1e1e;
 }
-.chargediag .tag > div:last-child {
+.chargediag .chargediag_tag > div:last-child {
   border-color: #a2a2a2;
   color: #a2a2a2;
 }
-.chargediag .tag_row {
+.chargediag .chargediag_tag_row {
   display: flex;
   align-items: center;
   font-family: "Apple SD Gothic B";
@@ -372,72 +372,72 @@
   font-size: 18px;
   line-height: 24px;
 }
-.chargediag .tag_row + .tag_row {
+.chargediag .chargediag_tag_row + .chargediag_tag_row {
   margin-top: 18px;
 }
-.chargediag .tag_row p:first-child {
+.chargediag .chargediag_tag_row p:first-child {
   font-size: 16px;
   margin-right: auto;
   text-align: left;
 }
-.chargediag .tag_row p:nth-child(2) {
+.chargediag .chargediag_tag_row p:nth-child(2) {
   flex-shrink: 0;
   width: 148px;
 }
-.chargediag .tag_row p:last-child {
+.chargediag .chargediag_tag_row p:last-child {
   flex-shrink: 0;
   width: 148px;
   font-family: "Apple SD Gothic R";
   color: #A2A2A2;
 }
-.chargediag .charge_flex {
+.chargediag .chargediag_charge_flex {
   display: flex;
   justify-content: space-between;
   gap: 32px;
   width: 100%;
   padding: 22.5px 8px 0;
 }
-.chargediag .charge_flex > div {
+.chargediag .chargediag_charge_flex > div {
   width: 100%;
 }
-.chargediag .table_border .tit {
+.chargediag .chargediag_table_border .tit {
   margin-bottom: 20px;
   font-family: "Apple SD Gothic B";
   font-size: 18px;
   line-height: 24px;
 }
-.chargediag .table_border {
+.chargediag .chargediag_table_border {
   padding-bottom: 16px;
   color: #1e1e1e;
   height: 142px;
 }
-.chargediag .table_border + .table_border {
+.chargediag .chargediag_table_border + .chargediag_table_border {
   padding-top: 16px;
   padding-bottom: 0;
   border-top: 1px solid #e8e8e8;
   height: auto;
 }
-.chargediag .table_border > div {
+.chargediag .chargediag_table_border > div {
   display: flex;
   justify-content: space-between;
   font-size: 16px;
   line-height: 22px;
 }
-.chargediag .table_border > div + div {
+.chargediag .chargediag_table_border > div + div {
   margin-top: 8px;
 }
-.chargediag .table_border > div p:first-child {
+.chargediag .chargediag_table_border > div p:first-child {
   color: #7C7C7C;
 }
-.chargediag .table_flex {
+.chargediag .chargediag_table_flex {
   display: flex;
   gap: 35px;
   margin-top: 52px;
 }
-.chargediag .table_flex > div {
+.chargediag .chargediag_table_flex > div {
   width: calc(50% - (35px /2));
 }
-.chargediag .dtc {
+.chargediag .chargediag_dtc {
   display: flex;
   align-items: center;
   margin-top: 22.5px;
@@ -446,7 +446,7 @@
   line-height: 24px;
   color: #1e1e1e;
 }
-.chargediag .dtc_num {
+.chargediag .chargediag_dtc_num {
   display: block;
   padding-left: 6px;
   font-family: "Apple SD Gothic B";
@@ -455,26 +455,26 @@
   text-align: right;
 }
 
-.chargediag .caution {
+.chargediag .chargediag_caution {
   width: 680px;
   margin-top: 169px;
 }
-.chargediag .caution_tit {
+.chargediag .chargediag_caution_tit {
   margin-bottom: 15px;
   font-family: "Apple SD Gothic B";
   font-size: 18px;
   line-height: 24px;
   color: #4c4c4c;
 }
-.chargediag .caution_list {
+.chargediag .chargediag_caution_list {
   padding-left: 14px;
 }
-.chargediag .caution_list li {
+.chargediag .chargediag_caution_list li {
   list-style: disc;
   font-size: 14px;
   line-height: 22px;
   color: #7c7c7c;
 }
-.chargediag .caution_list li + li {
+.chargediag .chargediag_caution_list li + li {
   margin-top: 4px;
 }
