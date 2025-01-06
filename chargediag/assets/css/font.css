@@ -21,3 +21,11 @@
   font-weight: normal;
   unicode-range: U+0-10FFFF;
 }
+
+@font-face {
+  font-family: "Outfit-R";
+  src: url('../font/Outfit-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  unicode-range: U+0-10FFFF;
+}

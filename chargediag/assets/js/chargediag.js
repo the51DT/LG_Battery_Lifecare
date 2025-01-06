@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const gageWrap = document.querySelector(".chargediag_battery_box");
   const gageValueNum = Number(gageValue);
   const badNum = 92.57; // 관리필요 - 보통 기준숫자
-  const goodNum = 97.80; // 보통 - 우수 기준숫자
+  const goodNum = 97.8; // 보통 - 우수 기준숫자
 
   if (gageValueNum <= badNum) {
     gageWrap.classList.add("bad");
@@ -38,4 +38,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 말풍선 위치 조절
   gagePos.style.left = `${gagePer}%`;
+
+  // 기기 사이즈에 맞춰서 스케일조정
+  function calculateScale(
+    originalWidth,
+    originalHeight,
+    targetWidth,
+    targetHeight
+  ) {
+    let scaleX = targetWidth / originalWidth;
+    let scaleY = targetHeight / originalHeight;
+    return Math.min(scaleX, scaleY);
+  }
+
+  let container = document.querySelector(".chargediag_wrap");
+  let content = document.querySelector(".chargediag_area");
+
+  let containerWidth = container.offsetWidth;
+  let containerHeight = container.offsetHeight;
+
+  let originalWidth = content.offsetWidth;
+  let originalHeight = content.offsetHeight;
+
+  let scale = calculateScale(
+    originalWidth,
+    originalHeight,
+    containerWidth,
+    containerHeight
+  );
+
+  content.style.transform = `translate(-50%, -50%) scale(${scale})`;
+  let resultHeight = originalHeight * scale;
+  container.style.height = `${resultHeight}px`
 })
