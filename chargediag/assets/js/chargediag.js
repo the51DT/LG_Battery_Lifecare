@@ -69,5 +69,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   content.style.transform = `translate(-50%, -50%) scale(${scale})`;
   let resultHeight = originalHeight * scale;
-  container.style.height = `${resultHeight}px`
+  container.style.height = `${resultHeight}px` // 해당 줄 삭제 시 가운데 정렬
 })
