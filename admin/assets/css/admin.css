@@ -334,16 +334,13 @@
 .admin_wrap .table_detail select:only-child {
   margin: 0;
 }
-.admin_wrap .table_detail select:disabled {
-  opacity: 1;
-  background-color: #efefef;
-  color: #a2a2a2;
-}
 .admin_wrap select:focus {
   outline: none;
 }
 .admin_wrap select:disabled {
   background-color: #efefef;
+  opacity: 1;
+  color: #9e9e9e;
 }
 .admin_wrap input[type="text"] {
   padding: 11px 20px;
@@ -780,7 +777,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-left: 16px;
+  margin-left: 26px;
 }
 .move_box {
   width: 100%;
@@ -847,7 +844,7 @@
   margin-left: 26px;
 }
 .tag_wrap .tag {
-  padding: 5.5px 10px;
+  padding: 6px 10px;
   font-size: 12px;
   font-weight: 700;
   color: #fff;

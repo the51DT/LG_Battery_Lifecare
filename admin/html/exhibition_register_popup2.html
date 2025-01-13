@@ -146,6 +146,41 @@
             </div>
 
             <div class="sort_wrap">
+              <p class="sort_title requir">대상별 노출 설정</p>
+              <div class="sort_con">
+                <div class="input_type_radio">
+                  <input type="radio" name="target" value="LGES" id="LGES" checked>
+                  <label for="LGES">LGES 전체(BLC 고객)</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="target" value="target" id="target">
+                  <label for="target">특정 대상</label>
+                </div>
+                <!-- [start] 특정 대상 선택 시 셀렉트 disabled 해제 -->
+                <div class="sub_input">
+                  <select name="exhibition_target" class="sort_select">
+                    <option>대상 선택</option>
+                    <option>B2B 고객 노출</option>
+                    <option>B2B 고객 제외</option>
+                    <option>일부 차종 노출</option>
+                    <option>일부 차종 제외</option>
+                  </select>
+                  <select name="exhibition_target_detail" class="sort_select" disabled>
+                    <option>상세 선택</option>
+                    <option>전체</option>
+                  </select>
+                  <!-- [start] 상세 선택 시 플래그 노출 -->
+                  <div class="tag_wrap">
+                    <span class="tag">전체<button class="tag_del"><span class="hidden">삭제</span></button></span>
+                    <span class="tag">현대캐피탈<button class="tag_del"><span class="hidden">삭제</span></button></span>
+                  </div>
+                  <!-- [end] 상세 선택 시 플래그 노출 -->
+                </div>
+                <!-- [end] 특정 대상 선택 시 셀렉트 disabled 해제 -->
+              </div>
+            </div>
+
+            <div class="sort_wrap">
                 <p class="sort_title requir">상품 불러오기</p>
                 <div class="sort_con">
                 <div class="sort_double">
