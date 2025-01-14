@@ -57,7 +57,12 @@
       <div class="contents_admin">
         <div class="admin_wrap">
           <h2 class="admin_title">주문 결과 조회</h2>
-          
+
+          <div class="admin_tab">
+            <p class="on">일반결제</p>
+            <p>WPAY</p>
+          </div>
+
           <div class="admin_box">
             <div class="sort_wrap">
               <p class="sort_title">검색어</p>
@@ -81,28 +86,20 @@
                   <option>결제일</option>
                 </select> -->
                 <div class="sort_option">
-                  <input type="radio" name="period" value="today" id="today">
-                  <label class="period" for="today">오늘</label>
-                </div>
-                <div class="sort_option">
-                  <input type="radio" name="period" value="1day_ago" id="1day_ago">
-                  <label class="period" for="1day_ago">1일전</label>
-                </div>
-                <div class="sort_option">
-                  <input type="radio" name="period" value="3days" id="3days">
-                  <label class="period" for="3days">3일</label>
-                </div>
-                <div class="sort_option">
-                  <input type="radio" name="period" value="7days" id="7days" checked>
-                  <label class="period" for="7days">7일</label>
-                </div>
-                <div class="sort_option">
                   <input type="radio" name="period" value="1month" id="1month">
                   <label class="period" for="1month">1개월</label>
                 </div>
                 <div class="sort_option">
-                  <input type="radio" name="period" value="3month" id="3month">
+                  <input type="radio" name="period" value="3month" id="3month" checked>
                   <label class="period" for="3month">3개월</label>
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="6month" id="6month">
+                  <label class="period" for="6month">6개월</label>
+                </div>
+                <div class="sort_option">
+                  <input type="radio" name="period" value="1year" id="1year">
+                  <label class="period" for="1year">1년</label>
                 </div>
                 <div class="sort_option">
                   <input type="radio" name="period" value="select_day" id="select_day">

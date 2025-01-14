@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>망 취소 조회</title>
+  <title>WPAY 카드 승인 조회</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -56,17 +56,21 @@
 
       <div class="contents_admin">
         <div class="admin_wrap">
-          <h2 class="admin_title">망 취소 조회<span class="caption input_caption">이니시스 망 취소 정보 조회</span></h2>
+          <h2 class="admin_title">카드 승인 조회<span class="caption input_caption">이니시스 결제 승인 정보 조회</span></h2>
 
           <div class="admin_tab">
-            <p class="on">일반결제</p>
-            <p>WPAY</p>
+            <p>일반결제</p>
+            <p class="on">WPAY</p>
           </div>
 
           <div class="admin_box">
             <div class="sort_wrap">
-              <p class="sort_title">취소 일자</p>
+              <p class="sort_title">기간</p>
               <div class="sort_con">
+                <select name="period search" class="sort_select">
+                  <option>승인일시</option>
+                  <option>취소일시</option>
+                </select>
                 <div class="sort_option">
                   <input type="radio" name="period" value="today" id="today">
                   <label class="period" for="today">오늘</label>
@@ -109,8 +113,31 @@
                   <option>주문자 ID</option>
                   <option>주문자 휴대폰번호</option>
                   <option>주문번호</option>
+                  <option>전시 상품명</option>
                 </select>
                 <input type="text">
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title requir">거래상태</p>
+              <div class="sort_con">
+                <div class="input_type_radio">
+                  <input type="radio" name="order_state" value="all" id="all" checked>
+                  <label for="all">전체</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="order_state" value="complete" id="complete">
+                  <label for="complete">승인</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="order_state" value="cancel" id="cancel">
+                  <label for="cancel">매입전취소</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="order_state" value="cancel_complete" id="cancel_complete">
+                  <label for="cancel_complete">매입후취소</label>
+                </div>
               </div>
             </div>
 
@@ -171,13 +198,25 @@
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
+                  <th style="width: 110px;">전시상품명
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
                   <th style="width: 230px;">TID(거래번호)
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
                     </div>
                   </th>
-                  <th style="width: 90px;">취소금액
+                  <th style="width: 90px;">결제금액
+                    <div class="btn_table_wrap">
+                      <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
+                      <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
+                    </div>
+                  </th>
+                  <th style="width: 140px;">거래상태
                     <div class="btn_table_wrap">
                       <button class="btn_table_top"><span class="hidden">오름차정렬</span></button>
                       <button class="btn_table_bottom"><span class="hidden">내림차정렬</span></button>
@@ -189,13 +228,15 @@
                   <!-- <td><input type="checkbox"></td> -->
                   <td style="padding-left: 20px;"><span class="text_bold">5</span></td>
                   <td>2023-12-07 10:27:56</td>
-                  <td>2023-12-07 10:27:56</td>
+                  <td>-</td>
                   <td><a class="text_blue text_underline" href="#">2023120712345</a></td>
                   <td>ad*@naver.com</td>
                   <td>김*다</td>
                   <td>010-8120-****</td>
-                  <td>PG사에서 전달받은 거래 번호 노출</td>
+                  <td><span class="text_overflow">배터리 인증서 3개월 이용권</span></td>
+                  <td><span class="text_overflow">PG사에서 전달받은 거래 번호 노출</span></td>
                   <td>45,000</td>
+                  <td>승인</td>
                 </tr>
                 <tr>
                   <!-- <td><input type="checkbox"></td> -->
@@ -206,8 +247,10 @@
                   <td>ad*@naver.com</td>
                   <td>강*찬</td>
                   <td>010-8120-****</td>
-                  <td>PG사에서 전달받은 거래 번호 노출</td>
+                  <td><span class="text_overflow">배터리 인증서 프리미엄</span></td>
+                  <td><span class="text_overflow">PG사에서 전달받은 거래 번호 노출</span></td>
                   <td>50,000</td>
+                  <td>매입전취소</td>
                 </tr>
                 <tr>
                   <!-- <td><input type="checkbox"></td> -->
@@ -218,8 +261,10 @@
                   <td>ad*@naver.com</td>
                   <td>이*신</td>
                   <td>010-8120-****</td>
-                  <td>PG사에서 전달받은 거래 번호 노출</td>
+                  <td><span class="text_overflow">배터리 인증서 3개월 이용권</span></td>
+                  <td><span class="text_overflow">PG사에서 전달받은 거래 번호 노출</span></td>
                   <td>50,000</td>
+                  <td>매입후취소</td>
                 </tr>
                 <tr>
                   <!-- <td><input type="checkbox"></td> -->
@@ -230,8 +275,10 @@
                   <td>ad*@naver.com</td>
                   <td>홍*동</td>
                   <td>010-8120-****</td>
-                  <td>PG사에서 전달받은 거래 번호 노출</td>
+                  <td><span class="text_overflow">배터리 인증서 3개월 이용권</span></td>
+                  <td><span class="text_overflow">PG사에서 전달받은 거래 번호 노출</span></td>
                   <td>45,000</td>
+                  <td>PG사 취소값</td>
                 </tr>
                 <tr>
                   <!-- <td><input type="checkbox"></td> -->
@@ -242,12 +289,14 @@
                   <td>ad*@naver.com</td>
                   <td>김*현</td>
                   <td>010-8120-****</td>
-                  <td>PG사에서 전달받은 거래 번호 노출</td>
+                  <td><span class="text_overflow">배터리 인증서 3개월 이용권</span></td>
+                  <td><span class="text_overflow">PG사에서 전달받은 거래 번호 노출</span></td>
                   <td>45,000</td>
+                  <td>PG사 취소값</td>
                 </tr>
               </tbody>
             </table>
-            <!-- [end]] 체크박스 제거 / 2024.03.19 -->
+            <!-- [end] 체크박스 제거 / 2024.03.19 -->
             <div class="table_page">
               <div>Showing 1 to 10 of 13 entries</div>
               <div class="page_control">
