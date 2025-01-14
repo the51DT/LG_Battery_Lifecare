@@ -366,6 +366,11 @@
   width: 230px;
   margin-left: 20px;
 }
+.admin_wrap .input_type_radio select,
+.admin_wrap .input_type_check select {
+  width: 100px;
+  margin-left: 20px;
+}
 .admin_wrap .page_popup input[type="text"] {
   width: 348px;
 }
@@ -635,6 +640,9 @@
 .sort_title.title_top {
   padding-top: 5.5px;
 }
+.sort_title.title_top_center {
+  padding-top: 21.5px;
+}
 .sort_title.title_center {
   align-self: center;
 }
@@ -682,9 +690,24 @@
 .sort_box {
   width: 438px;
   background: #fff;
+  align-self: flex-start;
+}
+.sort_double + .sort_double .sort_box {
+  margin-top: 4px;
+}
+.sort_double + .sort_double .sort_box input[type="text"] {
+  width: 174px;
+}
+.sort_double + .sort_double .sort_box input[type="text"] + span {
+  display: inline-block;
+  width: 80px;
 }
 .sort_box + .sort_box {
   margin-left: 14px;
+}
+.sort_box.box_sub {
+  align-self: flex-end;
+  margin-left: 26px;
 }
 .sort_box .admin_flex {
   font-size: 13px;
@@ -695,6 +718,7 @@
 .sort_box_title {
   margin-bottom: 10px;
   font-size: 13px;
+  line-height: 19px;
   font-weight: 700;
 }
 .sort_box_top {
@@ -710,11 +734,19 @@
   border: 1px solid #e8e8e8;
   border-top: none;
 }
+.sort_box .sort_box_bottom button {
+  display: block;
+  margin-left: auto;
+}
 .sort_box .sort_box_price {
   font-size: 20px;
 }
 .sort_box .sort_box_list + .sort_box_list {
   margin-top: 16px;
+}
+.sort_box_caption {
+  margin-top: 10px;
+  width: 100%;
 }
 .sort_table {
   align-items: flex-start;
@@ -897,6 +929,7 @@
   border-radius: 4px;
   background: #1e1e1e;
   font-size: 13px;
+  line-height: 12px;
   font-weight: 700;
   color: #fff;
 }

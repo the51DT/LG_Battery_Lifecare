@@ -315,7 +315,7 @@
             </div>
 
             <div class="sort_wrap">
-              <p class="sort_title">판매조건</p>
+              <p class="sort_title title_top">판매조건</p>
               <div class="sort_con">
                 <div class="sort_con_double">
                   <div class="input_type_radio">
@@ -329,12 +329,24 @@
                 </div>
                 <!-- [start] 조건있음 체크됐을때 노출 -->
                 <div class="sort_con_double">
-                  <div class="input_type_check">
-                    <input type="checkbox" name="conditions_count" value="conditions_count" id="conditions_count" checked>
-                    <label for="conditions_count">구매 횟수 제한</label>
-                    <span class="sort_caption">회원(ID)당 월</span>
-                    <input type="text" class="text_small" placeholder="숫자만 입력">
-                    <span class="input_caption">회 구매제한</span>
+                  <div class="sort_double">
+                    <div class="input_type_check">
+                      <input type="checkbox" name="conditions_count" value="conditions_count" id="conditions_count" checked>
+                      <label for="conditions_count">구매 횟수 제한</label>
+                      <span class="sort_caption">회원(ID)당 월</span>
+                      <input type="text" class="text_small" placeholder="숫자만 입력">
+                      <span class="input_caption">회 구매제한</span>
+                    </div>
+                  </div>
+                  <div class="sort_double">
+                    <div class="input_type_check">
+                      <input type="checkbox" name="conditions_count" value="conditions_count" id="conditions_count" checked>
+                      <label for="conditions_count">무료체험 제공</label>
+                      <select>
+                        <option>1개월</option>
+                      </select>
+                      <span class="input_caption">개월</span>
+                    </div>
                   </div>
                 </div>
                 <!-- [end] 조건있음 체크됐을때 노출 -->
@@ -342,7 +354,7 @@
             </div>
 
             <div class="sort_wrap">
-              <p class="sort_title title_center">공급가</p>
+              <p class="sort_title title_top">공급가</p>
               <div class="sort_con">
                 <div class="sort_box">
                   <div class="sort_box_top">
@@ -380,7 +392,7 @@
             </div>
 
             <div class="sort_wrap">
-              <div class="sort_title title_center">
+              <div class="sort_title title_top">
                 <p>판매가<button class="btn_tooltip"><span class="hidden">툴팁</span></button></p>
                 <button class="sort_title_btn btn_small btn_sky">가격적용</button>
               </div>
@@ -436,45 +448,61 @@
             </div>
 
             <div class="sort_wrap">
-              <p class="sort_title">결제방법</p>
+              <p class="sort_title title_top">결제방법</p>
               <div class="sort_con">
-                <div class="sort_con_double">
-                  <div class="input_type_radio">
-                    <input type="radio" name="payment_period" value="common" id="common" checked>
-                    <label for="common">일반 결제</label>
-                  </div>
-                  <!-- [start]정기구독 청구 미노출(1차 범위 제외) / 2024.01.22 -->
-                  <!-- <div class="input_type_radio">
-                    <input type="radio" name="payment_period" value="subscribe" id="subscribe">
-                    <label for="subscribe">정기 구독 청구</label>
-                  </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="payment_period" value="common" id="common">
+                  <label for="common">일반 결제</label>
                 </div>
-                <div class="sort_con_double">
-                  <div class="sort_double sort_con_sub">
-                    <span class="sort_title text_darkblue">결제 주기</span>
-                    <div class="input_type_radio">
-                      <input type="radio" name="payment_cycle" value="1month" id="1month">
-                      <label for="1month">1개월</label>
+                <!-- [start]정기구독 청구 미노출(1차 범위 제외) / 2024.01.22 -->
+                <div class="input_type_radio">
+                  <input type="radio" name="payment_period" value="subscribe" id="subscribe" checked>
+                  <label for="subscribe">정기 결제</label>
+                </div>
+              </div>
+            </div>
+            <div class="sort_wrap">
+              <p class="sort_title title_top">결제 주기</p>
+              <div class="sort_con">
+                <div class="sort_double">
+                  <div class="input_type_check">
+                    <input type="checkbox" name="payment_cycle" value="1month" id="1month" checked>
+                    <label for="1month">1개월(월간)</label>
+                  </div>
+                  <div class="input_type_check">
+                    <input type="checkbox" name="payment_cycle" value="3month" id="3month">
+                    <label for="3month">3개월</label>
+                  </div>
+                  <div class="input_type_check">
+                    <input type="checkbox" name="payment_cycle" value="6month" id="6month">
+                    <label for="6month">6개월</label>
+                  </div>
+                  <div class="input_type_check">
+                    <input type="checkbox" name="payment_cycle" value="1year" id="1year" checked>
+                    <label for="1year">1년(연간)</label>
+                  </div>
+                  <span class="caption sort_caption">최대 2개까지 선택 가능</span>
+                </div>
+                <div class="sort_double">
+                  <div class="sort_box">
+                    <p class="sort_box_title text_darkblue">추가 할인 설정</p>
+                    <div class="sort_box_top">
+                      <div class="admin_flex">
+                        <span>1개월(월간)</span>
+                        <span class="text_bold"><input type="text" value="0"><span>원 (0% 할인)</span></span>
+                      </div>
+                      <div class="admin_flex">
+                        <span>1년(연간)</span>
+                        <span class="text_bold"><input type="text" value="120,000"><span>원 (10% 할인)</span></span>
+                      </div>
                     </div>
-                    <div class="input_type_radio">
-                      <input type="radio" name="payment_cycle" value="3month" id="3month" checked>
-                      <label for="3month">3개월</label>
-                    </div>
-                    <div class="input_type_radio">
-                      <input type="radio" name="payment_cycle" value="6month" id="6month">
-                      <label for="6month">6개월</label>
-                    </div>
-                    <div class="input_type_radio">
-                      <input type="radio" name="payment_cycle" value="1year" id="1year">
-                      <label for="1year">1년</label>
+                    <div class="sort_box_bottom">
+                      <button class="btn_fit btn_sky">할인 적용</button>
                     </div>
                   </div>
-                  <div class="sort_double sort_con_sub">
-                    <span class="sort_title text_darkblue">고객 결제시간 설정</span>
-                    <span>결제 예정일 <span class="text_red">10시</span>에 결제되며, 결제 실패 시 <span class="text_red">2시간</span> 간격으로 재결제가 이루어짐</span>
-                  </div> -->
-                  <!-- [end]정기구독 청구 미노출(1차 범위 제외) / 2024.01.22 -->
+                  <p class="sort_box_caption">고객 결제시간 설정 : 결제 예정일 <span class="text_red">10시</span>에 결제되며, 결제 실패 시 3회 까지 재결제가 진행됩니다.</p>
                 </div>
+                <!-- [end]정기구독 청구 미노출(1차 범위 제외) / 2024.01.22 -->
               </div>
             </div>
 
@@ -496,7 +524,7 @@
             <!-- [end]쿠폰 기능 미노출(1차 범위 제외) / 2024.01.22 -->
 
             <div class="sort_wrap">
-              <p class="sort_title">최종가</p>
+              <p class="sort_title title_top">최종가</p>
               <div class="sort_con">
                 <div class="sort_box">
                   <p class="sort_box_title text_darkblue">APP 최종가</p>
@@ -514,11 +542,42 @@
                       <span>판매가</span>
                       <span class="text_bold"><span>55,000</span> 원</span>
                     </div>
+                    <div class="admin_flex sort_box_list">
+                      <span>추가 할인</span>
+                      <span class="text_bold"><span>0</span> 원</span>
+                    </div>
                   </div>
                   <div class="sort_box_bottom">
                     <div class="admin_flex">
                       <span>합계</span>
-                      <span class="text_bold"><span>55,000</span> 원</span>
+                      <span class="text_bold"><span class="sort_box_price">월 55,000</span>&nbsp;&nbsp;원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="sort_box box_sub">
+                  <div class="sort_box_top">
+                    <div class="admin_flex sort_box_list">
+                      <span>공급가 (12개월 기준)</span>
+                      <span class="text_bold"><span>960,000</span> 원</span>
+                    </div>
+                    <div class="admin_flex sort_box_list">
+                      <span>결합 할인 (12개월 기준)</span>
+                      <span class="text_bold"><span>-300,000</span> 원</span>
+                    </div>
+                    <div class="line"></div>
+                    <div class="admin_flex sort_box_list">
+                      <span>판매가 (12개월 기준)</span>
+                      <span class="text_bold"><span>660,000</span> 원</span>
+                    </div>
+                    <div class="admin_flex sort_box_list">
+                      <span>추가 할인</span>
+                      <span class="text_bold"><span>-120,000</span> 원</span>
+                    </div>
+                  </div>
+                  <div class="sort_box_bottom">
+                    <div class="admin_flex">
+                      <span>합계</span>
+                      <span class="text_bold"><span class="sort_box_price">연 540,000</span>&nbsp;&nbsp;원</span>
                     </div>
                   </div>
                 </div>
@@ -555,11 +614,11 @@
 
           <div class="admin_box">
             <div class="box_title">
-              <h3 class="requir">상품 정보</h3>
+              <h3 class="requir">상품 상세</h3>
             </div>
             
             <div class="sort_wrap">
-              <p class="sort_title">목록 이미지 설정</p>
+              <p class="sort_title title_top">목록 이미지 설정</p>
               <div class="sort_con">
                 <div class="sort_con_double">
                   <div class="input_type_radio">
@@ -619,42 +678,48 @@
             </div>
 
             <div class="sort_wrap">
-              <div class="sort_double">
-                <p class="sort_title">상품 상세</p>
-                <div class="sort_con">
-                  <div class="text_field">
-                    <div class="text_field_top">
-                      <div class="text_field_option">
-                        <select>
-                          <option>Heading</option>
-                        </select>
-                      </div>
-                      <div class="text_field_option">
-                        <button class="btn_bold"><span class="hidden">bold</span></button>
-                        <button class="btn_italic"><span class="hidden">italic</span></button>
-                        <button class="btn_underline"><span class="hidden">underline</span></button>
-                        <button class="btn_through"><span class="hidden">through</span></button>
-                        <button class="btn_vertical"><span class="hidden">vertical</span></button>
-                        <button class="btn_align"><span class="hidden">align</span></button>
-                      </div>
-                      <div class="text_field_option">
-                        <button class="btn_link"><span class="hidden">link</span></button>
-                        <button class="btn_photo"><span class="hidden">photo</span></button>
-                        <button class="btn_film"><span class="hidden">film</span></button>
-                        <button class="btn_clip"><span class="hidden">clip</span></button>
-                      </div>
+              <p class="sort_title title_top_center">상품 요약</p>
+              <div class="sort_con">
+                <textarea placeholder="정기결제 상품 등록 시 작성해주세요."></textarea>
+              </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title title_top_center">상품 상세</p>
+              <div class="sort_con">
+                <div class="text_field">
+                  <div class="text_field_top">
+                    <div class="text_field_option">
+                      <select>
+                        <option>Heading</option>
+                      </select>
                     </div>
-                    <div class="text_field_bottom">
-                      <textarea placeholder="Enter Text Here..."></textarea>
+                    <div class="text_field_option">
+                      <button class="btn_bold"><span class="hidden">bold</span></button>
+                      <button class="btn_italic"><span class="hidden">italic</span></button>
+                      <button class="btn_underline"><span class="hidden">underline</span></button>
+                      <button class="btn_through"><span class="hidden">through</span></button>
+                      <button class="btn_vertical"><span class="hidden">vertical</span></button>
+                      <button class="btn_align"><span class="hidden">align</span></button>
                     </div>
+                    <div class="text_field_option">
+                      <button class="btn_link"><span class="hidden">link</span></button>
+                      <button class="btn_photo"><span class="hidden">photo</span></button>
+                      <button class="btn_film"><span class="hidden">film</span></button>
+                      <button class="btn_clip"><span class="hidden">clip</span></button>
+                    </div>
+                  </div>
+                  <div class="text_field_bottom">
+                    <textarea placeholder="Enter Text Here..."></textarea>
                   </div>
                 </div>
               </div>
-              <div class="sort_double">
-                <p class="sort_title">상품 유의사항</p>
-                <div class="sort_con">
-                  <textarea></textarea>
-                </div>
+            </div>
+
+            <div class="sort_wrap">
+              <p class="sort_title title_top_center">상품 유의사항</p>
+              <div class="sort_con">
+                <textarea></textarea>
               </div>
             </div>
 
