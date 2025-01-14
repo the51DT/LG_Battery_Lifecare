@@ -65,6 +65,29 @@
           <h2 class="admin_title">매출 현황 관리</h2>
 
           <div class="admin_box">
+            <div class="sort_wrap">
+              <p class="sort_title requir">매출 구분</p>
+              <div class="sort_con">
+                <div class="input_type_radio">
+                  <input type="radio" name="sales" value="all" id="all" checked>
+                  <label for="all">전체</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="sales" value="common" id="common">
+                  <label for="common">일반결제(단건)</label>
+                </div>
+                <div class="input_type_radio">
+                  <input type="radio" name="sales" value="wpay" id="wpay">
+                  <label for="wpay">정기결제(WPAY)</label>
+                </div>
+                <div class="sort_btn">
+                  <button class="btn_middle btn_sky">검색</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin_box">
             <div class="box_title">
               <h3>매출 현황</h3>
               <span class="caption">업데이트 일시 : 2023-12-21(목)</span>

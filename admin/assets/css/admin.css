@@ -541,6 +541,7 @@
   border-radius: 4px;
   font-family: "Apple SD Gothic", sans-serif;
   font-size: 13px;
+  line-height: 18px;
   color: #1e1e1e;
 }
 .admin_wrap .text_field_bottom textarea {
@@ -869,6 +870,9 @@
 .btn_sort button {
   width: 120px;
   margin-top: 20px;
+}
+.sort_btn {
+  margin-left: auto;
 }
 .tag_wrap {
   display: flex;
