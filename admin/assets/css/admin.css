@@ -1236,6 +1236,10 @@
   height: 154px;
   overflow-y: auto;
 }
+.table_scroll.list5 {
+  height: 335px;
+  overflow-y: auto;
+}
 .table_scroll th {
   position: sticky;
   top: 0;
