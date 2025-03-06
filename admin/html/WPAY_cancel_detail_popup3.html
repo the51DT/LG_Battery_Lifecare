@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WPAY 주문 정보</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="admin">
+    <header class="header_admin">
+      <h1><a href="/"><img alt="B-Lifecare" src="https://stag-bas.batterylifecare.com/_next/static/media/logo.d9215bd2.png"></a></h1>
+      <div class="header_tab">
+        <ul>
+          <li><a class="btn_tab" href="#">일반</a></li>
+          <li><a class="btn_tab on" href="#">상품/주문</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="lnb_admin">
+        <ul class="menu menu_1dep">
+          <li class="list_1dep">
+            <a class="btn_menu">상품 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">상품 리스트</a></li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">전시 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">전시상품 카테고리</a></li>
+              <li class="list_2dep"><a class="btn_menu">전시상품 리스트</a></li>
+              <li class="list_2dep"><a class="btn_menu">전시상품 진열 관리</a></li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">주문 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">매출 현황 관리</a></li>
+              <li class="list_2dep"><a class="btn_menu">주문 결과 조회</a></li>
+              <li class="list_2dep"><a class="btn_menu">결제 중단/실패 조회</a></li>
+            </ul>
+          </li>
+          <li class="list_1dep">
+            <a class="btn_menu">승인/취소/환불 관리</a>
+            <ul class="menu menu_2dep">
+              <li class="list_2dep"><a class="btn_menu">카드 승인 조회(이니시스)</a></li>
+              <li class="list_2dep"><a class="btn_menu">관리자 카드취소 조회</a></li>
+              <li class="list_2dep"><a class="btn_menu">망 취소 조회(이니시스)</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contents_admin">
+        <div class="admin_wrap">
+          <h2 class="admin_title">주문 정보 (주문번호 <span>2023120712345</span>)</h2>
+          
+          <div class="admin_box">
+            <div class="box_title">
+              <h3>주문 상품 정보</h3>
+            </div>
+
+            <table class="table_list">
+              <thead>
+                <tr>
+                  <th width="234px">전시상품코드</th>
+                  <th width="484px">전시 상품명</th>
+                  <th width="244px">판매 최종가</th>
+                  <th width="234px">결제방법</th>
+                  <th width="234px">주문상태</th>
+                  <th width="230px">취소상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="text_bold">DC001</span></td>
+                  <td><span class="text_overflow">배터리 인증서 프리미엄</span></td>
+                  <td>45,000</td>
+                  <td>정기결제</td>
+                  <td>결제 완료</td>
+                  <td><span class="text_red">취소요청</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="admin_detail">
+            <div class="admin_box">
+              <div class="box_title">
+                <h3>결제 정보</h3>
+              </div>
+              <table class="table_detail">
+                <tr>
+                  <th>판매금액</th>
+                  <td>50,000원</td>
+                </tr>
+                <tr>
+                  <th>할인혜택</th>
+                  <td><span class="text_red">-5,000원</span></td>
+                </tr>
+                <tr>
+                  <th>결제금액</th>
+                  <td>45,000원</td>
+                </tr>
+                <tr>
+                  <th>적립금 사용</th>
+                  <td>0원</td>
+                </tr>
+                <tr>
+                  <th>실 결제금액</th>
+                  <td>45,000원</td>
+                </tr>
+              </table>
+            </div>
+            <div class="admin_box">
+              <div class="box_title">
+                <h3>결제 수단</h3>
+              </div>
+              <table class="table_detail">
+                <tr>
+                  <th>결제방법</th>
+                  <td>일반결제</td>
+                </tr>
+                <tr>
+                  <th>결제상세</th>
+                  <td><span>45,000원</span><span class="border">신용카드</span></td>
+                </tr>
+                <tr>
+                  <th>결제카드</th>
+                  <td>[삼성] **** **** **** ***6</td>
+                </tr>
+                <tr>
+                  <th>주문일시</th>
+                  <td>2023-12-07 12:07:26</td>
+                </tr>
+                <tr>
+                  <th>승인일시 (거래상태)</th>
+                  <td>(승인) 2023-12-07 12:07:28</td>
+                </tr>
+              </table>
+            </div>
+            <!-- [start]쿠폰 기능 미노출(1차 범위 제외) / 2024.01.22 -->
+            <div class="admin_box">
+              <div class="box_title">
+                <h3>혜택 정보</h3>
+              </div>
+              <table class="table_detail">
+                <tr>
+                  <th>쿠폰 사용 여부</th>
+                  <td>사용</td>
+                </tr>
+                <tr>
+                  <th>사용 금액</th>
+                  <td><span class="text_red">-5,000원</span></td>
+                </tr>
+                <tr>
+                  <th>쿠폰명</th>
+                  <td>정기구독 할인 쿠폰(3개월)</td>
+                </tr>
+              </table>
+            </div>
+            <!-- [end]쿠폰 기능 미노출(1차 범위 제외) / 2024.01.22 -->
+            <div class="admin_box">
+              <div class="box_title">
+                <h3>주문자 정보</h3>
+                <button class="btn_small btn_border">회원정보 바로가기</button>
+              </div>
+              <table class="table_detail">
+                <tr>
+                  <th>주문자명</th>
+                  <td>이순신</td>
+                </tr>
+                <tr>
+                  <th>주문자ID</th>
+                  <td>adf@naver.com</td>
+                </tr>
+                <tr>
+                  <th>휴대폰번호</th>
+                  <td>010-5325-5865</td>
+                </tr>
+              </table>
+            </div>
+            <div class="admin_box">
+              <div class="box_title">
+                <h3>사용내역</h3>
+                <!-- [start] B-Lifecare 에서 제공하는 서비스를 결제한 경우 - 바로가기 버튼 -->
+                <!-- <button class="btn_small btn_border">서비스 이용 현황 바로가기</button> -->
+                <!-- [end] B-Lifecare 에서 제공하는 서비스를 결제한 경우 - 바로가기 버튼  -->
+              </div>
+              <table class="table_detail">
+                <!-- [start] B-Lifecare 에서 제공하는 서비스를 결제한 경우 - 사용안함 -->
+                <!-- <tr>
+                  <th>배터리 퇴화 케어 Pass</th>
+                  <td>사용여부 : N</td>
+                </tr> -->
+                <!-- [end] B-Lifecare 에서 제공하는 서비스를 결제한 경우 - 사용안함  -->
+                <!-- [start] B-Lifecare 에서 제공하는 서비스를 결제한 경우 - 사용함 -->
+                <!-- <tr>
+                  <th>배터리 퇴화 케어 Pass</th>
+                  <td>
+                    사용여부 : Y<br>
+                    최초 사용일자 : 2024-04-15<br>
+                    차량번호 : 12가1234<br>
+                    차종 : 아이오닉5
+                  </td>
+                </tr> -->
+                <!-- [end] B-Lifecare 에서 제공하는 서비스를 결제한 경우 - 사용함  -->
+                <tr>
+                  <th>배터리 인증서 프리미엄 이용권</th>
+                  <td>
+                    사용여부 : Y<br>
+                    최초 사용일자 : 2024-04-15<br>
+                    차량번호 : 12가1234<br>
+                    차종 : 아이오닉5
+                  </td>
+                </tr>
+                <tr>
+                  <th>배터리인증서 프리미엄 이용권</th>
+                  <td>사용여부 : N</td>
+                </tr>
+                <tr>
+                  <th>배터리인증서 프리미엄 이용권</th>
+                  <td>사용여부 : N</td>
+                </tr>
+              </table>
+            </div>
+            <div class="admin_box">
+              <div class="box_title">
+                <h3>취소 정보</h3>
+              </div>
+              <table class="table_detail">
+                <tr>
+                  <th>취소요청 일시</th>
+                  <td>2023-12-08 10:10:00</td>
+                </tr>
+                <tr>
+                  <th>취소처리 완료 일시</th>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th>취소금액</th>
+                  <td>45,000</td>
+                </tr>
+                <tr>
+                  <th>처리상태</th>
+                  <td>취소요청</td>
+                </tr>
+                <tr>
+                  <th>취소/환불 선택</th>
+                  <td>
+                    <div class="input_type_radio">
+                      <div class="input_type_radio">
+                        <input type="radio" name="select" value="all" id="all">
+                        <label for="all">전체취소</label>
+                      </div>
+                      <div class="input_type_radio">
+                        <input type="radio" name="select" value="part" id="part" checked>
+                        <label for="part">부분취소</label>
+                      </div>
+                      <div class="input_type_radio">
+                        <input type="radio" name="select" value="impossible" id="impossible">
+                        <label for="impossible">환불 불가</label>
+                      </div>
+                    </div>
+                    <!-- [start] 부분취소 선택 시에만 노출 -->
+                    <div class="part_area">
+                      <div>
+                        <input type="text" placeholder="부분 취소 금액 입력 (숫자만 입력)">
+                        <span class="input_caption">원</span>
+                        <p class="text_red">결제 금액보다 큰 금액은 입력할 수 없습니다.</p>
+                      </div>
+                      <div>
+                        <p>잔액(남은 금액)</p>
+                        <p><span>0</span>원</p>
+                      </div>
+                    </div>
+                    <!-- [end] 부분취소 선택 시에만 노출 -->
+                  </td>
+                </tr>
+                <tr>
+                  <th style="padding-top: 30px;">취소사유</th>
+                  <td>
+                    <select name="reason" class="sort_select" disabled>
+                      <option>기타(직접입력)</option>
+                    </select>
+                    <input type="text" placeholder="고객이 입력한 사유" disabled>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="padding-top: 30px;">환불불가</th>
+                  <td>
+                    <textarea placeholder="환불 불가 사유 입력(직접 입력) , 최대 1000자"></textarea>
+                    <div class="input_type_check">
+                      <input type="checkbox" name="refund" value="alarm" id="alarm">
+                      <label for="alarm">고객에게 알림 발송(앱 푸시)</label>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <div class="btn_wrap btn_sub">
+                <button class="btn_default btn_sky">저장</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap btn_sub">
+            <button class="btn_default btn_white">목록</button>
+          </div>
+
+          <div class="popup_wrap" id="retype">
+            <div class="admin_popup">
+              <h3>결제를 취소 하시겠습니까?</h3>
+              <p>취소 시 PG사에 신용카드 취소 요청 됩니다.</p>
+              <button class="btn_middle btn_white">아니요</button>
+              <button class="btn_middle btn_sky">결제 취소</button>
+              <button class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+
+          <div class="popup_wrap" id="retype">
+            <div class="admin_popup">
+              <h3>환불 불가로 설정하시겠습니까?</h3>
+              <p>
+                환불 불가 사유를 정확하게 입력하셨는지<br>
+                확인해주세요. 입력한 사유는 고객에게<br>
+                알림 발송(앱 푸시)을 체크한 경우 같이 전달됩니다.
+              </p>
+              <button class="btn_middle btn_white">아니요</button>
+              <button class="btn_middle btn_sky">환불 불가 설정</button>
+              <button class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+
+          <div class="popup_wrap on" id="error">
+            <div class="admin_popup">
+              <h3>결제취소 중 오류가 발생하였습니다</h3>
+              <p>
+                PG사 결제 취소 중 오류가 발생하여<br>
+                결제취소가 완료되지 않았습니다.<br>
+                다시 시도하시겠습니까?
+              </p>
+              <button class="btn_middle btn_white">아니요</button>
+              <button class="btn_middle btn_sky">환불 불가 설정</button>
+              <button class="btn_close">
+                <span class="hidden">닫기</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -267,27 +267,47 @@
                 </tr>
                 <tr>
                   <th>취소금액/범위</th>
-                  <td><span>45,000원</span><span class="border">전체취소</span></td>
+                  <td>
+                    <!-- ↓ 전체취소 선택 시 노출 -->
+                    <span>540,000원</span><span class="border">전체취소</span>
+                    <!-- ↓ 부분취소 선택 시 노출 -->
+                    <!-- <span>15,000원</span><span class="border">부분취소</span> -->
+                    <!-- ↓ 환불 불가 선택 시 노출 -->
+                    <!-- <span>0</span><span class="border">환불불가</span> -->
+                  </td>
                 </tr>
                 <tr>
                   <th>처리상태</th>
-                  <td>취소완료(사용자)</td>
+                  <td>
+                    <!-- ↓ 전체취소 선택 시 노출 -->
+                    취소완료(사용자)
+                    <!-- ↓ 부분취소 선택 시 노출 -->
+                    <!-- 취소완료(관리자_부분) -->
+                    <!-- ↓ 환불 불가 선택 시 노출 -->
+                    <!-- 취소요청 -->
+                  </td>
                 </tr>
                 <tr>
                   <th>취소/환불 선택</th>
                   <td>
                     <div class="input_type_radio">
+                      <!-- 취소 처리한 상태값만 활성화 / 이외 항목 선택 불가(딤처리) -->
                       <div class="input_type_radio">
-                        <input type="radio" name="select" value="cancel" id="cancel" checked>
-                        <label for="cancel">결제취소</label>
+                        <input type="radio" name="select" value="cancel_all" id="cancel_all" checked>
+                        <label for="cancel_all">전체취소</label>
                       </div>
                       <div class="input_type_radio">
-                        <input type="radio" name="select" value="impossible" id="impossible">
+                        <input type="radio" name="select" value="cancel" id="cancel" disabled>
+                        <label for="cancel">부분취소</label>
+                      </div>
+                      <div class="input_type_radio">
+                        <input type="radio" name="select" value="impossible" id="impossible" disabled>
                         <label for="impossible">환불 불가</label>
                       </div>
                     </div>
                   </td>
                 </tr>
+                <!-- ↓ 전체취소 or 부분취소 선택 시 노출 -->
                 <tr>
                   <th style="padding-top: 30px;">취소사유</th>
                   <td>
@@ -296,12 +316,25 @@
                     </select>
                   </td>
                 </tr>
+                <!-- ↓ 환불 불가 선택 시 노출 -->
+                <!-- <tr>
+                  <th style="padding-top: 30px;">환불불가</th>
+                  <td>
+                    <textarea placeholder="담당자가 입력한 환불 불가사유가 노출됩니다.">담당자가 입력한 환불 불가사유가 노출됩니다.</textarea>
+                    <div class="input_type_check">
+                      <input type="checkbox" name="refund" value="alarm" id="alarm">
+                      <label for="alarm">고객에게 알림 발송(앱 푸시)</label>
+                    </div>
+                  </td>
+                </tr> -->
               </table>
             </div>
           </div>
 
           <div class="btn_wrap btn_sub">
+            <!-- 취소 처리 후에는 [목록] 버튼만 노출 / 결제 완료 상태에서는 [목록], [부분 취소 진행] 2개 버튼 노출 -->
             <button class="btn_default btn_white">목록</button>
+            <!-- <button class="btn_default btn_sky">부분 취소 진행</button> -->
           </div>
 
           <div class="popup_wrap" id="record">
