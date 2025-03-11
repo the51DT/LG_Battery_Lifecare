@@ -1406,6 +1406,9 @@
 .table_detail .input_type_radio {
   justify-content: end;
 }
+.table_detail .input_type_radio + .input_type_radio {
+  margin-left: 30px;
+}
 .table_detail_gray th {
   color: #7C7C7C;
 }
