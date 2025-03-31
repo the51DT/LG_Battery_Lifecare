@@ -5,11 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   gagePos.innerText = gageValue;
 
-  // 관리필요, 보통, 우수 기준숫자 넘어갔는지 확인 후 색 변경
+
+  // 관리필요, 양호, 우수 기준숫자 넘어갔는지 확인 후 색 변경
   const gageWrap = document.querySelector(".chargediag_battery_box");
   const gageValueNum = Number(gageValue);
-  const badNum = 92.57; // 관리필요 - 보통 기준숫자
-  const goodNum = 97.8; // 보통 - 우수 기준숫자
+  const badNum = 92.57; // 관리필요 - 양호 기준숫자
+  const goodNum = 97.8; // 양호 - 우수 기준숫자
 
   if (gageValueNum <= badNum) {
     gageWrap.classList.add("bad");

@@ -23,7 +23,7 @@
   width: 1240px;
   height: auto;
   margin: 0 auto;
-  padding: 82px 52px 64px;
+  padding: 42px 52px 54px;
   background-image: url(../images/bg.svg);
   background-size: 414px 455px;
   background-repeat: no-repeat;
@@ -35,17 +35,27 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 23px;
+  margin-bottom: 14px;
 }
 .chargediag .chargediag_header h1 {
   display: flex;
   align-items: center;
-  height: 26px;
+  margin-bottom: 16.88px;
 }
 .chargediag .chargediag_header h1 img {
-  width: 150px;
+  flex-shrink: 0;
+  width: 243px;
 }
-.chargediag .chargediag_header div {
+.chargediag .chargediag_header > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 28px;
+}
+.chargediag .chargediag_header > div > div:first-child img {
+  width: 241px;
+}
+.chargediag .chargediag_header > div > div:last-child {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -118,7 +128,7 @@
 .chargediag .chargediag_battery_flex {
   display: flex;
   gap: 32px;
-  margin-bottom: 66px;
+  margin-bottom: 56px;
 }
 .chargediag .chargediag_battery_flex > div {
   width: calc(50% - (33px / 2));
@@ -151,7 +161,7 @@
   background-image: url(../images/battery_r.png);
 }
 .chargediag .chargediag_battery_per::after {
-  content: '보통';
+  content: '양호';
   margin-left: 24px;
   padding: 5px 15px;
   border-radius: 30px;
@@ -215,8 +225,8 @@
 .chargediag .chargediag_battery_y {
   background-color: #FFC045;
 }
-.chargediag .battery_y::before {
-  content: '보통';
+.chargediag .chargediag_battery_y::before {
+  content: '양호';
 }
 .chargediag .chargediag_battery_b {
   background-color: #50CCE0;
@@ -462,7 +472,7 @@
 
 .chargediag .chargediag_caution {
   width: 680px;
-  margin-top: 169px;
+  margin-top: 140px;
 }
 .chargediag .chargediag_caution_tit {
   margin-bottom: 15px;
@@ -482,4 +492,11 @@
 }
 .chargediag .chargediag_caution_list li + li {
   margin-top: 4px;
+}
+.chargediag_caution_notice {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #7c7c7c;
 }
