@@ -689,7 +689,7 @@
   margin-left: 10px;
 }
 .sort_box {
-  width: 438px;
+  width: 545px;
   background: #fff;
   align-self: flex-start;
 }
@@ -697,7 +697,8 @@
   margin-top: 4px;
 }
 .sort_double + .sort_double .sort_box input[type="text"] {
-  width: 174px;
+  width: 164px;
+  margin-right: 6px;
 }
 .sort_double + .sort_double .sort_box input[type="text"] + span {
   display: inline-block;
@@ -727,6 +728,9 @@
   border-radius: 12px 12px 0 0;
   border: 1px solid #e8e8e8;
   border-bottom: none;
+}
+.sort_box .sort_box_top .admin_flex {
+  gap: 20px;
 }
 .sort_box .sort_box_bottom {
   padding: 20px 24px;
