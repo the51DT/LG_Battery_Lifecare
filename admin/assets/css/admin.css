@@ -782,6 +782,24 @@
 .sort_summary_info p .text_bold {
   font-size: 20px;
 }
+.sort_summary_info p i {
+  font-style: normal;
+}
+.sort_summary_info p i + i {
+  padding-left: 24px;
+  position: relative;
+}
+.sort_summary_info p i + i::before {
+  content: '';
+  display: block;
+  height: 12px;
+  width: 1px;
+  background-color: #d3d3d3;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
 .input_type_check {
   display: flex;
   align-items: center;
