@@ -1,14 +1,12 @@
 @charset "utf-8";
 :root {
 	--light_blue: #2ca5b6;
-	--light_bg: #fff;
-	--light_txt_b: #1e1e1e;
-	--light_txt_w: #fff;
-	--light_txt_a2: #a2a2a2;
-
 	--dark_blue: #005f6e;
-	--dark_bg: #1e1e1e;
-  --dark_txt_w: #EFEFEF
+
+	--white-fff: #fff;
+	--white-ef: #EFEFEF;
+	--black-1e: #1e1e1e;
+	--gray-a2: #a2a2a2;
 }
 
 .wrap {
@@ -77,11 +75,11 @@ section:not(:first-child) {
 	padding-bottom: 33px;
 }
 .container div {
-	color: var(--light_txt_b);
+	color: var(--black-1e);
 }
 .container .korea_service_banner-wrap {
 	background: var(--light_blue);
-	color: var(--light_txt_w);
+	color: var(--white-fff);
 	padding: 48px 32px;
 }
 .container .korea_service_banner {
@@ -92,10 +90,10 @@ section:not(:first-child) {
 }
 .container .korea_service_banner .h4 {
 	margin: 12px 0 20px;
-	color: var(--light_txt_w);
+	color: var(--white-fff);
 }
 .container .korea_service_banner p.size-16 {
-	color: var(--light_txt_w);
+	color: var(--white-fff);
 }
 .container .korea_service_desc-wrap {
 	padding: 0 20px;
@@ -107,7 +105,7 @@ section:not(:first-child) {
 	align-items: center;
 }
 .container .korea_service_desc p.size-15 {
-	color: var(--light_txt_a2);
+	color: var(--gray-a2);
 	margin: 12px 0 24px;
 }
 .container .guide_service_delivery {
@@ -120,10 +118,11 @@ section:not(:first-child) {
 .container .guide_service_delivery p.size-16 {
 	text-align: left;
 	font-weight: 700;
+	padding-bottom: 4px;
 }
 .container .guide_service_delivery .guide--vehicle {
 	padding: 10px 15px;
-	background: var(--light_bg);
+	background: var(--white-fff);
 	border-radius: 4px;
 	display: flex;
 	justify-content: space-between;
@@ -157,7 +156,7 @@ section:not(:first-child) {
 	font-weight: 700;
 }
 .container .lifecare_service p.size-13 {
-	color: var(--light_txt_a2);
+	color: var(--gray-a2);
 	margin-top: 10px;
 	word-wrap: break-word;
 	word-break: keep-all;
@@ -167,40 +166,37 @@ section:not(:first-child) {
 /* dark mode */
 @media (prefers-color-scheme: dark) {
 	.header_inner_sub {
-		background: var(--dark_bg);
-    color: var(--dark_txt_w);
+		background: var(--black-1e);
+    color: var(--white-ef);
 	}
-
   .container{
-    background: var(--dark_bg);
+    background: var(--black-1e);
   }
-
   .container div {
-    color: var(--dark_txt_w);
+    color: var(--white-ef);
   }
   .container .guide_service_delivery{
     background: #2C2C2C;  
   }
   .container .guide_service_delivery .guide--vehicle{
-    background: var(--light_txt_a2)
+    background: var(--gray-a2)
   }
   .container .guide_service_delivery .guide--vehicle p.size-13{
-    color: var(--light_txt_b);
+    color: var(--black-1e);
   }
   .container .lifecare_service_desc{
     background:#2c2c2c;
     box-shadow: 0px 4px 12px 0px #00000026;
   }
   .container .korea_service_desc-wrap p.size-13{
-    color: var(--light_txt_a2);
+    color: var(--gray-a2);
   }
-
   .container .korea_service_banner-wrap.dark{
     background: var(--dark_blue);
-    color: var(--dark_txt_w);  
+    color: var(--white-ef);  
   }
   .container .korea_service_banner-wrap.dark h4.h4,
   .container .korea_service_banner-wrap.dark p.size-16 {
-    color: var(--dark_txt_w);  
+    color: var(--white-ef);  
   }
 }
