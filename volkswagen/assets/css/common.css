@@ -19,6 +19,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background: #e5e5e5;
 }
 h4.h4 {
 	font-weight: 700;
@@ -59,6 +60,7 @@ p.font-16 {
 	align-items: center;
 	gap: 12px;
 	color: var(--light_txt_c);
+	background: #fff;
 }
 .header_inner_sub h3 {
 	font-weight: 400;
@@ -73,6 +75,7 @@ section:not(:first-child) {
 }
 .container {
 	padding-bottom: 33px;
+	background: #fff;
 }
 .container div {
 	color: var(--black-1e);
