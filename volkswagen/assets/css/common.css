@@ -32,18 +32,18 @@ h5.h5 {
 	line-height: 32px;
 	text-align: center;
 }
-p.size-13 {
+p.font-13 {
 	font-weight: 400;
 	font-size: 13px;
 	line-height: 18px;
 }
-p.size-15 {
+p.font-15 {
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 20px;
 	text-align: center;
 }
-p.size-16 {
+p.font-16 {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 16px;
@@ -92,7 +92,7 @@ section:not(:first-child) {
 	margin: 12px 0 20px;
 	color: var(--white-fff);
 }
-.container .korea_service_banner p.size-16 {
+.container .korea_service_banner p.font-16 {
 	color: var(--white-fff);
 }
 .container .korea_service_desc-wrap {
@@ -104,7 +104,7 @@ section:not(:first-child) {
 	justify-content: center;
 	align-items: center;
 }
-.container .korea_service_desc p.size-15 {
+.container .korea_service_desc p.font-15 {
 	color: var(--gray-a2);
 	margin: 12px 0 24px;
 }
@@ -115,7 +115,7 @@ section:not(:first-child) {
 	border-radius: 4px;
 	margin: 10px 0 6px;
 }
-.container .guide_service_delivery p.size-16 {
+.container .guide_service_delivery p.font-16 {
 	text-align: left;
 	font-weight: 700;
 	padding-bottom: 4px;
@@ -128,7 +128,7 @@ section:not(:first-child) {
 	justify-content: space-between;
 	align-items: center;
 }
-.container .guide_service_delivery .guide--vehicle p.size-13:first-child {
+.container .guide_service_delivery .guide--vehicle p.font-13:first-child {
 	font-weight: 700;
 }
 .container .guide_service_delivery .guide--vehicle:nth-of-type(1) {
@@ -152,10 +152,10 @@ section:not(:first-child) {
 .container .lifecare_service_desc p {
 	text-align: left;
 }
-.container .lifecare_service p.size-16 {
+.container .lifecare_service p.font-16 {
 	font-weight: 700;
 }
-.container .lifecare_service p.size-13 {
+.container .lifecare_service p.font-13 {
 	color: var(--gray-a2);
 	margin-top: 10px;
 	word-wrap: break-word;
@@ -181,14 +181,14 @@ section:not(:first-child) {
   .container .guide_service_delivery .guide--vehicle{
     background: var(--gray-a2)
   }
-  .container .guide_service_delivery .guide--vehicle p.size-13{
+  .container .guide_service_delivery .guide--vehicle p.font-13{
     color: var(--black-1e);
   }
   .container .lifecare_service_desc{
     background:#2c2c2c;
     box-shadow: 0px 4px 12px 0px #00000026;
   }
-  .container .korea_service_desc-wrap p.size-13{
+  .container .korea_service_desc-wrap p.font-13{
     color: var(--gray-a2);
   }
   .container .korea_service_banner-wrap.dark{
@@ -196,7 +196,7 @@ section:not(:first-child) {
     color: var(--white-ef);  
   }
   .container .korea_service_banner-wrap.dark h4.h4,
-  .container .korea_service_banner-wrap.dark p.size-16 {
+  .container .korea_service_banner-wrap.dark p.font-16 {
     color: var(--white-ef);  
   }
 }
