@@ -163,7 +163,6 @@ section:not(:first-child) {
 	margin-top: 10px;
 	word-wrap: break-word;
 	word-break: keep-all;
-  padding-right: 30px;
 }
 
 /* dark mode */
