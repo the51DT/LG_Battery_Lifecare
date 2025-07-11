@@ -1,0 +1,10 @@
+@charset "utf-8";
+:root {
+  --light_blue: #2ca5b6;
+  --dark_blue: #005f6e;
+
+  --white-fff: #fff;
+  --white-ef: #EFEFEF;
+  --black-1e: #1e1e1e;
+  --gray-a2: #a2a2a2;
+}

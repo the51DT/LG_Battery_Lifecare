@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="전기차의 상태와 미래가치를 확인하는 실시간 모니터링 서비스"/>
+  <meta name="description" content="전기차의 상태와 미래가치를 확인하는 실시간 모니터링 서비스" />
   <meta property="og:title" content="B-Lifecare">
   <meta property="og:url" content="https://www.batterylifecare.com">
   <meta property="og:image" content="https://www.batterylifecare.com/images/challenge/kakao_sns.jpg">
-  <meta property="og:description" content="전기차의 상태와 미래가치를 확인하는 실시간 모니터링 서비스"/>
+  <meta property="og:description" content="전기차의 상태와 미래가치를 확인하는 실시간 모니터링 서비스" />
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="">
   <meta name="twitter:url" content="https://www.batterylifecare.com">
   <meta name="twitter:image" content="https://www.batterylifecare.com/images/challenge/kakao_sns.jpg">
-  <meta name="twitter:description" content="전기차의 상태와 미래가치를 확인하는 실시간 모니터링 서비스"/>
+  <meta name="twitter:description" content="전기차의 상태와 미래가치를 확인하는 실시간 모니터링 서비스" />
 
   <title> B-Lifecare </title>
   <link rel="stylesheet" href="../assets/css/style.css">
 
 </head>
+
 <body>
   <!-- 다크모드 적용 시 wrap.dark 추가 -->
   <div class="wrap">
@@ -25,10 +27,10 @@
       <div class="header_inner_sub">
         <div class="img">
           <a href="#" target="_blank">
-            <img src="../assets/img/icon/arrow_left.svg" alt="페이지 뒤로가기 버튼"/>
+            <img src="../assets/img/icon/arrow_left.svg" alt="페이지 뒤로가기 버튼" />
           </a>
         </div>
-        <h3> 폭스바겐 그룹 코리아 서비스</h3>
+        <h3> EV스마트케어 서비스</h3>
       </div>
     </header>
     <div class="container">
@@ -36,11 +38,12 @@
         <div class="korea_service_banner-wrap">
           <div class="korea_service_banner">
             <p class="font-16"> LG에너지솔루션 x 폭스바겐 그룹 코리아 </p>
-            <h4 class="h4">폭스바겐 그룹 코리아 <br />
-              서비스 출시 (가안)  
+            <h4 class="h4">EV스마트케어 <br />
+              서비스 출시
             </h4>
             <div class="img">
-              <img id="service_banner_img" src="../assets/img/group_korea_service_banner.svg" alt="사람이 폰으로 차를 찍고 있는 모습" />
+              <img id="service_banner_img" src="../assets/img/group_korea_service_banner.svg"
+                alt="사람이 폰으로 차를 찍고 있는 모습" />
             </div>
           </div>
         </div>
@@ -49,12 +52,10 @@
         <div class="korea_service_desc-wrap">
           <div class="korea_service_desc">
             <h5 class="h5">
-              폭스바겐 그룹 코리아<br />
-              서비스란? (가안)
-            </h5>
+              EV스마트케어 <br /> 서비스란? </h5>
             <p class="font-15">
               배터리 상태에 대해 실시간으로 모니터링하고 <br />
-              알림을 주는 케어 서비스예요.(가안)
+              알림을 주는 케어 서비스예요.
             </p>
             <div class="img">
               <img src="../assets/img/korea_service_desc_img.svg" alt="차와 돈이 함께 있음" />
@@ -78,14 +79,14 @@
         <div class="lifecare_service_desc-wrap">
           <h5 class="h5">
             안전한 전기차 라이프 <br />
-            케어 서비스와 함께!  
+            케어 서비스와 함께!
           </h5>
           <div class="lifecare_service_desc">
             <div class="img"> <img src="../assets/img/icon/icon_reward.svg" alt="메달 아이콘" /> </div>
             <div class="lifecare_service">
               <p class="font-16">배터리 이상 알림 서비스 </p>
-              <p class="font-13">배터리에 이상 현상이 발견되면 
-                차주와 운전자에게 알림을 보내드려요! 
+              <p class="font-13">배터리에 이상 현상이 발견되면
+                차주와 운전자에게 알림을 보내드려요!
                 이제부터 안심하고 운전하세요!</p>
             </div>
           </div>
@@ -108,13 +109,14 @@
     let bannerWrap = document.querySelector(".korea_service_banner-wrap");
     let bannerImg = document.getElementById('service_banner_img');
 
-    if(isDarkMode){
+    if (isDarkMode) {
       bannerImg.src = "../assets/img/group_korea_service_banner_dark.svg"
       bannerWrap.classList.add("dark")
-    }else{
+    } else {
       bannerImg.src = "../assets/img/group_korea_service_banner.svg"
       bannerWrap.classList.remove("dark")
     }
   </script>
 </body>
+
 </html>
